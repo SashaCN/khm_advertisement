@@ -1,0 +1,29 @@
+mixin soc-line
+  ul.soc-line.flex-sb
+    li 
+      a.soc(href="#") 
+        svg 
+          use(xlink:href="img/sprite.svg#mail")
+    li 
+      a.soc(href="#") 
+        svg 
+          use(xlink:href="img/sprite.svg#tg")
+    li 
+      a.soc(href="#") 
+        svg 
+          use(xlink:href="img/sprite.svg#viber")
+    li 
+      a.soc(href="#") 
+        svg 
+          use(xlink:href="img/sprite.svg#inst")
+    li 
+      a.soc(href="#") 
+        svg 
+          use(xlink:href="img/sprite.svg#fb")
+
+mixin button(type, href='#', content)
+  case type
+    when 'g'
+      a.g-button(href=href)= content
+    when 't'
+      a.t-button(href=href)= content
