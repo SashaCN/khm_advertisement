@@ -53,7 +53,7 @@ body
   color: $textDark
   text-decoration: none
   padding-left: 30px
-  transition: .3s
+  transition: $trs
   &::before 
     content: ''
     position: absolute
@@ -63,21 +63,27 @@ body
     height: 20px
     background-image: url(../img/tel.svg)
     transform: translateY(-50%)
-  +underlineHover
+  // +underlineHover
   &::after
     left: 30px
   &:hover:after
     width: calc(100% - 30px)
-  // &:hover 
-  //   color: $primaryBlue
+  &:hover 
+    color: $primaryBlue
 
 .soc-line 
   column-gap: 15px
   a
     display: inline-block
+    transition: $trs
+    &:hover 
+      transform: scale(1.2)
+      svg
+        width: 100%
   li,a,svg
     width: 20px
     height: 20px
+
 
 .menu 
   padding: 20px 0
@@ -89,5 +95,5 @@ body
     color: $textDark
     text-decoration: none
     text-transform: uppercase
-    transition: .3s
+    transition: $trs
     +underlineHover

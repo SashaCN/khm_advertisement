@@ -1,20 +1,33 @@
 doctype html
 html(lang="uk")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Реклама Поділля. Розробка Та Виготовлення Зовнішньої Реклами
-        link(rel="stylesheet", href="css/styles.css")
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    body 
-        include helpers/mixins.pug
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Реклама Поділля. Розробка Та Виготовлення Зовнішньої Реклами
+		link(rel="stylesheet", href="css/styles.css")
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	body 
+		include helpers/mixins.pug
 
-        include components/header.pug
+		include components/header.pug
 
-        main 
+		main 
+			section.first-screen
+				h1 Lorem ipsum dolor sit amet.
+				.header-adv.flex-sb
+					a(href="#") вивіски
+					span.list-dot 
+					a(href="#") лайтбокси
+					span.list-dot 
+					a(href="#") літери
+					span.list-dot 
+					a(href="#") банери
+				+button('g', '#', 'замовити')
+			section.order-adv.wrapper 
+				h2.sec-title ПРИДБАТИ ЧИ ЗАМОВИТИ РОЗРОБКУ, ОТРИМАТИ КОНСУЛЬТАЦІЮ - ВСЕ ПО ЗОВНІШНІЙ РЕКЛАМІ В АГЕНЦІЇ "РЕКЛАМА ПОДІЛЛЯ" 
+				p.sec-desc Реклама Поділля – агенція в м. Хмельницькому, що розробляє зовнішню рекламу. Здійснює монтаж рекламних конструкцій. Розробляє, починаючи з 3D макета, виготовляє та монтує вивіски від звичайних щитових вивісок, світлових коробів, лайтбоксів світлових, об’ємних вивісок, до складних дахових вивісок, світлових літер, об’ємних букв, літер з різними способами підсвічування.
 
-
-        include components/footer.pug
+		include components/footer.pug

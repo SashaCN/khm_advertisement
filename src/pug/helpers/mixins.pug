@@ -24,6 +24,6 @@ mixin soc-line
 mixin button(type, href='#', content)
   case type
     when 'g'
-      a.g-button(href=href)= content
+      a.g-button.button(href=href)= content
     when 't'
-      a.t-button(href=href)= content
+      a.t-button.button(href=href)= content
