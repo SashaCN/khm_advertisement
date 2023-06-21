@@ -1,4 +1,8 @@
 
+/* -------------------------------------------------------------------------- */
+/*                               general styles                               */
+/* -------------------------------------------------------------------------- */
+
 *
   margin: 0
   padding: 0
@@ -12,6 +16,7 @@ html
 
 body 
   font-size: 14rem
+  font-family: 'Montserrat', sans-serif
 
 .wrapper 
   width: 86%
@@ -20,3 +25,69 @@ body
 .flex-sb 
   display: flex
   justify-content: space-between
+
+/* -------------------------------------------------------------------------- */
+/*                                   header                                   */
+/* -------------------------------------------------------------------------- */
+
+.header-soc
+  position: relative
+  padding: 3px 0 7px
+  &::before 
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background: $P-B-gradient
+  .wrapper 
+    align-items: center
+
+.tel 
+  position: relative
+  font-size: 16rem
+  line-height: 20rem
+  font-weight: 600
+  text-transform: uppercase
+  color: $textDark
+  text-decoration: none
+  padding-left: 30px
+  transition: .3s
+  &::before 
+    content: ''
+    position: absolute
+    top: 50% 
+    left: 0
+    width: 20px
+    height: 20px
+    background-image: url(../img/tel.svg)
+    transform: translateY(-50%)
+  +underlineHover
+  &::after
+    left: 30px
+  &:hover:after
+    width: calc(100% - 30px)
+  // &:hover 
+  //   color: $primaryBlue
+
+.soc-line 
+  column-gap: 15px
+  a
+    display: inline-block
+  li,a,svg
+    width: 20px
+    height: 20px
+
+.menu 
+  padding: 20px 0
+  a 
+    position: relative
+    font-size: 16rem
+    line-height: 19.5rem
+    font-weight: 700
+    color: $textDark
+    text-decoration: none
+    text-transform: uppercase
+    transition: .3s
+    +underlineHover

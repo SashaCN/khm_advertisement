@@ -1,0 +1,14 @@
+@mixin underlineHover
+  &::after 
+    content: ''
+    position: absolute 
+    bottom: -5rem
+    left: 0
+    width: 0
+    height: 2px
+    background-color: $primaryBlue
+    transition: .3s
+    border-radius: 1px
+  &:hover 
+    &::after
+      width: 100%
