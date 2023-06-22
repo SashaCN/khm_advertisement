@@ -1,25 +1,24 @@
+mixin svg(href)
+  svg 
+    use(xlink:href=href)
+
 mixin soc-line
   ul.soc-line.flex-sb
     li 
       a.soc(href="#") 
-        svg 
-          use(xlink:href="img/sprite.svg#mail")
+        +svg("img/sprite.svg#mail")
     li 
       a.soc(href="#") 
-        svg 
-          use(xlink:href="img/sprite.svg#tg")
+        +svg("img/sprite.svg#tg")
     li 
       a.soc(href="#") 
-        svg 
-          use(xlink:href="img/sprite.svg#viber")
+        +svg("img/sprite.svg#viber")
     li 
       a.soc(href="#") 
-        svg 
-          use(xlink:href="img/sprite.svg#inst")
+        +svg("img/sprite.svg#inst")
     li 
       a.soc(href="#") 
-        svg 
-          use(xlink:href="img/sprite.svg#fb")
+        +svg("img/sprite.svg#fb")
 
 mixin button(type, href='#', content)
   case type

@@ -5,9 +5,54 @@
 @import  components/footer
 
 .first-screen
-  padding: 150px 0
+  padding: 200px 10%
   text-align: center
-  background: #eee
+  background: #eee url(../img/bg-first_screen.jpg) center / cover
+
+h1 
+  color: $textDark 
+  font-size: 56rem
+  font-weight: 600 
+  text-transform: uppercase
+  line-height: 110%
+  margin-bottom: 70px
+
+.adv-list 
+  display: flex
+  justify-content: center
+  margin-bottom: 65px
+  a 
+    position: relative
+    display: inline-block
+    font-size: 32rem
+    font-weight: 600
+    color: $textDark
+    padding: 0 40px
+    margin: 0 7.5px
+    text-transform: uppercase
+    text-decoration: none
+    transition: $trs
+    &:hover 
+      color: $primaryBlue
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      top: 50% 
+      right: 100%
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      background-color: $primaryBlue
+      transform: translateY(-50%)
+    &::after 
+      left: 100%
+  li 
+    &:first-child a::before
+      display: none      
+    &:last-child a::after
+      display: none      
+    
   
 .button
   display: inline-block
@@ -63,6 +108,10 @@
     &::before
       background-position: 100% 0
 
+/* -------------------------------------------------------------------------- */
+/*                             ORDER ADVERTISEMENT                            */
+/* -------------------------------------------------------------------------- */
+
 section 
   padding: 100px 0
 
@@ -78,3 +127,10 @@ section
   line-height: 22rem
   color: $textDark
   margin: 50px 0
+
+.preference
+  width: 30%
+  border: 2px solid $primaryBlue
+  border-radius: 5px
+  padding: 100px 20px 30px
+  
