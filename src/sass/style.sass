@@ -10,7 +10,6 @@
   background: #eee url(../img/bg-first_screen.jpg) center / cover
 
 h1 
-  color: $textDark 
   font-size: 56rem
   font-weight: 600 
   text-transform: uppercase
@@ -30,7 +29,6 @@ h1
     padding: 0 40px
     margin: 0 7.5px
     text-transform: uppercase
-    text-decoration: none
     transition: $trs
     &:hover 
       color: $primaryBlue
@@ -64,7 +62,6 @@ h1
   padding: 13px
   min-width: 250px
   color: #fff
-  text-decoration: none
   border-radius: 5px
   transition: $trs
 
@@ -120,17 +117,74 @@ section
   line-height: 49rem
   font-weight: 600
   text-transform: uppercase
-  color: $textDark
 
 .sec-desc
   font-size: 18rem
   line-height: 22rem
-  color: $textDark
   margin: 50px 0
 
+.order-adv 
+  & > p 
+    margin-bottom: 125px
+
+.preferences 
+  align-items: stretch
+
+.gradient-bg 
+  position: absolute
+  top: -75px
+  left: 10%
+  width: 80%
+  height: 150px
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 5px
+  background: $blockGradient
+  svg
+    height: 110px
+  
 .preference
-  width: 30%
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 30.5%
   border: 2px solid $primaryBlue
   border-radius: 5px
   padding: 100px 20px 30px
-  
+  h3 
+    font-size: 18rem 
+    font-weight: 600
+    margin-bottom: 15px
+    text-transform: uppercase
+  p 
+    font-size: 16rem
+    font-weight: 300
+    margin-bottom: 10px
+  .desc
+    margin-bottom: 20px
+
+.order-link 
+  display: inline-block
+  position: relative
+  font-size: 18rem
+  line-height: 18rem
+  font-weight: 600
+  text-transform: lowercase
+  transition: $trs
+  padding-right: 46px
+  &::before
+    content: ''
+    position: absolute 
+    top: 50%
+    right: 0
+    width: 26px
+    height: 13px
+    background-image: url(../img/arrow_right.svg)
+    transform: translateY(-50%)
+    transition: $trs
+  &:hover 
+    color: #943F78
+    &::before 
+      background-position-x: -26px

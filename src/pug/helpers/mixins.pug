@@ -26,3 +26,14 @@ mixin button(type, href='#', content)
       a.g-button.button(href=href)= content
     when 't'
       a.t-button.button(href=href)= content
+
+mixin preference(img, title, desc1, desc2)
+  .preference
+    .gradient-bg 
+      +svg(img)
+    h3= title 
+    .desc
+      p=desc1 
+      p=desc2 
+    .order
+      a.order-link(href="#") замовити 
