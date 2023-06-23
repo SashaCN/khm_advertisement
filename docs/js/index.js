@@ -1,0 +1,1 @@
+let services=document.querySelectorAll(".service");console.log(services),services.forEach((e=>e.addEventListener("click",(function(){let s=document.querySelector(".service.showed-desc");null!=s&&s.classList.remove("showed-desc"),s!=e&&e.classList.add("showed-desc")}))));
