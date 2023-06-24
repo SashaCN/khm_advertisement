@@ -133,7 +133,7 @@ section
 
 .gradient-bg 
   position: absolute
-  top: -75px
+  top: 0
   left: 10%
   width: 80%
   height: 150px
@@ -142,10 +142,12 @@ section
   align-items: center
   border-radius: 5px
   background: $blockGradient
+  transform: translateY(-50%)
   svg
     height: 110px
   
-.preference
+.preference,
+.promo-item
   position: relative
   display: flex
   flex-direction: column
@@ -302,6 +304,7 @@ section
     text-align: center
     font-size: 14rem
     font-weight: 600
+    transition: padding-left $trs, padding-right $trs
 
 .choosen-item 
   font-weight: 700
@@ -319,24 +322,19 @@ section
   figure 
     display: flex
     flex-direction: column 
-    justify-content: space-between
+    // justify-content: space-between
     width: 32%
   img 
     width: 100%
     object-fit: cover 
     object-position: center
     border-radius: 5px
-  figcaption 
-    position: relative
-    padding-top: 32px
-    &::before
-      content: ''
-      position: absolute
-      top: 15px
-      left: 0
-      width: 100%
+  .g-line 
+      display: block
       height: 2px
       background: $itemLine
+      margin: 15px 0
+  figcaption 
     p 
       font-size: 14rem
   h4 
@@ -358,3 +356,63 @@ section
   display: flex
   justify-content: center
   column-gap: 20px
+
+/* -------------------------------------------------------------------------- */
+/*                                   FACADES                                  */
+/* -------------------------------------------------------------------------- */
+
+.facades 
+  .sec-desc 
+    display: grid
+    row-gap: 10px     
+    margin-bottom: 30px 
+  
+/* -------------------------------------------------------------------------- */
+/*                                    PROMO                                   */
+/* -------------------------------------------------------------------------- */
+
+.promo 
+  align-items: stretch
+  h2 
+    margin-bottom: 90px
+  .gradient-bg
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 25px
+    height: auto
+    min-height: 94px
+    h3 
+      font-weight: 700
+      text-align: center
+      color: #fff
+      margin: 0
+      width: fit-content
+
+.promo-item 
+  padding-top: 75px
+  .price 
+    font-style: 18rem 
+    font-weight: 600 
+  .desc 
+    * 
+      margin: 0 
+    display: grid
+    row-gap: 20px
+
+.components 
+  font-size: 18rem
+  font-weight: 500
+  li 
+    position: relative
+    padding-left: 25px
+    &:before 
+      content: ''
+      position: absolute 
+      top: 50%
+      left: 12.5px
+      width: 4px
+      height: 4px
+      border-radius: 50%
+      background-color: $textDark
+      transform: translate(-50%, -50%)

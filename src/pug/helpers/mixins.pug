@@ -41,7 +41,7 @@ mixin preference(img, title, desc1, desc2)
       p=desc1 
       p=desc2 
     .order
-      a.order-link(href="#") замовити 
+      a.order-link(href="#order") замовити 
 
 mixin service(title, desc1, desc2)
   .service 
@@ -64,9 +64,24 @@ mixin service(title, desc1, desc2)
 mixin creatingFigure(img, alt, title, price, height)
   figure 
     img(src=img, alt=alt) 
+    span.g-line
     figcaption 
       h4=title
       p.price ціна - 
         =price
-      p.height висота - 
-        =height
+      if height 
+        p.height висота - 
+          =height
+
+mixin promo( title, price, desc, ...items)
+  .promo-item
+    .gradient-bg 
+      h3= title 
+    .desc
+      p.price=price
+      ul.components 
+        each item in items 
+          li= item
+      p=desc
+    .order
+      a.order-link(href="#order") замовити 
