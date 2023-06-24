@@ -27,6 +27,11 @@ mixin button(type, href='#', content)
     when 't'
       a.t-button.button(href=href)= content
 
+mixin buttonLine
+  .button-line 
+    +button('g', '#order', 'замовити')
+    +button('t', '#order', 'детальніше')
+
 mixin preference(img, title, desc1, desc2)
   .preference
     .gradient-bg 
@@ -55,3 +60,13 @@ mixin service(title, desc1, desc2)
       p=desc1 
       if desc2
         p=desc2 
+
+mixin creatingFigure(img, alt, title, price, height)
+  figure 
+    img(src=img, alt=alt) 
+    figcaption 
+      h4=title
+      p.price ціна - 
+        =price
+      p.height висота - 
+        =height

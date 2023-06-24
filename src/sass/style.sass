@@ -75,15 +75,16 @@ h1
   position: relative
   color: $textTButton
   min-width: 246px
-  padding: 11px
+  // padding: 13px
+  // line-height: 18rem
   z-index: 1
   &:before 
     content: ''
     position: absolute
-    top: -2px
-    left: -2px
-    width: calc(100% + 4px)
-    height: calc(100% + 4px)
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
     border-radius: 5px
     z-index: -2
     background: $B-P-gradient
@@ -92,10 +93,10 @@ h1
   &::after
     content: ''
     position: absolute
-    width: 100%
-    height: 100%
-    left: 0
-    top: 0
+    left: 2px
+    top: 2px
+    width: calc(100% - 4px)
+    height: calc(100% - 4px)
     border-radius: 5px 
     background: #fff
     z-index: -1
@@ -287,3 +288,73 @@ section
 /*                            ADVERTISMENT CREATING                           */
 /* -------------------------------------------------------------------------- */
 
+.creating 
+  h2 
+    margin-bottom: 40px
+  
+
+.adv-examples 
+  align-items: center 
+  column-gap: 30px
+  margin-bottom: 30px
+  a 
+    display: inline-block
+    text-align: center
+    font-size: 14rem
+    font-weight: 600
+
+.choosen-item 
+  font-weight: 700
+  padding: 15px 25px
+  text-transform: uppercase
+  color: #fff
+  background: $choosenItem
+  border-radius: 5px
+  width: max-content
+
+.fig-list
+  align-items: stretch
+  column-gap: 20px
+  margin-bottom: 30px
+  figure 
+    display: flex
+    flex-direction: column 
+    justify-content: space-between
+    width: 32%
+  img 
+    width: 100%
+    object-fit: cover 
+    object-position: center
+    border-radius: 5px
+  figcaption 
+    position: relative
+    padding-top: 32px
+    &::before
+      content: ''
+      position: absolute
+      top: 15px
+      left: 0
+      width: 100%
+      height: 2px
+      background: $itemLine
+    p 
+      font-size: 14rem
+  h4 
+    font-size: 16rem
+    font-weight: 600
+    color: $textTButton
+    margin-bottom: 10px
+
+.screen-desc 
+  h2
+    font-size: 24rem
+    line-height: normal
+    margin-bottom: 25px
+  p 
+    margin: 0
+    margin-bottom: 30px
+
+.button-line 
+  display: flex
+  justify-content: center
+  column-gap: 20px
