@@ -44,14 +44,14 @@ header
   top: 0
   left: 0
   width: 100vw
-  height: 173px
+  height: 180px
   background-color: rgba(255, 255, 255, 0.90)
   backdrop-filter: blur(10px)
   z-index: 10
 
 .header-soc
   position: relative
-  padding: 3px 0 7px
+  padding: 10px 0 7px
   &::before 
     content: ''
     position: absolute
@@ -65,7 +65,8 @@ header
   .wrapper 
     align-items: center
 
-.tel 
+.tel,
+address 
   position: relative
   font-size: 18rem
   line-height: 20rem
@@ -83,6 +84,8 @@ header
     background-image: url(../img/tel.svg)
     transform: translateY(-50%)
   // +underlineHover
+
+.tel
   &::after
     left: 30px
   &:hover:after
@@ -92,12 +95,18 @@ header
   @media screen and ( max-width: 1660px )
     font-size: 16rem
 
-// .logo
-//   transition: $trs
-//   &:hover 
-//     transform: scale(1.1)
+address
+  &::before
+    width: 15px
+    height: 20px
+    background-image: url(../img/gps.svg)
+
+.logo
+  width: 137px
+  height: 90px
 
 .soc-line 
+  display: inline-flex
   column-gap: 15px
   a
     display: inline-block
