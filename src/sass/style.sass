@@ -313,17 +313,94 @@ section
   .sec-title
     margin-bottom: 40px
   
+.adv-list-line 
+  position: relative
+  margin-bottom: 30px
+  @media screen and ( max-width: 1360px )
+    padding-top: 66px
+    ul 
+      position: absolute
+      top: 0
+      left: 50%
+      z-index: 1
+      transform: translateX(-50%)
+      background:#fff
+    &.active-menu 
+      li:not(.choosen-item) 
+        position: relative
+        display: block
+        padding: 15px 0
+        margin: 0
+        &::before 
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          height: 1px
+          background: $B-P-gradient
+          background-size: 200%
+        &:last-child::before 
+          display: none
+      .choosen-item 
+        order: -1
+        &::before 
+          top: calc( 50% - 7.5px )
+          transform: rotate(-45deg) scaleY(-1)
+        a 
+          border-radius: 5px 5px 0 0
+    .choosen-item 
+      position: relative
+      a 
+        text-align: left
+        padding-right: 65px
+      &::before
+        content: ''
+        position: absolute
+        top: calc( 50% - 15px )
+        right: 25px
+        width: 15px
+        height: 15px
+        border: 4px solid $primaryBlue
+        border-top: none
+        border-left: none
+        border-radius: 1px
+        transform: rotate(45deg)
+        transition: transform $trs, top $trs
+
+.make-choice 
+  // display: none
+  width: 50%
+  margin: 0 auto
+  font-size: 18rem
+  font-weight: 600
+  margin-bottom: 15px
 
 .adv-examples 
   align-items: center 
   column-gap: 30px
-  margin-bottom: 30px
+  border-radius: 5px
   a 
     display: inline-block
     text-align: center
     font-size: 14rem
     font-weight: 600
     transition: padding-left $trs, padding-right $trs
+  @media screen and ( max-width: 1360px )
+    flex-direction: column 
+    width: 50%
+    margin: 0 auto 30px
+    li 
+      display: none
+      margin-bottom: 15px
+    li,
+    a 
+      width: 100%
+    .choosen-item 
+      display: block
+      margin: 0
+    
+
 
 .creating-screen
   // animation: appearance .5s linear backwards reverse
@@ -345,7 +422,7 @@ section
     display: block
     opacity: 1
 
-.choosen-item 
+.choosen-item a
   font-weight: 700
   padding: 15px 25px
   text-transform: uppercase

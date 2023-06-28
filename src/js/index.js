@@ -25,7 +25,9 @@ services.forEach(service =>
 /*                                CREATING LIST                               */
 /* -------------------------------------------------------------------------- */
 
-let advButtons = document.querySelectorAll('.adv-examples a'),
+let advMenu = document.querySelector('.adv-list-line')
+    advButtons = advMenu.querySelectorAll('li'),
+    current = advMenu.querySelector('li.choosen-item')
     advScreens = document.querySelectorAll('.creating-screen');
 
 advButtons.forEach(btn => 
@@ -34,12 +36,24 @@ advButtons.forEach(btn =>
 
     // changing button
 
-    let current = document.querySelector('.adv-examples a.choosen-item');
-    if(current != undefined && current != btn) {
-      current.classList.remove('choosen-item');
-    }
-    if(current != btn){
-      btn.classList.add('choosen-item');
+    current = advMenu.querySelector('li.choosen-item');
+
+    if (screen.width <= 1360){
+      console.log(btn.getAttribute('data-btn-name'))
+      if (btn == current) {
+        advMenu.classList.toggle("active-menu");
+      } else {
+        current.classList.remove('choosen-item');
+        btn.classList.add('choosen-item');
+        advMenu.classList.remove("active-menu");
+      }
+    } else {
+      if(current != undefined && current != btn) {
+        current.classList.remove('choosen-item');
+      }
+      if(current != btn){
+        btn.classList.add('choosen-item');
+      }
     }
 
     // changing screen

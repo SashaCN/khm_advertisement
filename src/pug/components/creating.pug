@@ -1,27 +1,29 @@
 section.creating 
   h2.sec-title ВИГОТОВЛЕННЯ ЗОВНІШНЬОЇ РЕКЛАМИ. РОЗРОБКА МОНТАЖ ТА СЕРВІС.
-  ul.adv-examples.flex-sb 
-    li
-      //- light letters
-      a.choosen-item(href="#" data-btn-name="ll") об'ємні світлові літери
-    li
-      //- light signs
-      a(href="#" data-btn-name="ls") вивіски. світлові вивіски 
-    li
-      //- neon signs
-      a(href="#" data-btn-name="ns") неонові вивіски
-    li
-      //- volumetric visors
-      a(href="#" data-btn-name="vv") обʼємні козирки
-    li
-      //- entrance group
-      a(href="#" data-btn-name="eg") вхідна група
-    li
-      //- showcase
-      a(href="#" data-btn-name="sc") вітрини. наклеювання плівкою ORACAL
-    li
-      //- pillars
-      a(href="#" data-btn-name="pl") штендери. інформаційні щити. вуличні таблички, банери
+  //- p.make-choice Обрати вид реклами:
+  .adv-list-line 
+    ul.adv-examples.flex-sb 
+      li.choosen-item(data-btn-name="ll")
+        //- light letters
+        a(href="#") об'ємні світлові літери
+      li(data-btn-name="ls")
+        //- light signs
+        a(href="#") вивіски. світлові вивіски 
+      li(data-btn-name="ns")
+        //- neon signs
+        a(href="#") неонові вивіски
+      li(data-btn-name="vv")
+        //- volumetric visors
+        a(href="#") обʼємні козирки
+      li(data-btn-name="eg")
+        //- entrance group
+        a(href="#") вхідна група
+      li(data-btn-name="sc")
+        //- showcase
+        a(href="#") вітрини. наклеювання плівкою ORACAL
+      li(data-btn-name="pl")
+        //- pillars
+        a(href="#") штендери. інформаційні щити. вуличні таблички, банери
   .creating-screen.choosen-screen(data-block-name="ll")
     .fig-list.flex-sb 
       +creatingFigure(
