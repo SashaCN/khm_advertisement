@@ -4,8 +4,6 @@
 
 let services = document.querySelectorAll('.service');
 
-console.log(services)
-
 services.forEach(service => 
   service.addEventListener("click", function() {
     let current = document.querySelector('.service.showed-desc');
@@ -19,20 +17,40 @@ services.forEach(service =>
 );
 
 /* -------------------------------------------------------------------------- */
+/*                               PARTNERS SLIDER                              */
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
 /*                                CREATING LIST                               */
 /* -------------------------------------------------------------------------- */
 
-let items = document.querySelectorAll('.adv-examples a');
+let advButtons = document.querySelectorAll('.adv-examples a'),
+    advScreens = document.querySelectorAll('.creating-screen');
 
-items.forEach(item =>
-  item.addEventListener("click", function(e) {
+advButtons.forEach(btn => 
+  btn.addEventListener("click", function(e) {
     e.preventDefault();
+
+    // changing button
+
     let current = document.querySelector('.adv-examples a.choosen-item');
-    if(current != undefined) {
+    if(current != undefined && current != btn) {
       current.classList.remove('choosen-item');
     }
-    if(current != item){
-      item.classList.add('choosen-item');
+    if(current != btn){
+      btn.classList.add('choosen-item');
     }
+
+    // changing screen
+
+    if (document.querySelector('.choosen-screen') != undefined){
+      document.querySelector('.choosen-screen').classList.remove('choosen-screen');
+    }
+    advScreens.forEach(function (screen){
+      if (screen.getAttribute('data-block-name') === btn.getAttribute('data-btn-name')) {
+        screen.classList.add('choosen-screen');
+      };
+    });
   })
 );
