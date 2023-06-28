@@ -48,6 +48,10 @@ advButtons.forEach(btn =>
 
         if (btn == advMenu.querySelector('li:last-child')){
           btn.previousSibling.classList.add("none");
+        } else {
+          if (advMenu.querySelector('.g-line.none') != undefined) {
+            advMenu.querySelector('.g-line.none').classList.remove("none");
+          }
         }
       }
     } else {
