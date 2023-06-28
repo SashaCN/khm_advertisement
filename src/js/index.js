@@ -1,4 +1,16 @@
 /* -------------------------------------------------------------------------- */
+/*                                 BURGER MENU                                */
+/* -------------------------------------------------------------------------- */
+
+let burger = document.querySelector('.burger'),
+    menuBg = document.querySelector('.header-line');
+
+burger.addEventListener('click', function(burger){
+  menuBg.classList.toggle('active-menu');
+});
+
+
+/* -------------------------------------------------------------------------- */
 /*                              SERVICES ACORDION                             */
 /* -------------------------------------------------------------------------- */
 
