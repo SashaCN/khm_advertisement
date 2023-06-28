@@ -6,19 +6,19 @@ mixin soc-line
   ul.soc-line.flex-sb
     li 
       a.soc(href="#") 
-        +svg("img/sprite.svg#mail")
+        +svg("#mail")
     li 
       a.soc(href="#") 
-        +svg("img/sprite.svg#tg")
+        +svg("#tg")
     li 
       a.soc(href="#") 
-        +svg("img/sprite.svg#viber")
+        +svg("#viber")
     li 
       a.soc(href="#") 
-        +svg("img/sprite.svg#inst")
+        +svg("#inst")
     li 
       a.soc(href="#") 
-        +svg("img/sprite.svg#fb")
+        +svg("#fb")
 
 mixin button(type, href='#', content)
   case type
@@ -29,7 +29,7 @@ mixin button(type, href='#', content)
 
 mixin buttonLine
   .button-line 
-    +button('g', '#order', 'замовити')
+    +button('g', '#contacts', 'замовити')
     //- +button('t', '#order', 'детальніше')
 
 mixin preference(img, title, desc1, desc2)

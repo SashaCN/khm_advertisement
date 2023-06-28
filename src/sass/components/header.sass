@@ -37,7 +37,9 @@ a
 /* -------------------------------------------------------------------------- */
 
 header 
-  padding-top: 173px
+  padding-top: 180px
+  @media screen and ( max-width: 1660px )
+    padding-top: 170px
 
 .header-line 
   position: fixed
@@ -48,6 +50,8 @@ header
   background-color: rgba(255, 255, 255, 0.90)
   backdrop-filter: blur(10px)
   z-index: 10
+  @media screen and ( max-width: 1660px )
+    height: 170px
 
 .header-soc,
 footer

@@ -131,6 +131,12 @@ section
 
 .preferences 
   align-items: stretch
+  // @media screen and ( max-width: 1300px )
+  //   flex-wrap: wrap
+  //   justify-content: center
+  //   gap: 80px 50px
+  //   .preference
+  //     width: 40%
 
 .gradient-bg 
   position: absolute
@@ -168,6 +174,8 @@ section
     margin-bottom: 10px
   .desc
     margin-bottom: 20px
+
+.preferences 
 
 .order-link 
   display: inline-block
@@ -244,6 +252,7 @@ section
     width: 35px
     height: 19px
     transition: $trs
+    flex-shrink: 0
   p 
     font-size: 18rem
     transition: $trs
