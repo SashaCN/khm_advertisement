@@ -8,6 +8,9 @@
   padding: 200px 10%
   text-align: center
   background: #eee url(../img/bg-first_screen.jpg) center / cover
+  @media screen and ( max-width: 1024px )
+    padding: 150px 10%
+
 
 h1 
   font-size: 56rem
@@ -118,6 +121,8 @@ h1
 
 section 
   padding-top: 100px
+  @media screen and ( max-width: 1024px )  
+    padding-top: 75px
 
 .sec-title 
   display: block
@@ -134,22 +139,29 @@ section
 .order-adv 
   & > p 
     margin-bottom: 125px
+    @media screen and ( max-width: 768px )
+      margin-bottom: 100px
 
-.preferences 
+.preferences
   align-items: stretch
-  // @media screen and ( max-width: 1300px )
-  //   flex-wrap: wrap
-  //   justify-content: center
-  //   gap: 80px 50px
-  //   .preference
-  //     width: 40%
+  @media screen and ( max-width: 1024px )
+    flex-wrap: wrap
+    justify-content: center
+    gap: 125px 50px
+    .preference
+      width: 40%
+  @media screen and ( max-width: 768px )
+    gap: 80px 30px
+    .preference
+      width: calc(50% - 15px)
 
 .gradient-bg 
   position: absolute
   top: 0
   left: 10%
   width: 80%
-  height: 150px
+  // height: 150px
+  padding: 20px 0
   display: flex
   justify-content: center
   align-items: center
@@ -158,6 +170,12 @@ section
   transform: translateY(-50%)
   svg
     height: 110px
+  @media screen and ( max-width: 768px )
+    width: 60%
+    left: 20%
+    padding: 10px 0
+    svg 
+      height: 80px
   
 .preference,
 .promo-item
@@ -181,6 +199,8 @@ section
   .desc
     margin-bottom: 20px
     font-size: 16rem
+  @media screen and ( max-width: 768px ) 
+    padding: 70px 20px 30px
 
 .preference 
   .desc
@@ -236,6 +256,10 @@ section
   grid-template-columns: repeat(6, 15%)
   column-gap: 2%
   overflow-x: hidden
+  @media screen and ( max-width: 1024px )
+    grid-template-columns: repeat(5, 18%)
+    column-gap: 2.5%
+    
 
 .slider-item
   display: flex
@@ -253,6 +277,8 @@ section
 .services 
   .sec-desc 
     margin: 45px 0 80px
+    @media screen and ( max-width: 1024px ) 
+      margin: 30px 0 60px
 
 .services-list 
   .sec-title
@@ -353,7 +379,7 @@ section
     &.active-menu 
       li:not(.choosen-item) 
         display: block
-        padding: 15px 0
+        padding: 15px
         margin: 0
       .choosen-item 
         order: -1
@@ -418,7 +444,8 @@ section
     .choosen-item 
       display: block
       margin: 0
-    
+  @media screen and ( max-width: 1360px )
+    width: 80% 
 
 
 .creating-screen
@@ -476,6 +503,12 @@ section
     display: block
     height: 2px
     margin: 15px 0
+  @media screen and ( max-width: 768px )
+    flex-wrap: wrap
+    justify-content: center
+    row-gap: 20px
+    figure 
+      width: calc( 50% - 10px )
 
 .g-line 
   width: 100%
@@ -528,6 +561,15 @@ section
       margin: 0
       width: fit-content
 
+.promo-line
+  align-items: stretch
+  @media screen and ( max-width: 1024px )
+    flex-wrap: wrap
+    justify-content: center
+    gap: 90px 50px
+    .promo-item
+      width: 40%
+
 .promo-item 
   padding-top: 75px
   .price 
@@ -576,6 +618,14 @@ section
     border: none 
     color: #fff
     margin: 0 auto
+  @media screen and ( max-width: 1024px )
+    &>.flex-sb 
+      flex-wrap: wrap
+    .half 
+      width: 100%
+    .map-half 
+      order: -1
+      margin-bottom: 45px
 
 .inputs 
   display: grid
