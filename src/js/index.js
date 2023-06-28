@@ -39,13 +39,16 @@ advButtons.forEach(btn =>
     current = advMenu.querySelector('li.choosen-item');
 
     if (screen.width <= 1360){
-      console.log(btn.getAttribute('data-btn-name'))
       if (btn == current) {
         advMenu.classList.toggle("active-menu");
       } else {
         current.classList.remove('choosen-item');
         btn.classList.add('choosen-item');
         advMenu.classList.remove("active-menu");
+
+        if (btn == advMenu.querySelector('li:last-child')){
+          btn.previousSibling.classList.add("none");
+        }
       }
     } else {
       if(current != undefined && current != btn) {
