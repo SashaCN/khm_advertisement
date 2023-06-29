@@ -290,24 +290,39 @@ section
     margin-bottom: 40px
 
 .slider-line
-  display: grid
-  grid-auto-flow: column
-  grid-template-columns: repeat(6, 15%)
-  column-gap: 2%
   overflow-x: hidden
-  @media screen and ( max-width: 1024px )
-    grid-template-columns: repeat(5, 18%)
-    column-gap: 2.5%
-  @media screen and ( max-width: 768px )
-    grid-template-columns: repeat(4, 22%)
-    column-gap: 4%
-  @media screen and ( max-width: 600px )
-    grid-template-columns: repeat(3, 30%)
-    column-gap: 5%
-  @media screen and ( max-width: 375px )
-    grid-template-columns: repeat(2, 45%)
-    column-gap: 10%
+  &:hover .slider-pack
+    animation-play-state: paused
+
+.slider-pack
+  // width: 100%
+  white-space: nowrap
+  animation: 30s slide infinite linear
+  img 
+    margin: 0 40px
+  // display: grid
+  // grid-auto-flow: column
+  // grid-template-columns: repeat(6, 15%)
+  // column-gap: 2%
+  // @media screen and ( max-width: 1024px )
+  //   grid-template-columns: repeat(5, 18%)
+  //   column-gap: 2.5%
+  // @media screen and ( max-width: 768px )
+  //   grid-template-columns: repeat(4, 22%)
+  //   column-gap: 4%
+  // @media screen and ( max-width: 600px )
+  //   grid-template-columns: repeat(3, 30%)
+  //   column-gap: 5%
+  // @media screen and ( max-width: 375px )
+  //   grid-template-columns: repeat(2, 45%)
+  //   column-gap: 10%
     
+@keyframes slide
+  from 
+    transform: translateX(0)
+  to 
+    transform: translateX(-100%)
+
 
 .slider-item
   display: flex
@@ -812,7 +827,7 @@ section
   border-radius: 5px
   iframe 
     border: none
-    margin-top: -62px
+    margin-top: -72px
     width: 100%
     height: 386px
 
