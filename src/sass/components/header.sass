@@ -14,6 +14,10 @@ ul
 html 
   font-size: 1px
   scroll-behavior: smooth
+  @media screen and ( max-width: 768px )
+    font-size: 0.9px
+  @media screen and ( max-width: 600px )
+    font-size: 0.8px
 
 body
   font-size: 14rem
@@ -27,6 +31,8 @@ a
 .wrapper 
   width: 86%
   margin: auto
+  @media screen and ( max-width: 600px )
+    width: calc( 100% - 30px )
 
 .flex-sb 
   display: flex
@@ -110,8 +116,23 @@ header
         flex-direction: column
         text-align: center
         padding-top: 30px
-        li
+        li a
+          display: inline-block
           padding: 10px 0
+  @media screen and ( max-width: 600px )
+    padding: 10px 15px
+    &.active-menu 
+      .tel 
+        margin-bottom: 20px
+      .header-soc 
+        &::before
+          left: -15px
+        & > .flex-sb 
+          flex-direction: column 
+          justify-content: flex-start
+          align-items: center
+
+    
 
 .header-soc 
   @media screen and ( max-width: 768px ) 
@@ -166,7 +187,9 @@ address
     color: $primaryBlue
   @media screen and ( max-width: 1660px )
     font-size: 16rem
-  @media screen and ( max-width: 768px )
+
+@media screen and ( max-width: 768px )
+  header .tel
     display: none
 
 address
@@ -203,7 +226,8 @@ address
     li,a,svg
       width: 30px
       height: 30px
-  @media screen and ( max-width: 768px )
+@media screen and ( max-width: 768px )
+  header .soc-line
     display: none
 
 .burger 

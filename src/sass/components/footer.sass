@@ -18,6 +18,24 @@ footer
       width: 100%
     @media screen and ( max-width: 1024px )
       width: 25%
+  @media screen and ( max-width: 768px )
+    flex-wrap: wrap
+    gap: 20px
+    .footer-logo,
+    .policy
+      width: 40%
+    .soc-line 
+      order: 1
+      width: 100%
+      justify-content: center
+  @media screen and ( max-width: 500px )
+    flex-direction: column
+    .footer-logo 
+      width: 60%
+      @media screen and ( max-width: 375px )
+        width: 80%
+    .policy
+      width: auto
 
 .policy 
   font-size: 14rem

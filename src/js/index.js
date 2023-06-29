@@ -9,6 +9,12 @@ burger.addEventListener('click', function(burger){
   menuBg.classList.toggle('active-menu');
 });
 
+menuBg.querySelectorAll('a').forEach(btn => 
+  btn.addEventListener('click', () => {
+    menuBg.classList.remove('active-menu');
+  })
+);
+
 
 /* -------------------------------------------------------------------------- */
 /*                              SERVICES ACORDION                             */
