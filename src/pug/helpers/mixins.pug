@@ -32,11 +32,10 @@ mixin buttonLine
     +button('g', '#contacts', 'замовити')
     //- +button('t', '#order', 'детальніше')
 
-mixin preference(img, title, desc1, desc2)
+mixin preference(title, desc1, desc2)
   .preference
     .gradient-bg 
-      svg 
-        use(xlink:href=img)
+      block
     h3= title 
     .desc
       p=desc1 
