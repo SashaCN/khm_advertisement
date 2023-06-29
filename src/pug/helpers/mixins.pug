@@ -35,7 +35,8 @@ mixin buttonLine
 mixin preference(img, title, desc1, desc2)
   .preference
     .gradient-bg 
-      +svg(img)
+      svg 
+        use(xlink:href=img)
     h3= title 
     .desc
       p=desc1 
