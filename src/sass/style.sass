@@ -851,6 +851,9 @@ address
       padding: 30px 0
       width: 100%
 .page-content 
+  display: none
+  &.choosen-page 
+    display: block
   & > * 
     margin: 0
     margin-bottom: 30px
@@ -889,3 +892,16 @@ address
     &:hover
       color: $primaryBlue
 
+.examples-line 
+  display: grid
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr)
+  grid-gap: 30px 20px
+  grid-auto-flow: row dense
+  overflow: hidden
+  figure 
+    width: 100%
+    &:nth-child(odd)
+      grid-row: 1/2
+    &:nth-child(even)
+      grid-row: 2/3
+      

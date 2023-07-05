@@ -7,7 +7,7 @@ block content
       .page-switches.flex-sb 
         a.choosen-switch(href="#") вивіски
         a(href="#") неонові вивіски 
-      .page-content 
+      .page-content.choosen-page 
         h2.sec-title щитова вивіска, рекламний щит за 260 грн
         p.sec-desc Щитова вивіска - оптимальний спосіб інформувати про себе. Така вивіска, рекламний щит є не дорога як у виробництві, так і в обслуговувані. Основними перевагами такого виду зовнішньої реклами є її невисока ціна виготовлення, простий монтаж, транспортування, невибагливе обслуговування. Щитову вивіску, рекламний щит, також можна доповнити зовнішнім підсвічуванням. Найбільше така вивіска застосовується для невеликих магазинів, кіосків, кав'ярень, також як вказівник чи рекламно-інформаційний щит.
         h3.sec-subtitle Ми пропонуємо декілька варіантів виготовлення щитової реклами з застосуванням різних матеріалів:
@@ -24,11 +24,113 @@ block content
             - 
               var items = [
                 {
-                  src: "img/ps_chamelon.jpg", 
+                  src: "img/ps_chameleon.jpg", 
                   title: "Вивіска для компанії “chameleon”", 
-                  price: "200 uah", 
+                  price: "???", 
                   height: "30 СМ"
-                }]
+                },
+                {
+                  src: "img/ps_marketok.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_medtehnika.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_milamed.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_medmagazin.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_technoprostir.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_technoprostir.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+              ]
+            each i in items 
+              +creatingFigure(
+                i.src,
+                i.title,
+                i.title,
+                i.price,
+                i.height
+              )
+      .page-content
+        h2.sec-title скляна трубка з інертним газом
+        p.sec-desc Характерною рисою є скляна трубка, наповнена газом - неоном.Виготовляють неонові вивіски по засобу нагріву трубки та закачування газу. Після застосування газу - подається висока напруга і трубка випромінює світло. Індивідуальний колірний діапазон досягається внаслідок використання різних і іноді декількох інертних газів.
+        h3.sec-subtitle гнучкий світловий неон
+        p.sec-desc Це гнучкий неоновий шнур з діодами, має всередині люмінофорне покриття, завдяки якому світло розсіюється рівномірно по всьому периметру
+        .sec-desc 
+          h3.sec-subtitle вартість послуг
+          p Ціна на монтаж та виготовлення (як приклад вивіска світлова AJOUR - вивіска з скляних трубок наповнених інертним газом, п'ять літер розміром 25 см - 5000 грн ) залежить від розмірів вивіски, а також від способу їх підсвітки, розміщення, монтажу та кріплення. 
+          p Для більш детальною інформацією зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
+        .examples 
+          h3.sec-subtitle 
+          .examples-line.fig-list 
+            - 
+              var items = [
+                {
+                  src: "img/ps_chameleon.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_marketok.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_medtehnika.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_milamed.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_medmagazin.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_technoprostir.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+                {
+                  src: "img/ps_technoprostir.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+              ]
             each i in items 
               +creatingFigure(
                 i.src,

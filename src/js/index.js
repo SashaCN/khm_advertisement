@@ -122,6 +122,11 @@ if (document.querySelector('.panel_sign-page') != undefined) {
       } else {
         document.querySelector('.choosen-switch').classList.remove('choosen-switch');
         this.classList.add('choosen-switch');
+
+        document.querySelectorAll('.page-content').forEach(screen =>
+          screen.classList.toggle('choosen-page')
+        );
+
       }
     })
   );
