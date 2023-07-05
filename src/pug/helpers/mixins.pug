@@ -27,10 +27,10 @@ mixin button(type, href='#', content)
     when 't'
       a.t-button.button(href=href)= content
 
-mixin buttonLine
+mixin buttonLine(thref="#")
   .button-line 
     +button('g', '#contacts', 'замовити')
-    //- +button('t', '#order', 'детальніше')
+    //- +button('t', thref, 'детальніше')
 
 mixin preference(title, desc1, desc2)
   .preference

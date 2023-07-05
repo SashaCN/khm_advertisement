@@ -839,3 +839,53 @@ section
 address 
   font-style: normal
   text-transform: none
+
+/* -------------------------------------------------------------------------- */
+/*                               PANEL SIGN PAGE                              */
+/* -------------------------------------------------------------------------- */
+
+.additional-page
+  section 
+    padding: 0
+    & > img 
+      padding: 30px 0
+      width: 100%
+.page-content 
+  & > * 
+    margin: 0
+    margin-bottom: 30px
+  .sec-subtitle 
+    font-size: 24rem
+    font-weight: 600
+    text-transform: uppercase
+  .components 
+    font-weight: 400
+  .sec-desc 
+    p 
+      margin-bottom: 10px
+
+.page-switches 
+  margin-bottom: 30px
+  column-gap: 20px
+  a 
+    display: inline-block
+    padding: 15px
+    width: 50% 
+    font-style: 16rem
+    font-weight: 700
+    text-transform: uppercase
+    text-align: center
+    border-radius: 5px
+    transition: $trs
+    &:last-child
+      background-position: 100% 0
+  .choosen-switch
+    background: $B-P-gradient
+    background-size: 200% 100%
+    color: #fff
+    cursor: default
+
+  a:not(.choosen-switch)
+    &:hover
+      color: $primaryBlue
+
