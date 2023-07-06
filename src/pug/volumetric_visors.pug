@@ -1,0 +1,32 @@
+extends components/template.pug 
+
+block content 
+  .wrapper.panel_sign-page.additional-page
+    section 
+      img(src="img/banner_parfum.jpg", alt="Обʼємний кощирок ПАРФУМ")
+      .page-content.choosen-page 
+        h2.sec-title ОБ’ЄМНІ КОЗИРкИ РІЗНИХ КОНФІГУРАЦІЙ
+        p.sec-desc На даний час об’ємні козирки є одним з основних елементів комплексу фасадних конструкцій при оформлені будь-якого комерційного приміщення. Також може використовуватись як окремий елемент вхідної групи.
+        h3.sec-subtitle вартість послуг
+        p.sec-desc Ціна на монтаж та виготовлення від 3360 грн за метр квадратний і залежить від розмірів, матеріалів, складності конструкції. Для більш детальною інформацією зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
+        .examples 
+          h3.sec-subtitle 
+          .examples-line.fig-list 
+            - 
+              var items = [
+                {
+                  src: "img/ps_chameleon.jpg", 
+                  title: "Вивіска для компанії “chameleon”", 
+                  price: "???", 
+                  height: "30 СМ"
+                },
+              ]
+            each i in items 
+              +creatingFigure(
+                i.src,
+                i.title,
+                i.title,
+                i.price,
+                i.height
+              )
+          +button('g', 'index.html#contacts', 'Замовити')  

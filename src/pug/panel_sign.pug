@@ -3,7 +3,7 @@ extends components/template.pug
 block content 
   .wrapper.panel_sign-page.additional-page
     section 
-      img(src="img/panel_sign.jpg", alt="Щитова вивіска Chameleon")
+      img(src="img/banner_panel_sign.jpg", alt="Щитова вивіска Chameleon")
       .page-switches.flex-sb 
         a.choosen-switch(href="#") вивіски
         a(href="#") неонові вивіски 
@@ -19,7 +19,7 @@ block content
             li основа – ластик ПВХ товщиною 3 мм, поклеєний широкоформатним друком з ламінацією на плівці Оракал –800 грн м².
             li основа – панель з алюмінієвого композиту товщиною 3 мм, поклеєний широкоформатним друком з ламінацією на плівці Оракал – 1100 грн м².
         .examples 
-          h3.sec-subtitle 
+          h3.sec-subtitle приклади виконаних робіт
           .examples-line.fig-list 
             - 
               var items = [
@@ -74,6 +74,13 @@ block content
                 i.price,
                 i.height
               )
+          .button-line
+            +button('g', 'index.html#contacts', 'Замовити')  
+          .pag-line 
+            a.pag-arr.arr-left(href="#") 
+            .pag-pages
+              a.page(href="#") 1
+            a.pag-arr.arr-right(href="#") 
       .page-content
         h2.sec-title скляна трубка з інертним газом
         p.sec-desc Характерною рисою є скляна трубка, наповнена газом - неоном.Виготовляють неонові вивіски по засобу нагріву трубки та закачування газу. Після застосування газу - подається висока напруга і трубка випромінює світло. Індивідуальний колірний діапазон досягається внаслідок використання різних і іноді декількох інертних газів.
@@ -84,7 +91,7 @@ block content
           p Ціна на монтаж та виготовлення (як приклад вивіска світлова AJOUR - вивіска з скляних трубок наповнених інертним газом, п'ять літер розміром 25 см - 5000 грн ) залежить від розмірів вивіски, а також від способу їх підсвітки, розміщення, монтажу та кріплення. 
           p Для більш детальною інформацією зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
         .examples 
-          h3.sec-subtitle 
+          h3.sec-subtitle приклади виконаних робіт
           .examples-line.fig-list 
             - 
               var items = [
@@ -139,3 +146,9 @@ block content
                 i.price,
                 i.height
               )
+          .button-line
+            +button('g', 'index.html#contacts', 'Замовити')  
+          .pag-line 
+            a.pag-arr.arr-left(href="#") 
+            a.page(href="#") 1
+            a.pag-arr.arr-right(href="#") 
