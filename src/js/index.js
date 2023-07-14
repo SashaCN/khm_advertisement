@@ -3,12 +3,30 @@
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
+/*                            MENU HIDE ON  SCROLL                            */
+/* -------------------------------------------------------------------------- */
+
+let header = document.querySelector('header'),
+    previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+window.addEventListener('scroll', function() {
+  let currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScrollPosition > previousScrollPosition && currentScrollPosition > header.querySelector('.header-line').offsetHeight) {
+    header.classList.remove('showen-menu');
+  } else {
+    header.classList.add('showen-menu');
+  }
+
+  previousScrollPosition = currentScrollPosition;
+});
+
+/* -------------------------------------------------------------------------- */
 /*                                 BURGER MENU                                */
 /* -------------------------------------------------------------------------- */
 
-if (document.querySelector('.main-page') != undefined) {
-  let burger = document.querySelector('.burger'),
-      menuBg = document.querySelector('.header-line');
+let burger = document.querySelector('.burger'),
+menuBg = document.querySelector('.header-line');
   
   burger.addEventListener('click', function(burger){
     menuBg.classList.toggle('active-menu');
@@ -18,11 +36,13 @@ if (document.querySelector('.main-page') != undefined) {
     btn.addEventListener('click', () => {
       menuBg.classList.remove('active-menu');
     })
-  );
-  
+    );
+    
 /* -------------------------------------------------------------------------- */
 /*                           FIRST SCREEN BG SLIDER                           */
 /* -------------------------------------------------------------------------- */
+
+if (document.querySelector('.main-page') != undefined) {
 
 let slides = document.querySelectorAll(".first-screen .bg img"),
     i = 1;
@@ -30,7 +50,6 @@ let slides = document.querySelectorAll(".first-screen .bg img"),
 setInterval(() => {
   document.querySelector(".first-screen .bg img.active-img").classList.remove('active-img');
   slides[i].classList.add('active-img');
-  console.log(i);
   if (i == slides.length-1) {
     i = 0;
   } else {
