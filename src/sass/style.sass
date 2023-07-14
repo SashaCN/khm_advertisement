@@ -5,13 +5,16 @@
 @import  components/footer
 
 .first-screen
+  color: #fff
   padding: 200px 10%
   text-align: center
-  background: #eee url(../img/bg-first_screen.jpg) center / cover
+  background: linear-gradient(270deg, rgba(#7ec5e6, .5) 0%, rgba(#943F78, 0.5)), #eee url(../img/test_bg.jpg) center / cover
   @media screen and ( max-width: 1024px )
     padding: 150px 10%
   @media screen and ( max-width: 500px )
     padding: 125px 15px
+  a 
+    color: #fff
 
 
 h1 
@@ -48,7 +51,7 @@ h1
     display: inline-block
     font-size: 32rem
     font-weight: 600
-    color: $textDark
+    color: #fff
     padding: 0 40px
     margin: 0 7.5px
     text-transform: uppercase
@@ -580,6 +583,7 @@ section
     object-fit: cover 
     object-position: center
     border-radius: 5px
+    height: 580px
   figcaption 
     p 
       font-size: 14rem
@@ -898,57 +902,15 @@ address
     margin-bottom: 30px
 
 .examples-line 
-  display: flex
-  flex-direction: column
-  flex-wrap: wrap
-  gap: 30px 20px
-  max-height: 1500px
-  overflow-x: hidden
-
-.pag-line 
-  display: flex
-  justify-content: center 
-  align-items: center 
-  column-gap: 20px
-
-.pag-arr 
-  position: relative
-  width: 25px
-  height: 25px
-  border: 1px solid $textTButton 
-  border-radius: 3px
-  transition: $trs
-  &:before 
-    content: ''
-    position: absolute 
-    top: 8px
-    // left: 10px
-    width: 8px
-    height: 8px
-    border: 1px solid $textTButton 
-    border-top: none
-    border-left: none
-    border-radius: 1px
-    transition: $trs
-  &.arr-left 
-    &:before
-      left: 10px
-      transform: rotate(135deg)
-  &.arr-right 
-    &:before
-      right: 10px
-      transform: rotate(-45deg)
-  &:hover 
-    background: $textTButton
-    &:before
-      border-color: #fff
-
-.pag-pages 
-  display: flex
-  column-gap: 15px
-  font-weight: 500
-  text-transform: uppercase
-  a 
-    transition: $trs
-    &:hover 
-      transform: scale(1.2)
+  display: flex 
+  gap: 0
+  overflow-x: scroll
+  margin: 0 -10px 30px
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track
+    display: none
+  figure 
+    flex: 0 0 33.333%
+    padding: 0 10px
+    

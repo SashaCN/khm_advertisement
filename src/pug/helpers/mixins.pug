@@ -61,17 +61,15 @@ mixin service(title, desc1, desc2)
       if desc2
         p=desc2 
 
-mixin creatingFigure(img, alt, title, price, height)
+mixin creatingFigure(img, alt, title, ...descs)
   figure 
     img(src=img, alt=alt) 
     span.g-line
     figcaption 
       h4=title
-      p.price ціна - 
-        =price
-      if height 
-        p.height висота - 
-          =height
+      .desc 
+        each desc in descs 
+          p= desc
 
 mixin promo( title, price, desc, ...items)
   .promo-item
