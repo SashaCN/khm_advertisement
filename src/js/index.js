@@ -20,7 +20,25 @@ if (document.querySelector('.main-page') != undefined) {
     })
   );
   
-  
+/* -------------------------------------------------------------------------- */
+/*                           FIRST SCREEN BG SLIDER                           */
+/* -------------------------------------------------------------------------- */
+
+let slides = document.querySelectorAll(".first-screen .bg img"),
+    i = 1;
+
+setInterval(() => {
+  document.querySelector(".first-screen .bg img.active-img").classList.remove('active-img');
+  slides[i].classList.add('active-img');
+  console.log(i);
+  if (i == slides.length-1) {
+    i = 0;
+  } else {
+    i++;
+  }
+}, 5000);
+
+
   /* -------------------------------------------------------------------------- */
   /*                              SERVICES ACORDION                             */
   /* -------------------------------------------------------------------------- */

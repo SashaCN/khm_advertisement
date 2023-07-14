@@ -5,16 +5,33 @@
 @import  components/footer
 
 .first-screen
+  position: relative
   color: #fff
   padding: 200px 10%
   text-align: center
-  background: linear-gradient(270deg, rgba(#7ec5e6, .5) 0%, rgba(#943F78, 0.5)), #eee url(../img/test_bg.jpg) center / cover
+  background: linear-gradient(270deg, rgba(#7ec5e6, .6) 0%, rgba(#943F78, .6))
   @media screen and ( max-width: 1024px )
     padding: 150px 10%
   @media screen and ( max-width: 500px )
     padding: 125px 15px
   a 
     color: #fff
+  .bg 
+    // width: 100%
+    height: 100%
+    img
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+      opacity: 0
+      width: 100%
+      height: 100%
+      transition: .8s
+      object-fit: cover
+      object-position: center
+    .active-img 
+      opacity: 1
 
 
 h1 
