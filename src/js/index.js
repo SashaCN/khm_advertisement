@@ -7,9 +7,14 @@
 /* -------------------------------------------------------------------------- */
 
 let header = document.querySelector('header'),
-    previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop,
+    isScrolling = false;
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', scrollingMenuHide(e));
+window.addEventListener('touchmove', scrollingMenuHide(e));
+
+function scrollingMenuHide (e) 
+{
   let currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScrollPosition > previousScrollPosition && currentScrollPosition > header.querySelector('.header-line').offsetHeight) {
@@ -19,7 +24,7 @@ window.addEventListener('scroll', function() {
   }
 
   previousScrollPosition = currentScrollPosition;
-});
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                 BURGER MENU                                */
