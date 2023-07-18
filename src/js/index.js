@@ -7,19 +7,31 @@
 /* -------------------------------------------------------------------------- */
 
 let header = document.querySelector('header'),
+    buttons = header.querySelectorAll('.menu ul a'),
     previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop,
-    isScrolling = false;
+    btnClick = false;
 
-window.addEventListener('scroll', scrollingMenuHide(e));
-window.addEventListener('touchmove', scrollingMenuHide(e));
+window.addEventListener('scroll', scrollingMenuHide);
+window.addEventListener('touchmove', scrollingMenuHide);
 
-function scrollingMenuHide (e) 
+buttons.forEach(btn =>
+  btn.addEventListener('click', function() {
+    btnClick = true;
+    header.classList.remove('showen-menu');
+    setTimeout(() => {
+      btnClick = false;
+    }, 1000);
+  })
+);
+
+function scrollingMenuHide () 
 {
   let currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScrollPosition > previousScrollPosition && currentScrollPosition > header.querySelector('.header-line').offsetHeight) {
+    btnClick = false;
     header.classList.remove('showen-menu');
-  } else {
+  } else if (btnClick != true) {
     header.classList.add('showen-menu');
   }
 
