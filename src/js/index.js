@@ -7,7 +7,7 @@
 /* -------------------------------------------------------------------------- */
 
 let animParent = document.querySelectorAll(".anim-parent"),
-    startAnim = window.innerHeight/2
+    startAnim = window.innerHeight/4*3
 
 checkScroll();
 window.addEventListener('scroll', checkScroll);
@@ -41,7 +41,7 @@ function checkScroll (){
 /* -------------------------------------------------------------------------- */
 
 let header = document.querySelector('header'),
-    buttons = header.querySelectorAll('.menu ul a'),
+    buttons = header.querySelectorAll('.scroll-btn'),
     previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop,
     btnClick = false;
 
