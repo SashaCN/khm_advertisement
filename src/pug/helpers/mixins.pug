@@ -29,8 +29,8 @@ mixin button(type, href='#', content)
 
 mixin buttonLine(thref="#")
   .button-line 
-    +button('g', '#contacts', 'замовити')
-    //- +button('t', thref, 'детальніше')
+    a.g-button.button.anim.animation-left(href='#contacts') замовити
+    //- a.t-button.button.anim.animation-right(href=thref) детальніше
 
 mixin preference(title, desc1, desc2)
   .preference
@@ -44,8 +44,8 @@ mixin preference(title, desc1, desc2)
       a.order-link(href="#contacts") замовити 
 
 mixin service(title, desc1, desc2)
-  .service 
-    .service-info.flex-sb 
+  .service
+    .service-info.flex-sb
       h4=title 
       <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 19" id="arrow-down">
         <path d="M17.5 19L0.179491 0.249997L34.8205 0.25L17.5 19Z" fill="url(#paint0_linear_151_90)"></path>

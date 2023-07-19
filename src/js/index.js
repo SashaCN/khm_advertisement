@@ -3,6 +3,40 @@
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
+/*                              SCROLL ANIMATION                              */
+/* -------------------------------------------------------------------------- */
+
+let animParent = document.querySelectorAll(".anim-parent"),
+    startAnim = window.innerHeight/2
+
+checkScroll();
+window.addEventListener('scroll', checkScroll);
+window.addEventListener('touchmove', checkScroll);
+    
+function checkScroll (){
+  animParent.forEach((e) => {
+    if(document.documentElement.scrollTop + startAnim >= e.offsetTop){
+      let animLeft = e.querySelectorAll(".animation-left"),
+          animRight = e.querySelectorAll(".animation-right"),
+          animBottom = e.querySelectorAll(".animation-bottom"),
+          animFade = e.querySelectorAll(".animation-fade")
+      animLeft.forEach((elem)=>{
+        elem.classList.remove("animation-left")  
+      })
+      animRight.forEach((elem)=>{
+        elem.classList.remove("animation-right")  
+      })
+      animBottom.forEach((elem)=>{
+        elem.classList.remove("animation-bottom")  
+      })
+      animFade.forEach((elem)=>{
+        elem.classList.remove("animation-fade")  
+      })
+    }
+  })  
+}
+
+/* -------------------------------------------------------------------------- */
 /*                            MENU HIDE ON  SCROLL                            */
 /* -------------------------------------------------------------------------- */
 
