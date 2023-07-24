@@ -20,62 +20,65 @@ block content
             li основа – панель з алюмінієвого композиту товщиною 3 мм, поклеєний широкоформатним друком з ламінацією на плівці Оракал – 1100 грн м².
         .examples 
           h3.sec-subtitle приклади виконаних робіт
-          .examples-line.fig-list 
-            - 
-              var items = [
-                {
-                  src: "img/ps_chameleon.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
-                },
-                {
-                  src: "img/ps_marketok.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
-                },
-                {
-                  src: "img/ps_medtehnika.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
-                },
-                {
-                  src: "img/ps_milamed.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
-                },
-                {
-                  src: "img/ps_medmagazin.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
-                },
-                {
-                  src: "img/ps_technoprostir.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
-                },
-                {
-                  src: "img/ps_technoprostir.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
-                },
-              ]
-            each i in items 
-              +creatingFigure(
-                i.src,
-                i.title,
-                i.title,
-                i.price,
-                i.height
-              )
-          .button-line
-            +button('g', 'index.html#contacts', 'Замовити')  
+          .fig-slider 
+            .examples-line
+              .arr-left 
+              .arr-right 
+              - 
+                var items = [
+                  {
+                    src: "img/ps_chameleon.jpg", 
+                    title: "Вивіска для компанії “chameleon”", 
+                    price: "???", 
+                    height: "30 СМ"
+                  },
+                  {
+                    src: "img/ps_marketok.jpg", 
+                    title: "Вивіска для компанії “chameleon”", 
+                    price: "???", 
+                    height: "30 СМ"
+                  },
+                  {
+                    src: "img/ps_medtehnika.jpg", 
+                    title: "Вивіска для компанії “chameleon”", 
+                    price: "???", 
+                    height: "30 СМ"
+                  },
+                  {
+                    src: "img/ps_milamed.jpg", 
+                    title: "Вивіска для компанії “chameleon”", 
+                    price: "???", 
+                    height: "30 СМ"
+                  },
+                  {
+                    src: "img/ps_medmagazin.jpg", 
+                    title: "Вивіска для компанії “chameleon”", 
+                    price: "???", 
+                    height: "30 СМ"
+                  },
+                  {
+                    src: "img/ps_technoprostir.jpg", 
+                    title: "Вивіска для компанії “chameleon”", 
+                    price: "???", 
+                    height: "30 СМ"
+                  },
+                  {
+                    src: "img/ps_technoprostir.jpg", 
+                    title: "Вивіска для компанії “chameleon”", 
+                    price: "???", 
+                    height: "30 СМ"
+                  },
+                ]
+              each i in items 
+                +creatingFigure(
+                  i.src,
+                  i.title,
+                  i.title,
+                  i.price,
+                  i.height
+                )
+            .button-line
+              +button('g', 'index.html#contacts', 'Замовити')  
       .page-content
         h2.sec-title скляна трубка з інертним газом
         p.sec-desc Характерною рисою є скляна трубка, наповнена газом - неоном.Виготовляють неонові вивіски по засобу нагріву трубки та закачування газу. Після застосування газу - подається висока напруга і трубка випромінює світло. Індивідуальний колірний діапазон досягається внаслідок використання різних і іноді декількох інертних газів.
