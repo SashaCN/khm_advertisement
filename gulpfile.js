@@ -11,6 +11,7 @@ import imagemin from "gulp-imagemin"
 import cache from "gulp-cache"
 import gcmq from "gulp-group-css-media-queries"
 import cleanCSS from "gulp-clean-css"
+import rename from "gulp-rename"
 
 const sass = gulpSass(coreSass)
 
@@ -76,6 +77,21 @@ export const js = () => {
   }))
 }
 
+gulp.task("php", function(){
+  return gulp
+  .src([
+    "src/pug/components/send.pug"
+  ])
+  .pipe(pug())
+  .pipe(rename({
+    extname: ".php"
+  }))
+  .pipe(gulp.dest("dist"))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
+})
+
 export const files = () => {
   return gulp
   .src([
@@ -122,6 +138,7 @@ export const watch = () => {
   gulp.watch("src/sass/**/*.sass", gulp.parallel(css))
   gulp.watch("src/js/**/*.js", gulp.parallel(js))
   gulp.watch("src/pug/**/*.pug", gulp.parallel(html))
+  // gulp.watch("src/pug/**/*.pug", gulp.parallel(php))
   gulp.watch("src/*.*", gulp.parallel(files))
   gulp.watch("src/fonts/**/*.*", gulp.parallel(fonts))
   gulp.watch("src/img/**/*.*", gulp.parallel(images))

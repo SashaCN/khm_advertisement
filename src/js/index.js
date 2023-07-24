@@ -220,3 +220,38 @@ if (document.querySelector('.panel_sign-page') != undefined) {
   );
 
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                SCROLL SLIDER                               */
+/* -------------------------------------------------------------------------- */
+
+let slider = document.querySelector('.fig-slider>div'),
+    slideItem = slider.querySelector('figure'),
+    arrR = document.querySelector('.arr-right'),
+    arrL = document.querySelector('.arr-left'),
+    isButtonClicked = false;
+
+arrR.addEventListener('click', function (){
+  if (isButtonClicked) return false;
+
+  if (slider.scrollLeft + slider.offsetWidth + slideItem.offsetWidth + 20 >= slider.scrollWidth)
+  {
+    slider.scrollBy(slideItem.offsetWidth+20, 0);
+  } else{
+    slider.scrollBy(slideItem.offsetWidth, 0);
+  }
+  isButtonClicked = true;
+  setTimeout(() => {
+    isButtonClicked = false;
+  }, 500);
+});
+
+arrL.addEventListener('click', function (){
+  if (isButtonClicked) return false;
+  
+  slider.scrollBy(-slideItem.offsetWidth, 0);
+  isButtonClicked = true;
+  setTimeout(() => {
+    isButtonClicked = false;
+  }, 500);
+});
