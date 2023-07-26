@@ -99,7 +99,7 @@ if ($_POST){
   $agree = (!empty($_POST['agreement'])) ? 'Погоджуюсь':'Не погоджуюсь';
 
   // $mail = "vovk.as@ukr.net";
-  $mail = "admin@hashtag.net.ua";
+  $mail = "sashacn228@gmail.com";
   $subj = "Замовлення на сайті Рекклама Поділля";
   $text = "
   <table style='text-align:left'>
