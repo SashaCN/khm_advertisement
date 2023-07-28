@@ -630,12 +630,18 @@ section
     padding: 50px
     border-radius: 20px
     border: 2px solid $primaryBlue
+    @media screen and ( max-width: 600px )
+      padding: 10px
     figcaption,
     .g-line 
       display: none
     img 
       object-fit: contain
       max-height: calc(90vh - 100px)
+      @media screen and ( max-width: 600px )
+        max-height: calc(90vh - 20px)
+
+
   figcaption 
     p 
       font-size: 14rem
@@ -1091,4 +1097,5 @@ address
   flex-direction: column 
   justify-content: center
   align-items: center
+  text-align: center
   row-gap: 30px 
