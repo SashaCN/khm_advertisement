@@ -195,6 +195,8 @@ setInterval(() => {
 let figures = document.querySelectorAll('figure'),
     bg;
 
+// console.log(bg)
+
 const newDiv = document.createElement('div');
 newDiv.classList.add('fig-popup-bg');
 
@@ -207,16 +209,22 @@ if (figures.length !== 0) {
 
       bg = document.body.insertBefore(newDiv, document.body.firstChild);
 
-      bg.addEventListener('click', () => {
-        let currentFigure = document.querySelector('.active-figure');
-        if (currentFigure) {
-          currentFigure.classList.remove('active-figure');
-        }
-        bg.remove();
-      })
+      deleteBg(bg);
     })
   });
 }
+
+function deleteBg (bg)
+{
+  bg.addEventListener('click', () => {
+    let currentFigure = document.querySelector('.active-figure');
+    if (currentFigure) {
+      currentFigure.classList.remove('active-figure');
+    }
+    bg.remove();
+  })
+}
+
 
 
 /* -------------------------------------------------------------------------- */

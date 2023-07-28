@@ -40,7 +40,10 @@ if ($_POST){
   mail ($mail, $subj, $text, $headers);
 
   echo('
-  popup
+    <div class="center">
+      <p class="sec-subtitle">Повідомлення відправлено!</p>
+      <a href="index.html" class="g-button button">Повернутись на головну</a>
+    </div>
   ');
 }
 

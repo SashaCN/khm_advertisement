@@ -4,6 +4,18 @@
 @import  components/header
 @import  components/footer
 
+body 
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+main
+  min-height: 100%
+
+main 
+  position: relative
+  flex: 1
+
 .first-screen
   position: relative
   color: #fff
@@ -567,7 +579,7 @@ section
   // transition: $trs
 
 .choosen-screen
-  animation: appearance 1s linear forwards
+  animation: appearance 1s linear
   display: block
 
 @keyframes appearance
@@ -658,7 +670,6 @@ section
   height: 100vh
   background-color: rgba(0, 0, 0, .7)
   z-index: 11
-
 
 .g-line 
   width: 100%
@@ -1064,3 +1075,20 @@ address
       &::before
         transform: scale(1.2) rotate(-135deg)
         border-color: #fff
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 MAIL SENDER                                */
+/* -------------------------------------------------------------------------- */
+
+  
+.center 
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  display: flex
+  flex-direction: column 
+  justify-content: center
+  align-items: center
+  row-gap: 30px 
