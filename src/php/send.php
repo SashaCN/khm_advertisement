@@ -5,8 +5,7 @@ if ($_POST){
   
   $agree = (!empty($_POST['agreement'])) ? 'Погоджуюсь':'Не погоджуюсь';
 
-  // $mail = "vovk.as@ukr.net";
-  $mail = "admin@hashtag.net.ua";
+  $mail = "vovk.as@ukr.net";
   $subj = "Замовлення на сайті Рекклама Поділля";
   $text = "
   <table style='text-align:left'>
@@ -36,10 +35,13 @@ if ($_POST){
   </tr>
   </table>
   ";
-  $headers = "from: admin; Content-type: text/html; charset=utf-8";
+  $headers = "Content-type: text/html; charset=utf-8";
   
   mail ($mail, $subj, $text, $headers);
 
+  echo('
+  popup
+  ');
 }
 
 

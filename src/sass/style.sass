@@ -606,6 +606,24 @@ section
     object-position: center
     border-radius: 5px
     height: 580px
+  figure.active-figure
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 86vw
+    max-height: 90vh
+    background: #fff
+    z-index: 12
+    padding: 50px
+    border-radius: 20px
+    border: 2px solid $primaryBlue
+    figcaption,
+    .g-line 
+      display: none
+    img 
+      object-fit: contain
+      max-height: calc(90vh - 100px)
   figcaption 
     p 
       font-size: 14rem
@@ -632,14 +650,15 @@ section
     figure 
       width: 100%
 
-.fig-popup-bg 
+.fig-popup-bg
   position: fixed 
   top: 0
   left: 0
   width: 100vw
   height: 100vh
   background-color: rgba(0, 0, 0, .7)
-  z-index: 10
+  z-index: 11
+
 
 .g-line 
   width: 100%

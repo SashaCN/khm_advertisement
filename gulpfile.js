@@ -138,7 +138,7 @@ export const watch = () => {
   gulp.watch("src/sass/**/*.sass", gulp.parallel(css))
   gulp.watch("src/js/**/*.js", gulp.parallel(js))
   gulp.watch("src/pug/**/*.pug", gulp.parallel(html))
-  gulp.watch("src/pug/index.pug", gulp.parallel(php))
+  // gulp.watch("src/pug/index.pug", gulp.parallel(php))
   gulp.watch("src/*.*", gulp.parallel(files))
   gulp.watch("src/fonts/**/*.*", gulp.parallel(fonts))
   gulp.watch("src/img/**/*.*", gulp.parallel(images))
@@ -151,7 +151,7 @@ export default gulp.series(
     html,
     css,
     js,
-    php,
+    // php,
     files,
     fonts,
     images,

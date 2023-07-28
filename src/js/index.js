@@ -192,18 +192,42 @@ setInterval(() => {
 /*                                FIGURE POPUP                                */
 /* -------------------------------------------------------------------------- */
 
+let figures = document.querySelectorAll('figure'),
+    bg;
 
+const newDiv = document.createElement('div');
+newDiv.classList.add('fig-popup-bg');
+
+if (figures.length !== 0) {
+  figures.forEach(figure => {
+    figure.addEventListener('click', (e)=>{
+      e.preventDefault();
+
+      figure.classList.add('active-figure');
+
+      bg = document.body.insertBefore(newDiv, document.body.firstChild);
+
+      bg.addEventListener('click', () => {
+        let currentFigure = document.querySelector('.active-figure');
+        if (currentFigure) {
+          currentFigure.classList.remove('active-figure');
+        }
+        bg.remove();
+      })
+    })
+  });
+}
 
 
 /* -------------------------------------------------------------------------- */
 /*                               PANEL SIGN PAGE                              */
 /* -------------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------------- */
-/*                                 PAGE SWITHC                                */
-/* -------------------------------------------------------------------------- */
-
 if (document.querySelector('.panel_sign-page') != undefined) {
+  
+  /* -------------------------------------------------------------------------- */
+  /*                                 PAGE SWITHC                                */
+  /* -------------------------------------------------------------------------- */
 
   let switches = document.querySelectorAll('.page-switches a');
 
@@ -225,39 +249,38 @@ if (document.querySelector('.panel_sign-page') != undefined) {
     })
   );
 
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                SCROLL SLIDER                               */
-/* -------------------------------------------------------------------------- */
-
-let slider = document.querySelector('.fig-slider>div'),
-    slideItem = slider.querySelector('figure'),
-    arrR = document.querySelector('.arr-right'),
-    arrL = document.querySelector('.arr-left'),
-    isButtonClicked = false;
-
-arrR.addEventListener('click', function (){
-  if (isButtonClicked) return false;
-
-  if (slider.scrollLeft + slider.offsetWidth + slideItem.offsetWidth + 20 >= slider.scrollWidth)
-  {
-    slider.scrollBy(slideItem.offsetWidth+20, 0);
-  } else{
-    slider.scrollBy(slideItem.offsetWidth, 0);
-  }
-  isButtonClicked = true;
-  setTimeout(() => {
-    isButtonClicked = false;
-  }, 500);
-});
-
-arrL.addEventListener('click', function (){
-  if (isButtonClicked) return false;
+  /* -------------------------------------------------------------------------- */
+  /*                                SCROLL SLIDER                               */
+  /* -------------------------------------------------------------------------- */
   
-  slider.scrollBy(-slideItem.offsetWidth, 0);
-  isButtonClicked = true;
-  setTimeout(() => {
-    isButtonClicked = false;
-  }, 500);
-});
+  let slider = document.querySelector('.fig-slider>div'),
+      slideItem = slider.querySelector('figure'),
+      arrR = document.querySelector('.arr-right'),
+      arrL = document.querySelector('.arr-left'),
+      isButtonClicked = false;
+  
+  arrR.addEventListener('click', function (){
+    if (isButtonClicked) return false;
+  
+    if (slider.scrollLeft + slider.offsetWidth + slideItem.offsetWidth + 20 >= slider.scrollWidth)
+    {
+      slider.scrollBy(slideItem.offsetWidth+20, 0);
+    } else{
+      slider.scrollBy(slideItem.offsetWidth, 0);
+    }
+    isButtonClicked = true;
+    setTimeout(() => {
+      isButtonClicked = false;
+    }, 500);
+  });
+  
+  arrL.addEventListener('click', function (){
+    if (isButtonClicked) return false;
+    
+    slider.scrollBy(-slideItem.offsetWidth, 0);
+    isButtonClicked = true;
+    setTimeout(() => {
+      isButtonClicked = false;
+    }, 500);
+  });
+}
