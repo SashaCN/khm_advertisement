@@ -193,12 +193,14 @@ setInterval(() => {
 /* -------------------------------------------------------------------------- */
 
 let figures = document.querySelectorAll('figure'),
-    bg;
+    bg, btn;
 
 // console.log(bg)
 
 const newDiv = document.createElement('div');
+const closeBtn = document.createElement('span');
 newDiv.classList.add('fig-popup-bg');
+closeBtn.classList.add('close-btn');
 
 if (figures.length !== 0) {
   figures.forEach(figure => {
@@ -207,22 +209,24 @@ if (figures.length !== 0) {
 
       figure.classList.add('active-figure');
 
+      btn = document.body.insertBefore(closeBtn, document.body.firstChild)
       bg = document.body.insertBefore(newDiv, document.body.firstChild);
 
-      deleteBg(bg);
+      bg.addEventListener('click', deleteBg);
+      btn.addEventListener('click', deleteBg);
+      // deleteBg();
     })
   });
 }
 
-function deleteBg (bg)
+function deleteBg ()
 {
-  bg.addEventListener('click', () => {
     let currentFigure = document.querySelector('.active-figure');
     if (currentFigure) {
       currentFigure.classList.remove('active-figure');
     }
     bg.remove();
-  })
+    btn.remove();
 }
 
 
