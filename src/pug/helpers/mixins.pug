@@ -71,6 +71,12 @@ mixin creatingFigure(img, alt, title, ...descs)
         each desc in descs 
           p= desc
 
+mixin pageFigure(img, alt)
+  figure 
+    figcaption 
+      img(src=img, alt=alt) 
+      
+
 mixin promo( title, price, desc, ...items)
   .promo-item
     .gradient-bg 

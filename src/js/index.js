@@ -207,14 +207,16 @@ if (figures.length !== 0) {
     figure.addEventListener('click', (e)=>{
       e.preventDefault();
 
-      figure.classList.add('active-figure');
+      if (e.target.classList.contains('close-btn')){
+        return false;
+      }
 
-      btn = document.body.insertBefore(closeBtn, document.body.firstChild)
+      btn = figure.insertBefore(closeBtn, figure.firstChild)
       bg = document.body.insertBefore(newDiv, document.body.firstChild);
+      figure.classList.add('active-figure'); 
 
       bg.addEventListener('click', deleteBg);
       btn.addEventListener('click', deleteBg);
-      // deleteBg();
     })
   });
 }
