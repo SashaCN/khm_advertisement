@@ -243,7 +243,20 @@ if (document.querySelector('.panel_sign-page') != undefined) {
   /*                                 PAGE SWITHC                                */
   /* -------------------------------------------------------------------------- */
 
-  let switches = document.querySelectorAll('.page-switches a');
+  let switches = document.querySelectorAll('.page-switches a'),
+      screens = document.querySelectorAll('.page-content');
+
+  if (location.hash) {
+    let name = location.hash.slice(1);
+    switches.forEach(elem =>
+      elem.classList.remove('choosen-switch')
+    );
+    screens.forEach(screen =>
+      screen.classList.remove('choosen-page')
+    );
+    document.querySelector(`.page-switches a[data-name="${name}"]`).classList.add('choosen-switch');
+    document.querySelector(`.page-content[data-name="${name}"]`).classList.add('choosen-page');
+  }
 
   switches.forEach(elem =>
     elem.addEventListener('click', function (e){
@@ -255,7 +268,7 @@ if (document.querySelector('.panel_sign-page') != undefined) {
         document.querySelector('.choosen-switch').classList.remove('choosen-switch');
         this.classList.add('choosen-switch');
 
-        document.querySelectorAll('.page-content').forEach(screen =>
+        screens.forEach(screen =>
           screen.classList.toggle('choosen-page')
         );
         slider();
