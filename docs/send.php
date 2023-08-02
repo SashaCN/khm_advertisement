@@ -1,8 +1,6 @@
 <!DOCTYPE html><html lang="uk"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Реклама Поділля. Розробка Та Виготовлення Зовнішньої Реклами</title><link rel="stylesheet" href="css/styles.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet"></head><body> <svg style="display: none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" id="viber">
 <path d="M10.027 19.9964C8.53918 19.9964 7.04806 20.0063 5.56025 19.9931C4.86747 19.9865 4.1747 19.9733 3.48852 19.9041C1.78628 19.7292 0.453509 18.5053 0.140111 16.813C0.0378444 16.2654 0.011453 15.7012 0.0081541 15.1404C-0.00174267 11.7293 -0.0050416 8.32154 0.0081541 4.91045C0.011453 4.24407 0.02135 3.57109 0.192894 2.9146C0.601961 1.36411 1.91163 0.235874 3.50831 0.0775252C3.96027 0.0313402 4.41882 0.00494839 4.87407 0.00494839C8.27526 -0.00164946 11.6765 -0.00164946 15.0776 0.00494839C15.7803 0.00494839 16.483 0.0148456 17.1692 0.209482C18.69 0.638342 19.8017 1.97441 19.9304 3.55129C19.9733 4.07582 19.9996 4.60365 19.9996 5.12818C20.0062 8.31824 20.0095 11.5083 19.9996 14.6984C19.9963 15.3647 19.9897 16.041 19.8908 16.7008C19.617 18.5152 18.1094 19.8744 16.2752 19.9272C14.2562 19.9865 12.234 19.9766 10.2117 19.9964C10.1491 19.9964 10.0897 19.9964 10.027 19.9964ZM10.0138 3.68985C10.0138 3.67995 10.0138 3.67006 10.0138 3.66016C9.51236 3.66016 9.01422 3.65356 8.51278 3.66346C8.26207 3.66676 8.00805 3.68325 7.75733 3.72284C5.84395 4.02304 4.30665 5.60982 4.06253 7.5298C4.03284 7.77392 4.01305 8.02134 4.01635 8.26876C4.01965 9.0605 3.96686 9.85554 4.05594 10.6374C4.24397 12.333 5.16108 13.5371 6.70497 14.2596C6.83363 14.319 6.88312 14.3916 6.87982 14.5334C6.86662 14.9623 6.86662 15.3911 6.86662 15.8167C6.86662 16.0311 6.97219 16.206 7.16682 16.2917C7.36476 16.3775 7.5561 16.3115 7.71444 16.173C7.75073 16.14 7.78372 16.1037 7.81671 16.0674C8.20598 15.6353 8.59856 15.2064 8.98453 14.7709C9.06371 14.6819 9.14618 14.6423 9.26824 14.6423C9.9973 14.6489 10.7297 14.6489 11.4587 14.6423C11.7259 14.639 11.9964 14.6192 12.2604 14.5796C14.3684 14.2431 15.9816 12.3462 15.9849 10.2184C15.9849 9.55534 15.9914 8.88895 15.9816 8.22587C15.9783 7.94216 15.9585 7.65516 15.9156 7.37475C15.6253 5.47127 13.9362 3.86139 12.0162 3.70304C11.3565 3.64696 10.6835 3.68985 10.0138 3.68985Z" fill="#7EC5E6"></path>
@@ -63,15 +61,60 @@ if ($_POST){
   ";
   $headers = "Content-type: text/html; charset=utf-8";
   
-  mail ($mail, $subj, $text, $headers);
+  if (strlen($_POST['name']) < 20) {
+    if (strlen($_POST['email']) < 30) {
+      if (strlen($_POST['phone']) < 20) {
+        if (strlen($_POST['topic']) < 50) {
+          if (strlen($_POST['message']) < 1000) {
+            mail ($mail, $subj, $text, $headers);
 
-  echo('
-    <div class="center">
-      <p class="sec-subtitle">Повідомлення відправлено!</p>
-      <a href="index.html" class="g-button button">Повернутись на головну</a>
-    </div>
-  ');
+            echo('
+              <div class="center">
+                <p class="sec-subtitle">Повідомлення відправлено!</p>
+                <a href="index.html" class="g-button button">Повернутись на головну</a>
+              </div>
+            ');
+          } else {
+            echo('
+              <div class="center">
+                <p class="sec-subtitle error">Тема може містити масимум 50 символів</p>
+                <a href="index.html#contacts" class="g-button button">Повернутись до форми</a>
+              </div>
+            ');
+          }
+        } else {
+          echo('
+              <div class="center">
+                <p class="sec-subtitle error">Тема може містити масимум 50 символів</p>
+                <a href="index.html#contacts" class="g-button button">Повернутись до форми</a>
+              </div>
+            ');
+        }
+      } else {
+        echo('
+              <div class="center error">
+                <p class="sec-subtitle">Телефон може містити масимум 20 символів</p>
+                <a href="index.html#contacts" class="g-button button">Повернутись до форми</a>
+              </div>
+            ');
+      }
+    } else {
+      echo('
+        <div class="center error">
+          <p class="sec-subtitle">Пошта може містити масимум 30 символів</p>
+          <a href="index.html#contacts" class="g-button button">Повернутись до форми</a>
+        </div>
+      ');
+    }
+  } else {
+    echo('
+      <div class="center error">
+        <p class="sec-subtitle">Ім\'я може містити масимум 20 символів</p>
+        <a href="index.html#contacts" class="g-button button">Повернутись до форми</a>
+      </div>
+    ');
+  }
 }
 
 
-?></main><footer> <div class="wrapper"><div class="footer-line flex-sb"> <a class="footer-logo" href="/"> <h2><b>реклама</b> Поділля</h2><p>Розробки та виготовлення зовнішньої реклами</p></a><ul class="soc-line flex-sb"><li> <a class="soc" href="mailto:vovk.as@ukr.net"> <svg> <use xlink:href="#mail"></use></svg></a></li><li> <a class="soc" href="https://t.me/reklamapodillya"> <svg> <use xlink:href="#tg"></use></svg></a></li><li> <a class="soc" href="viber://chat?number=+380679047738%20"> <svg> <use xlink:href="#viber"></use></svg></a></li><li> <a class="soc" href="https://www.instagram.com/reklamapodilya/"> <svg> <use xlink:href="#inst"></use></svg></a></li><li> <a class="soc" href="https://www.facebook.com/reklamapodilya"> <svg> <use xlink:href="#fb"></use></svg></a></li></ul><a class="policy" href="#">політика конфіденційності </a></div><p class="copy"> <svg> <use xlink:href="#copy"></use></svg><span>copyright by “РЕКЛАМА ПОДІЛЛЯ”</span></p></div></footer><script src="js/index.js"> </script></body></html>
+?></main><footer> <div class="wrapper"><div class="footer-line flex-sb"> <a class="footer-logo" href="/"> <h2><b>реклама</b> Поділля</h2><p>Розробки та виготовлення зовнішньої реклами</p></a><ul class="soc-line flex-sb"><li> <a class="soc" href="mailto:vovk.as@ukr.net"> <svg> <use xlink:href="#mail"></use></svg></a></li><li> <a class="soc" href="https://t.me/reklamapodillya"> <svg> <use xlink:href="#tg"></use></svg></a></li><li> <a class="soc" href="viber://chat?number=+380679047738%20"> <svg> <use xlink:href="#viber"></use></svg></a></li><li> <a class="soc" href="https://www.instagram.com/reklamapodilya/"> <svg> <use xlink:href="#inst"></use></svg></a></li><li> <a class="soc" href="https://www.facebook.com/reklamapodilya"> <svg> <use xlink:href="#fb"></use></svg></a></li></ul><a class="policy" href="policy.html">політика конфіденційності </a></div><p class="copy"> <svg> <use xlink:href="#copy"></use></svg><span>copyright by “РЕКЛАМА ПОДІЛЛЯ”</span></p></div></footer><script src="js/index.js"> </script></body></html>

@@ -1,5 +1,8 @@
 extends components/template.pug 
 
+//- block seo 
+//-   meta(name="title" content="aidjfoia")
+
 block content 
   section.first-screen
     .bg 
@@ -238,14 +241,14 @@ block content
           p.order замовити послугу
           .inputs 
             p.name
-              input#name(type="text", name="name" required)
-              label(for="name") Ваше імʼя*
+              input#name(type="text", name="name")
+              label(for="name") Ваше імʼя
             p.email 
-              input#email(type="text", name="email" required)
-              label(for="email") Ваш емейл*
+              input#email(type="text", name="email")
+              label(for="email") Ваш емейл
             p.phone 
-              input#phone(type="tel", name="phone")
-              label(for="phone") Ваш номер телефону
+              input#phone(type="tel", name="phone" required)
+              label(for="phone") Ваш номер телефону*
             p.topic 
               input#topic(type="text", name="topic")
               label(for="topic") Тема повідомлення
