@@ -61,7 +61,7 @@ block content
                   i.title
                 )
             .button-line
-              +button('g', 'index.html#contacts', 'Замовити')  
+              +button('g', 'index.html#contacts', 'Замовити')
       .page-content
         h2.sec-title скляна трубка з інертним газом
         p.sec-desc Характерною рисою є скляна трубка, наповнена газом - неоном.Виготовляють неонові вивіски по засобу нагріву трубки та закачування газу. Після застосування газу - подається висока напруга і трубка випромінює світло. Індивідуальний колірний діапазон досягається внаслідок використання різних і іноді декількох інертних газів.
@@ -73,51 +73,54 @@ block content
           p Для більш детальною інформацією зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
         .examples 
           h3.sec-subtitle приклади виконаних робіт
-          .examples-line.fig-list 
-            - 
-              var items = [
-                {
-                  src: "img/pages/IMG_0197.JPG", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_0280.JPG", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_0714.JPG", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_1024.jpg", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_1118.jpg", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_3187.jpg", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_3715.JPG", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/photo_2022-06-16_14-23-20.jpg", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/photo_2022-07-12_23-36-03.jpg", 
-                  title: ""
-                },
-                
-              ]
-            each i in items 
-              +pageFigure(
-                i.src,
-                i.title
-              )
-          .button-line
-            +button('g', 'index.html#contacts', 'Замовити')  
+          .fig-slider 
+            .examples-line
+              .arr-left 
+              .arr-right 
+              - 
+                var items = [
+                  {
+                    src: "img/pages/IMG_0197.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0280.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0714.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1024.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1118.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3187.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3715.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/photo_2022-06-16_14-23-20.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/photo_2022-07-12_23-36-03.jpg", 
+                    title: ""
+                  },
+                  
+                ]
+              each i in items 
+                +pageFigure(
+                  i.src,
+                  i.title
+                )
+            .button-line
+              +button('g', 'index.html#contacts', 'Замовити')  

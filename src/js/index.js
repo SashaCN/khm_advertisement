@@ -258,7 +258,7 @@ if (document.querySelector('.panel_sign-page') != undefined) {
         document.querySelectorAll('.page-content').forEach(screen =>
           screen.classList.toggle('choosen-page')
         );
-
+        slider();
       }
     })
   );
@@ -267,34 +267,40 @@ if (document.querySelector('.panel_sign-page') != undefined) {
   /*                                SCROLL SLIDER                               */
   /* -------------------------------------------------------------------------- */
   
-  let slider = document.querySelector('.fig-slider>div'),
-      slideItem = slider.querySelector('figure'),
-      arrR = document.querySelector('.arr-right'),
-      arrL = document.querySelector('.arr-left'),
-      isButtonClicked = false;
-  
-  arrR.addEventListener('click', function (){
-    if (isButtonClicked) return false;
-  
-    if (slider.scrollLeft + slider.offsetWidth + slideItem.offsetWidth + 20 >= slider.scrollWidth)
-    {
-      slider.scrollBy(slideItem.offsetWidth+20, 0);
-    } else{
-      slider.scrollBy(slideItem.offsetWidth, 0);
-    }
-    isButtonClicked = true;
-    setTimeout(() => {
-      isButtonClicked = false;
-    }, 500);
-  });
-  
-  arrL.addEventListener('click', function (){
-    if (isButtonClicked) return false;
+  slider();
+
+  function slider() {
+    let currentPage = document.querySelector('.choosen-page'),
+        slider = currentPage.querySelector('.fig-slider>div'),
+        slideItem = slider.querySelector('figure'),
+        arrR = currentPage.querySelector('.arr-right'),
+        arrL = currentPage.querySelector('.arr-left'),
+        isButtonClicked = false;
     
-    slider.scrollBy(-slideItem.offsetWidth, 0);
-    isButtonClicked = true;
-    setTimeout(() => {
-      isButtonClicked = false;
-    }, 500);
-  });
+    arrR.addEventListener('click', function (){
+      if (isButtonClicked) return false;
+    
+      if (slider.scrollLeft + slider.offsetWidth + slideItem.offsetWidth + 20 >= slider.scrollWidth)
+      {
+        slider.scrollBy(slideItem.offsetWidth+20, 0);
+      } else{
+        slider.scrollBy(slideItem.offsetWidth, 0);
+      }
+      isButtonClicked = true;
+      setTimeout(() => {
+        isButtonClicked = false;
+      }, 500);
+    });
+    
+    arrL.addEventListener('click', function (){
+      if (isButtonClicked) return false;
+      
+      slider.scrollBy(-slideItem.offsetWidth, 0);
+      isButtonClicked = true;
+      setTimeout(() => {
+        isButtonClicked = false;
+      }, 500);
+    });
+  }
+
 }
