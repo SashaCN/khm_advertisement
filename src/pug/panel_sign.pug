@@ -27,25 +27,42 @@ block content
               - 
                 var items = [
                   {
-                    src: "img/ps_technoprostir.jpg", 
-                    title: "Вивіска для компанії “chameleon”"
+                    src: "img/pages/IMG_0197.JPG", 
+                    title: ""
                   },
                   {
-                    src: "img/ps_technoprostir.jpg", 
-                    title: "Вивіска для компанії “chameleon”"
+                    src: "img/pages/IMG_0280.JPG", 
+                    title: ""
                   },
                   {
-                    src: "img/ps_technoprostir.jpg", 
-                    title: "Вивіска для компанії “chameleon”"
+                    src: "img/pages/IMG_0714.JPG", 
+                    title: ""
                   },
                   {
-                    src: "img/ps_technoprostir.jpg", 
-                    title: "Вивіска для компанії “chameleon”"
+                    src: "img/pages/IMG_1024.jpg", 
+                    title: ""
                   },
                   {
-                    src: "img/ps_technoprostir.jpg", 
-                    title: "Вивіска для компанії “chameleon”"
+                    src: "img/pages/IMG_1118.jpg", 
+                    title: ""
                   },
+                  {
+                    src: "img/pages/IMG_3187.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3715.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/photo_2022-06-16_14-23-20.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/photo_2022-07-12_23-36-03.jpg", 
+                    title: ""
+                  },
+                  
                 ]
               each i in items 
                 +pageFigure(
@@ -69,55 +86,47 @@ block content
             - 
               var items = [
                 {
-                  src: "img/ps_chameleon.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_0197.JPG", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_marketok.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_0280.JPG", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_medtehnika.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_0714.JPG", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_milamed.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_1024.jpg", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_medmagazin.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_1118.jpg", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_technoprostir.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_3187.jpg", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_technoprostir.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_3715.JPG", 
+                  title: ""
                 },
+                {
+                  src: "img/pages/photo_2022-06-16_14-23-20.jpg", 
+                  title: ""
+                },
+                {
+                  src: "img/pages/photo_2022-07-12_23-36-03.jpg", 
+                  title: ""
+                },
+                
               ]
             each i in items 
-              +creatingFigure(
+              +pageFigure(
                 i.src,
-                i.title,
-                i.title,
-                i.price,
-                i.height
+                i.title
               )
           .button-line
             +button('g', 'index.html#contacts', 'Замовити')  
