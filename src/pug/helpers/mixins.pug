@@ -30,7 +30,7 @@ mixin button(type, href='#', content)
 mixin buttonLine(thref="#")
   .button-line 
     a.g-button.button.anim.animation-left(href='#contacts') замовити
-    //- a.t-button.button.anim.animation-right(href=thref) детальніше
+    a.t-button.button.anim.animation-right(href=thref) детальніше
 
 mixin preference(title, desc1, desc2)
   .preference
@@ -70,6 +70,12 @@ mixin creatingFigure(img, alt, title, ...descs)
       .desc 
         each desc in descs 
           p= desc
+
+mixin pageFigure(img, alt)
+  figure 
+    figcaption 
+      img(src=img, alt=alt) 
+      
 
 mixin promo( title, price, desc, ...items)
   .promo-item

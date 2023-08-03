@@ -11,22 +11,37 @@ block content
         p.sec-desc Ціна на монтаж та виготовлення від 3360 грн за метр квадратний і залежить від розмірів, матеріалів, складності конструкції. Для більш детальною інформацією зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
         .examples 
           h3.sec-subtitle 
-          .examples-line.fig-list 
-            - 
-              var items = [
-                {
-                  src: "img/ps_chameleon.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
-                },
-              ]
-            each i in items 
-              +creatingFigure(
-                i.src,
-                i.title,
-                i.title,
-                i.price,
-                i.height
-              )
-          +button('g', 'index.html#contacts', 'Замовити')  
+          .fig-slider 
+            .examples-line
+              .arr-left 
+              .arr-right 
+              - 
+                var items = [
+                  {
+                    src: "img/pages/IMG_0255.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1096.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_2360.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_2849.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3690.jpg", 
+                    title: ""
+                  }               
+                ]
+              each i in items 
+                +pageFigure(
+                  i.src,
+                  i.title
+                )
+            .button-line
+              +button('g', 'index.html#contacts', 'Замовити')

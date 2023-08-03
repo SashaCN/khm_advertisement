@@ -641,7 +641,6 @@ section
       @media screen and ( max-width: 600px )
         max-height: calc(90vh - 20px)
 
-
   figcaption 
     p 
       font-size: 14rem
@@ -676,6 +675,37 @@ section
   height: 100vh
   background-color: rgba(0, 0, 0, .7)
   z-index: 11
+
+.close-btn
+  position: fixed 
+  top: 20px
+  right: 20px
+  z-index: 13
+  width: 40px
+  height: 40px
+  &:before,
+  &:after 
+    content: ''
+    position: absolute
+    top: 18px
+    left: 0
+    width: 100%
+    height: 5px
+    background: $primaryBlue 
+    border-radius: 2px
+    z-index: 13
+    transition: $trs
+  &::before
+    transform: rotate(-45deg)
+  &::after
+    transform: rotate(45deg)
+  &:hover
+    &:before
+      background: $textTButton
+      transform: rotate(-45deg) scale(1.1)
+    &:after 
+      background: $textTButton
+      transform: rotate(45deg) scale(1.1)
 
 .g-line 
   width: 100%
@@ -877,6 +907,7 @@ section
       font-weight: 400
   input:not([type=checkbox]),
   textarea 
+
     display: inline-block 
     width: 100%
     padding: 9px 18px
@@ -887,6 +918,7 @@ section
       outline: none 
       border: 1px solid $primaryBlue
   textarea 
+    font-family: Montserrat,sans-serif
     resize: vertical
     max-height: 110px
     padding: 10px
@@ -981,6 +1013,9 @@ address
   .sec-desc 
     p 
       margin-bottom: 10px
+  figure.active-figure 
+    figcaption 
+      display: block
 
 .sec-subtitle 
   font-size: 24rem
@@ -1099,3 +1134,23 @@ address
   align-items: center
   text-align: center
   row-gap: 30px 
+
+.error 
+  color: red
+
+/* -------------------------------------------------------------------------- */
+/*                                 POLICY PAGE                                */
+/* -------------------------------------------------------------------------- */
+
+section.policy-page 
+  padding: 50px 0
+  .sec-title 
+    text-align: center
+    margin-bottom: 25px
+  .sec-subtitle 
+    display: block
+    margin: 20px 0
+  div 
+    margin-bottom: 30px
+  p
+    margin-bottom: 10px
