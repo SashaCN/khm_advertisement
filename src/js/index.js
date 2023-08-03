@@ -244,7 +244,8 @@ if (document.querySelector('.panel_sign-page') != undefined) {
   /* -------------------------------------------------------------------------- */
 
   let switches = document.querySelectorAll('.page-switches a'),
-      screens = document.querySelectorAll('.page-content');
+      screens = document.querySelectorAll('.page-content'),
+      banners = document.querySelectorAll('section>img');
 
   if (location.hash) {
     let name = location.hash.slice(1);
@@ -254,8 +255,12 @@ if (document.querySelector('.panel_sign-page') != undefined) {
     screens.forEach(screen =>
       screen.classList.remove('choosen-page')
     );
+    banners.forEach(banner =>
+      banner.style.display = 'none'
+    );
     document.querySelector(`.page-switches a[data-name="${name}"]`).classList.add('choosen-switch');
     document.querySelector(`.page-content[data-name="${name}"]`).classList.add('choosen-page');
+    document.querySelector(`section>img[data-name="${name}"]`).style.display = 'block';
   }
 
   switches.forEach(elem =>
@@ -267,10 +272,15 @@ if (document.querySelector('.panel_sign-page') != undefined) {
       } else {
         document.querySelector('.choosen-switch').classList.remove('choosen-switch');
         this.classList.add('choosen-switch');
-
+        
         screens.forEach(screen =>
           screen.classList.toggle('choosen-page')
         );
+        banners.forEach(banner =>
+          banner.style.display = 'none'
+        );
+        document.querySelector(`section>img[data-name="${document.querySelector(".choosen-page").getAttribute('data-name')}"]`).style.display = 'block';
+
         slider();
       }
     })
