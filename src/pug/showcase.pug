@@ -1,0 +1,58 @@
+extends components/template.pug 
+
+block content 
+  .wrapper.panel_sign-page.additional-page
+    section 
+      img(src="img/banner_showcase.jpg", alt="НАКЛЕЮВАННЯ ПЛІВКОЮ ORACAL")
+      .page-content.choosen-page 
+        h2.sec-title НАКЛЕЮВАННЯ ПЛІВКОЮ ORACAL
+        h3.sec-subtitle вартість послуг
+        p.sec-desc Вартість наклеювання складає 350 грн за метр квадратний. Для більш детальною інформацією зверніться до наших менеджерів. Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
+        .examples 
+          h3.sec-subtitle приклади виконаних робіт
+          .fig-slider 
+            .examples-line
+              .arr-left 
+              .arr-right 
+              - 
+                var items = [
+                  {
+                    src: "img/pages/IMG_0095.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0163.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0467.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0996.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1344.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1365.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3062.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3087.jpg", 
+                    title: ""
+                  }               
+                ]
+              each i in items 
+                +pageFigure(
+                  i.src,
+                  i.title
+                )
+            .button-line
+              +button('g', 'index.html#contacts', 'Замовити')
