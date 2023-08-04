@@ -1,5 +1,8 @@
 extends components/template.pug 
 
+block seo 
+  meta(name="title" content="aidjfoia")
+
 block content 
   section.first-screen
     .bg 
@@ -10,13 +13,13 @@ block content
     h1 розробка та виготовлення зовнішньої реклами
     ul.adv-list
       li 
-        a(href="panel_sign.html") вивіски
+        a(href="panel_sign.html#sign") вивіски
       li 
-        a(href="#") лайтбокси
+        a(href="light_letters.pug") лайтбокси
       li 
-        a(href="#") літери
+        a(href="enterance_group.html") вхідні групи
       li 
-        a(href="#") банери
+        a(href="pillars.html") банери
     +button('g', '#contacts', 'замовити')
   .wrapper.main-page
     a#about-us
@@ -134,11 +137,11 @@ block content
         )
         +creatingFigure(
           "img/vf_right.jpg",
-          "Вентильований фасад для «BUBBLES»",
-          "Вентильований фасад для «BUBBLES»",
+          "Вентильований фасад Бізнес Центр ІНВОЛ, Волочиськ",
+          "Вентильований фасад Бізнес Центр ІНВОЛ, Волочиськ",
           "Обшивка приміщення касетами алюмінієвого композиту 4 мм Г 1  по класу негорючості , вмонтоване на алюмінієвій підсистемі, з утепленням мінеральної вати від 50 до 150 мм"
         )
-      +buttonLine
+      +buttonLine("facades.html")
     a#prices-table
     section.prices.anim-parent 
       h2.sec-title.anim.animation-fade Ціни на виготовлення вивісок 
@@ -238,14 +241,14 @@ block content
           p.order замовити послугу
           .inputs 
             p.name
-              input#name(type="text", name="name" required)
-              label(for="name") Ваше імʼя*
+              input#name(type="text", name="name")
+              label(for="name") Ваше імʼя
             p.email 
-              input#email(type="text", name="email" required)
-              label(for="email") Ваш емейл*
+              input#email(type="text", name="email")
+              label(for="email") Ваш емейл
             p.phone 
-              input#phone(type="tel", name="phone")
-              label(for="phone") Ваш номер телефону
+              input#phone(type="tel", name="phone" required)
+              label(for="phone") Ваш номер телефону*
             p.topic 
               input#topic(type="text", name="topic")
               label(for="topic") Тема повідомлення

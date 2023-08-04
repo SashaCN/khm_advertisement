@@ -207,14 +207,16 @@ if (figures.length !== 0) {
     figure.addEventListener('click', (e)=>{
       e.preventDefault();
 
-      figure.classList.add('active-figure');
+      if (e.target.classList.contains('close-btn')){
+        return false;
+      }
 
-      btn = document.body.insertBefore(closeBtn, document.body.firstChild)
+      btn = figure.insertBefore(closeBtn, figure.firstChild)
       bg = document.body.insertBefore(newDiv, document.body.firstChild);
+      figure.classList.add('active-figure'); 
 
       bg.addEventListener('click', deleteBg);
       btn.addEventListener('click', deleteBg);
-      // deleteBg();
     })
   });
 }
@@ -241,7 +243,25 @@ if (document.querySelector('.panel_sign-page') != undefined) {
   /*                                 PAGE SWITHC                                */
   /* -------------------------------------------------------------------------- */
 
-  let switches = document.querySelectorAll('.page-switches a');
+  let switches = document.querySelectorAll('.page-switches a'),
+      screens = document.querySelectorAll('.page-content'),
+      banners = document.querySelectorAll('section>img');
+
+  if (location.hash) {
+    let name = location.hash.slice(1);
+    switches.forEach(elem =>
+      elem.classList.remove('choosen-switch')
+    );
+    screens.forEach(screen =>
+      screen.classList.remove('choosen-page')
+    );
+    banners.forEach(banner =>
+      banner.style.display = 'none'
+    );
+    document.querySelector(`.page-switches a[data-name="${name}"]`).classList.add('choosen-switch');
+    document.querySelector(`.page-content[data-name="${name}"]`).classList.add('choosen-page');
+    document.querySelector(`section>img[data-name="${name}"]`).style.display = 'block';
+  }
 
   switches.forEach(elem =>
     elem.addEventListener('click', function (e){
@@ -252,11 +272,16 @@ if (document.querySelector('.panel_sign-page') != undefined) {
       } else {
         document.querySelector('.choosen-switch').classList.remove('choosen-switch');
         this.classList.add('choosen-switch');
-
-        document.querySelectorAll('.page-content').forEach(screen =>
+        
+        screens.forEach(screen =>
           screen.classList.toggle('choosen-page')
         );
+        banners.forEach(banner =>
+          banner.style.display = 'none'
+        );
+        document.querySelector(`section>img[data-name="${document.querySelector(".choosen-page").getAttribute('data-name')}"]`).style.display = 'block';
 
+        slider();
       }
     })
   );
@@ -265,34 +290,40 @@ if (document.querySelector('.panel_sign-page') != undefined) {
   /*                                SCROLL SLIDER                               */
   /* -------------------------------------------------------------------------- */
   
-  let slider = document.querySelector('.fig-slider>div'),
-      slideItem = slider.querySelector('figure'),
-      arrR = document.querySelector('.arr-right'),
-      arrL = document.querySelector('.arr-left'),
-      isButtonClicked = false;
-  
-  arrR.addEventListener('click', function (){
-    if (isButtonClicked) return false;
-  
-    if (slider.scrollLeft + slider.offsetWidth + slideItem.offsetWidth + 20 >= slider.scrollWidth)
-    {
-      slider.scrollBy(slideItem.offsetWidth+20, 0);
-    } else{
-      slider.scrollBy(slideItem.offsetWidth, 0);
-    }
-    isButtonClicked = true;
-    setTimeout(() => {
-      isButtonClicked = false;
-    }, 500);
-  });
-  
-  arrL.addEventListener('click', function (){
-    if (isButtonClicked) return false;
+  slider();
+
+  function slider() {
+    let currentPage = document.querySelector('.choosen-page'),
+        slider = currentPage.querySelector('.fig-slider>div'),
+        slideItem = slider.querySelector('figure'),
+        arrR = currentPage.querySelector('.arr-right'),
+        arrL = currentPage.querySelector('.arr-left'),
+        isButtonClicked = false;
     
-    slider.scrollBy(-slideItem.offsetWidth, 0);
-    isButtonClicked = true;
-    setTimeout(() => {
-      isButtonClicked = false;
-    }, 500);
-  });
+    arrR.addEventListener('click', function (){
+      if (isButtonClicked) return false;
+    
+      if (slider.scrollLeft + slider.offsetWidth + slideItem.offsetWidth + 20 >= slider.scrollWidth)
+      {
+        slider.scrollBy(slideItem.offsetWidth+20, 0);
+      } else{
+        slider.scrollBy(slideItem.offsetWidth, 0);
+      }
+      isButtonClicked = true;
+      setTimeout(() => {
+        isButtonClicked = false;
+      }, 500);
+    });
+    
+    arrL.addEventListener('click', function (){
+      if (isButtonClicked) return false;
+      
+      slider.scrollBy(-slideItem.offsetWidth, 0);
+      isButtonClicked = true;
+      setTimeout(() => {
+        isButtonClicked = false;
+      }, 500);
+    });
+  }
+
 }

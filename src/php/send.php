@@ -37,14 +37,59 @@ if ($_POST){
   ";
   $headers = "Content-type: text/html; charset=utf-8";
   
-  mail ($mail, $subj, $text, $headers);
+  if (strlen($_POST['name']) < 20) {
+    if (strlen($_POST['email']) < 30) {
+      if (strlen($_POST['phone']) < 20) {
+        if (strlen($_POST['topic']) < 50) {
+          if (strlen($_POST['message']) < 1000) {
+            mail ($mail, $subj, $text, $headers);
 
-  echo('
-    <div class="center">
-      <p class="sec-subtitle">Повідомлення відправлено!</p>
-      <a href="index.html" class="g-button button">Повернутись на головну</a>
-    </div>
-  ');
+            echo('
+              <div class="center">
+                <p class="sec-subtitle">Повідомлення відправлено!</p>
+                <a href="index.html" class="g-button button">Повернутись на головну</a>
+              </div>
+            ');
+          } else {
+            echo('
+              <div class="center">
+                <p class="sec-subtitle error">Тема може містити масимум 50 символів</p>
+                <a href="index.html#contacts" class="g-button button">Повернутись до форми</a>
+              </div>
+            ');
+          }
+        } else {
+          echo('
+              <div class="center">
+                <p class="sec-subtitle error">Тема може містити масимум 50 символів</p>
+                <a href="index.html#contacts" class="g-button button">Повернутись до форми</a>
+              </div>
+            ');
+        }
+      } else {
+        echo('
+              <div class="center error">
+                <p class="sec-subtitle">Телефон може містити масимум 20 символів</p>
+                <a href="index.html#contacts" class="g-button button">Повернутись до форми</a>
+              </div>
+            ');
+      }
+    } else {
+      echo('
+        <div class="center error">
+          <p class="sec-subtitle">Пошта може містити масимум 30 символів</p>
+          <a href="index.html#contacts" class="g-button button">Повернутись до форми</a>
+        </div>
+      ');
+    }
+  } else {
+    echo('
+      <div class="center error">
+        <p class="sec-subtitle">Ім\'я може містити масимум 20 символів</p>
+        <a href="index.html#contacts" class="g-button button">Повернутись до форми</a>
+      </div>
+    ');
+  }
 }
 
 

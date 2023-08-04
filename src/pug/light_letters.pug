@@ -5,74 +5,86 @@ block content
     section 
       img(src="img/banner_bubbles.jpg", alt="Обʼємні світлові літери BUBBLES")
       .page-content.choosen-page 
-        h2.sec-title обʼємні світлові літери
-        h3.sec-subtitle На даний час об’ємні букви (літери) є одним з найефективнішим видом зовнішньої реклами в багатьох сферах бізнесу.
+        h1.sec-title обʼємні світлові літери
+        h2.sec-subtitle На даний час об’ємні букви (літери) є одним з найефективнішим видом зовнішньої реклами в багатьох сферах бізнесу.
         .sec-desc 
           p Їх Об’ємний 3D-Ефект Дає Змогу Значно Краще Привернути Увагу Потенційного Клієнта До Вашої Рекламної Вивіски, Чи Взагалі До Будь-Якої Зовнішньої Реклами. Гарний ефект об’ємні букви (літери), дають при першій комунікації з потенційним клієнтом, адже це підкреслює імідж компанії та її солідність. Також об’ємні рекламні букви (літери) замовляють для проведення весільних, святкових (дні народження, ювілеї, корпоративи) або іміджевих (презентацій, виставка)фотосесій.
           p Вивіски, лайтбокси з об'ємними літерами – поширений вид візуальних знаків, що застосовуються, як зовні, так і всередині приміщення. 
-        h3.sec-subtitle ВАРТІСТЬ ПОСЛУГ. РОЗРОБКА ТА ВИГОТОВЛЕННЯ.
+        h2.sec-subtitle ВАРТІСТЬ ПОСЛУГ. РОЗРОБКА ТА ВИГОТОВЛЕННЯ.
         .sec-desc 
           p Вартість пласких, об’ємних, світлових букв залежить від ряду критеріїв: вигляду виробу, розмірів, місця застосування, складності роботи й т.д. У нас ви можете замовити будь-який вподобаний варіант всього за кілька натискань.
           p Ціна на монтаж та виготовлення залежить від розмірів вивіски, а також від способу їх підсвітки, розміщення, монтажу та кріплення. Для більш детальної інформації зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
-        h3.sec-subtitle ціна - від 1176 грн за літеру (висота 30 см)
+        h2.sec-subtitle ціна - від 1176 грн за літеру (висота 30 см)
         ul.components
           li пластик Виробництво Німеччина
           li різка лазерним станком
           li надяскраві світлодіоди
           li різний шрифт
         .examples 
-          h3.sec-subtitle 
-          .examples-line.fig-list 
+          h2.sec-subtitle 
+        .fig-slider 
+          .examples-line
+            .arr-left 
+            .arr-right 
             - 
               var items = [
                 {
-                  src: "img/ps_chameleon.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/569BD883-D7C5-4895-BBD3-5A3B9EA9D9F1.jpg", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_marketok.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/B7EBE056-1519-45B7-919F-6461434C352A.jpg", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_medtehnika.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/BUBBLES.jpg", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_milamed.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_0207.jpg", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_medmagazin.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_0210.jpg", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_technoprostir.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_0630.JPG", 
+                  title: ""
                 },
                 {
-                  src: "img/ps_technoprostir.jpg", 
-                  title: "Вивіска для компанії “chameleon”", 
-                  price: "???", 
-                  height: "30 СМ"
+                  src: "img/pages/IMG_1559.JPG", 
+                  title: ""
                 },
+                {
+                  src: "img/pages/IMG_3668.JPG", 
+                  title: ""
+                },
+                {
+                  src: "img/pages/IMG_6963.JPG", 
+                  title: ""
+                },
+                {
+                  src: "img/pages/IMG_9594.JPG", 
+                  title: ""
+                },
+                {
+                  src: "img/pages/photo_2021-06-10_15-43-45.jpg", 
+                  title: ""
+                },
+                {
+                  src: "img/pages/IMG_9864.JPG", 
+                  title: ""
+                },
+                {
+                  src: "img/pages/IMG_0857.jpg", 
+                  title: ""
+                }                  
               ]
             each i in items 
-              +creatingFigure(
+              +pageFigure(
                 i.src,
-                i.title,
-                i.title,
-                i.price,
-                i.height
+                i.title
               )
+          .button-line
+              +button('g', 'index.html#contacts', 'Замовити')
