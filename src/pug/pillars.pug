@@ -1,0 +1,80 @@
+extends components/template.pug 
+
+block content 
+  .wrapper.panel_sign-page.additional-page
+    section 
+      img(src="img/banner_pillars.jpg", alt="")
+      .page-content.choosen-page 
+        h1.sec-title ШТЕНДЕРИ, ІНФОРМАЦІЙНІ ЩИТИ, ВУЛИЧНІ ТАБЛИЧКИ, БАНЕРИ
+        h2.sec-subtitle Штендери
+        p.sec-desc Штендер – це компактна, мобільна, переносна рекламна конструкція, яка користується великою популярністю в людних місцях. Частіше штендери ставлять біля дороги чи тротуару, недалеко від рекламованого об’єкта, зазвичай з вказівною стрілочкою.
+        h2.sec-subtitle БАНЕРИ
+        p.sec-desc Банери актуальні в якості вивісок, в екстер'єрі вітрин магазинів, їх розміщують на фасадах будівель (брандмауери), в якості реклами на транспортних засобах, на жвавих магістралях і всередині приміщень на виставках.
+        h2.sec-subtitle ІНФОРМАЦІЙНІ ЩИТИ
+        p.sec-desc Виготовимо інформаційний щит або стенд різних видів. Для державних установ, вуличні інформаційні стенди, куток споживача, медичні інформаційні стенди та багато інших.
+        h2.sec-subtitle вартість послуг
+        p.sec-desc Ціна на інформаційний щит від 600 грн за квадратний метр, штендер 60 на 90 -1500 грн, вулична табличка від 120 грн банери від 300 гр. за метр квадратний. Для більш детальною інформацією зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
+        .examples 
+          h2.sec-subtitle приклади виконаних робіт
+          .fig-slider 
+            .examples-line
+              .arr-left 
+              .arr-right 
+              - 
+                var items = [
+                  {
+                    src: "img/pages/2AE7B3E1-9376-4FDE-8724-348989B8E91A.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/8FF8D92F-25DF-446F-B7ED-EFB4FFC7F14F.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/300096747_1241092846703609_1117324780303571595_n.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1285.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1511.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1547.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_2157.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_9614.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/photo_2022-07-08_21-33-152.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/photo_2022-07-08_21-33-15.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/photo_2022-07-13_17-09-45.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3714.jpg", 
+                    title: ""
+                  }               
+                ]
+              each i in items 
+                +pageFigure(
+                  i.src,
+                  i.title
+                )
+            .button-line
+              +button('g', 'index.html#contacts', 'Замовити')
