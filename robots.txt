@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Host: https://reklama-podillya.com.ua/
+Sitemap: https://reklama-podillya.com.ua/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Host: https://reklama-podillya.com.ua/
+Sitemap: https://reklama-podillya.com.ua/sitemap.xml
+
+User-agent: Yandex
+Allow: /
+Host: https://reklama-podillya.com.ua/
+Sitemap: https://reklama-podillya.com.ua/sitemap.xml

@@ -2,45 +2,45 @@ extends components/template.pug
 
 block seo 
   meta(name="description", content="Вивіска світлова, латбокс, об'ємні літери, банери. Зовнішня реклама вивіски лайтбокс в Хмельницькому замовляють в агенції 'РЕКЛАМА ПОДІЛЛЯ'.")
-	meta(name="keywords", content="зовнішня реклама, розробка та виготовлення зовнішньої реклами, монтаж конструкцій зовнішньої реклами, замовити розробку вивісок")
-	meta(name="author", content="Реклама Поділля")
-	meta(name="publisher", content="Реклама Поділля")
-	meta(name="robots", content="index follow")
+  meta(name="keywords", content="зовнішня реклама, розробка та виготовлення зовнішньої реклами, монтаж конструкцій зовнішньої реклами, замовити розробку вивісок")
+  meta(name="author", content="Реклама Поділля")
+  meta(name="publisher", content="Реклама Поділля")
+  meta(name="robots", content="index follow")
   meta(property="og:title" content="Реклама Поділля - розробка, виготовлення зовнішньої реклами")
   meta(property="og:description" content="Вивіски, лайтбокс, світлові літери. Зовнішня реклама, виготовлення розробка монтаж - швидко якісно.")
   meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
   meta(property="og:url" content="https://reklama-podillya.com.ua")
   meta(property="og:type" content="website")
-	title Реклама Поділля. Розробка Та Виготовлення Зовнішньої Реклами
-	link(rel="canonical", href="https://reklama-podillya.com.ua/")
-		<script type="application/ld+json">
-		[
-			{
-			"@context": "http://schema.org/",
-			"@type": "LocalBusiness",
-			"name": "РЕКЛАМА ПОДІЛЛЯ",
-			"telephone": "067 904 77 38"
-			},
-			{
-			"@context": "http://schema.org/",
-			"@type": "LocalBusiness",
-			"name": "реклама Поділля",
-			"image": [
-				"https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
-				"https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
-				"https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
-				"https://reklama-podillya.com.ua/img/vf_veloman.jpg",
-				"https://reklama-podillya.com.ua/img/vf_center.jpg",
-				"https://reklama-podillya.com.ua/img/vf_right.jpg"
-			],
-			"telephone": "067 904 77 38",
-			"address": {
-				"@type": "PostalAddress",
-				"streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
-			}
-			}
-		]
-		</script>
+  title Реклама Поділля. Розробка Та Виготовлення Зовнішньої Реклами
+  link(rel="canonical", href="https://reklama-podillya.com.ua/")
+  script(type="application/ld+json")
+    [
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "РЕКЛАМА ПОДІЛЛЯ",
+      "telephone": "067 904 77 38"
+    },
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "реклама Поділля",
+      "image": [
+        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+        "https://reklama-podillya.com.ua/img/vf_center.jpg",
+        "https://reklama-podillya.com.ua/img/vf_right.jpg"
+      ],
+      "telephone": "067 904 77 38",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+      }
+    }
+  ]
+
 
 block content 
   section.first-screen
@@ -54,7 +54,7 @@ block content
       li 
         a(href="panel_sign.html#sign") вивіски
       li 
-        a(href="light_letters.pug") лайтбокси
+        a(href="light_letters.html") лайтбокси
       li 
         a(href="enterance_group.html") вхідні групи
       li 
@@ -308,4 +308,3 @@ block content
             +soc-line
           .map
             <iframe src="https://www.google.com/maps/d/embed?mid=1e8eIGtvIxX-P0DVk1aDMQs_x91NFk58&ehbc=2E312F"></iframe>
->>>>>>> 702c767cda0b308cd8b818c1c09ee47ff756cd99
