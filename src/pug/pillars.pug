@@ -1,5 +1,46 @@
 extends components/template.pug 
 
+block seo
+  meta(name="description", content="Компанія Реклама Поділля займається виготовленням штендерів,банерів,інформаційних щитів, які користуються великою популярністю серед власників бізнесу.")
+	meta(name="keywords", content="Замовити штендер, купити інформаційний щит, купити штендер, замовити банер")
+	meta(name="author", content="Реклама Поділля")
+	meta(name="publisher", content="Реклама Поділля")
+	meta(name="robots", content="index follow")
+  meta(property="og:title" content="Виготовлення штендерів, банерів, інформаційних щитів на Реклама Поділля")
+  meta(property="og:description" content="Компанія Реклама Поділля займається виготовленням штендерів,банерів,інформаційних щитів, які користуються великою популярністю серед власників бізнесу.")
+  meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
+  meta(property="og:url" content="https://reklama-podillya.com.ua/pillars.html")
+  meta(property="og:type" content="website")
+	title Виготовлення штендерів, банерів, інформаційних щитів на Реклама Поділля
+	link(rel="canonical", href="https://reklama-podillya.com.ua/pillars.html")
+	script(type="application/ld+json")
+    [
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "РЕКЛАМА ПОДІЛЛЯ",
+      "telephone": "067 904 77 38"
+    },
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "реклама Поділля",
+      "image": [
+        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+        "https://reklama-podillya.com.ua/img/vf_center.jpg",
+        "https://reklama-podillya.com.ua/img/vf_right.jpg"
+      ],
+      "telephone": "067 904 77 38",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+      }
+    }
+  ]
+
 block content 
   .wrapper.panel_sign-page.additional-page
     section 
