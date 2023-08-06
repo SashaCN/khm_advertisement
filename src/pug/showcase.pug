@@ -1,4 +1,45 @@
-extends components/template.pug 
+extends components/template.pug
+
+block seo 
+  meta(name="description", content="Професійна поклейка плівки oracal на вікна та інші поверхні вашого приміщення. Виготовлення зовнішньої реклами у вигляді плівки Oracal.")
+  meta(name="keywords", content="замовити поклейку плівки oracal, поклейка плівки на вікна та інші поверхні, купити плівку з рекламою")
+  meta(name="author", content="Реклама Поділля")
+  meta(name="publisher", content="Реклама Поділля")
+  meta(name="robots", content="index follow")
+  meta(property="og:title" content="Наклеювання та виготовлення плівки Oracal під замовлення")
+  meta(property="og:description" content="Професійна поклейка плівки oracal на вікна та інші поверхні вашого приміщення. Виготовлення зовнішньої реклами у вигляді плівки Oracal.")
+  meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
+  meta(property="og:url" content="https://reklama-podillya.com.ua/showcase.html")
+  meta(property="og:type" content="website")
+  title Наклеювання та виготовлення плівки Oracal під замовлення
+  link(rel="canonical", href="https://reklama-podillya.com.ua/showcase.html")
+  script(type="application/ld+json")
+    [
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "РЕКЛАМА ПОДІЛЛЯ",
+      "telephone": "067 904 77 38"
+    },
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "реклама Поділля",
+      "image": [
+        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+        "https://reklama-podillya.com.ua/img/vf_center.jpg",
+        "https://reklama-podillya.com.ua/img/vf_right.jpg"
+      ],
+      "telephone": "067 904 77 38",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+      }
+    }
+  ]
 
 block content 
   .wrapper.panel_sign-page.additional-page

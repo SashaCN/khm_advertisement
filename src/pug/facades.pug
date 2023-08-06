@@ -1,14 +1,51 @@
 extends components/template.pug 
 
+block seo 
+  meta(name="description", content="Вентильовані фасади. Касети з алюмінієвого композиту. Монтаж систем навісних вентильованих фасадів з Алюмінієво-композитних панелей (АКП).")
+  meta(name="keywords", content="купити вентельовані фасади, замовити навісні фасади з монтажем, монтаж вентильованих фасадів, вентильовані фасади для утеплення стін")
+  meta(name="author", content="Реклама Поділля")
+  meta(name="publisher", content="Реклама Поділля")
+  meta(name="robots", content="index follow")
+  meta(property="og:title" content="Монтаж Навісних Вентильованих Фасадів. Алюмінієвий композит.")
+  meta(property="og:description" content="Вентильовані фасади. Касети з алюмінієвого композиту. Монтаж систем навісних вентильованих фасадів з Алюмінієво-композитних панелей (АКП).")
+  meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
+  meta(property="og:url" content="https://reklama-podillya.com.ua/facades.html")
+  meta(property="og:type" content="website")
+  title Монтаж Навісних Вентильованих Фасадів. Алюмінієвий композит.
+  link(rel="canonical", href="https://reklama-podillya.com.ua/facades.html")
+  script(type="application/ld+json")
+    [
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "РЕКЛАМА ПОДІЛЛЯ",
+      "telephone": "067 904 77 38"
+    },
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "реклама Поділля",
+      "image": [
+        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+        "https://reklama-podillya.com.ua/img/vf_center.jpg",
+        "https://reklama-podillya.com.ua/img/vf_right.jpg"
+      ],
+      "telephone": "067 904 77 38",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+      }
+    }
+  ]
+
 block content 
   .wrapper.panel_sign-page.additional-page
     section 
-      img(src="img/banner_facade.jpg", alt="" data-name="")
-      //- img(src="img/banner_neon_sign.jpg", alt="Щитова вивіска Chameleon" data-name="neon_sign")
-      //- .page-switches.flex-sb 
-      //-   a.choosen-switch(href="#" data-name="sign") вивіски
-      //-   a(href="#" data-name="neon_sign") неонові вивіски 
-      .page-content.choosen-page(data-name='') 
+      img(src="img/banner_facade.jpg", alt="")
+      .page-content.choosen-page
         h1.sec-title ВЕНТИЛЬОВАНІ ФАСАДИ. ОБШИВКА АЛЮМІНІЄВИМИ КАСЕТАМИ
         p.sec-desc Всі елементи кріплення вентильованої фасадної системи (фасади обшиті алюмінієвими касетами) є універсальними. Це дозволяє створити різні архітектурні та конструкторські форми від класичних до ультрасучасних. Покращує термо та звукоізоляцію будівлі.
         h2.sec-subtitle Вентильовані фасади як утеплювач стін будівель
@@ -53,15 +90,47 @@ block content
               - 
                 var items = [
                   {
-                    src: "img/vf_veloman.jpg", 
+                    src: "img/pages/photo_2023-07-26_10-22-51.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/vf_center.jpg", 
+                    src: "img/pages/photo_2023-08-04_16-22-58.jpg", 
+                    title: ""
+                  },               
+                  {
+                    src: "img/pages/photo_2023-08-04_16-22-572.jpg", 
+                    title: ""
+                  },               
+                  {
+                    src: "img/pages/photo_2023-07-26_10-22-512.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/vf_right.jpg", 
+                    src: "img/pages/photo_2023-08-04_16-22-582.jpg", 
+                    title: ""
+                  },               
+                  {
+                    src: "img/pages/photo_2023-08-04_16-27-20.jpg", 
+                    title: ""
+                  },               
+                  {
+                    src: "img/pages/photo_2023-08-04_16-27-202.jpg", 
+                    title: ""
+                  },               
+                  {
+                    src: "img/pages/photo_2023-08-04_16-27-203.jpg", 
+                    title: ""
+                  },               
+                  {
+                    src: "img/pages/photo_2023-08-04_16-24-51.jpg", 
+                    title: ""
+                  },               
+                  {
+                    src: "img/pages/photo_2023-08-04_16-22-57.jpg", 
+                    title: ""
+                  },               
+                  {
+                    src: "img/pages/photo_2023-08-05_21-54-20.jpg", 
                     title: ""
                   }               
                 ]
@@ -72,65 +141,3 @@ block content
                 )
             .button-line
               +button('g', 'index.html#contacts', 'Замовити')
-      //- .page-content(data-name='neon_sign') 
-      //-   h2.sec-title скляна трубка з інертним газом
-      //-   p.sec-desc Характерною рисою є скляна трубка, наповнена газом - неоном.Виготовляють неонові вивіски по засобу нагріву трубки та закачування газу. Після застосування газу - подається висока напруга і трубка випромінює світло. Індивідуальний колірний діапазон досягається внаслідок використання різних і іноді декількох інертних газів.
-      //-   h2.sec-subtitle гнучкий світловий неон
-      //-   p.sec-desc Це гнучкий неоновий шнур з діодами, має всередині люмінофорне покриття, завдяки якому світло розсіюється рівномірно по всьому периметру
-      //-   .sec-desc 
-      //-     h2.sec-subtitle вартість послуг
-      //-     p Ціна на монтаж та виготовлення (як приклад вивіска світлова AJOUR - вивіска з скляних трубок наповнених інертним газом, п'ять літер розміром 25 см - 5000 грн ) залежить від розмірів вивіски, а також від способу їх підсвітки, розміщення, монтажу та кріплення. 
-      //-     p Для більш детальною інформацією зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
-      //-   .examples 
-      //-     h2.sec-subtitle приклади виконаних робіт
-      //-     .fig-slider 
-      //-       .examples-line
-      //-         .arr-left 
-      //-         .arr-right 
-      //-         - 
-      //-           var items = [
-      //-             {
-      //-               src: "img/pages/IMG_0197.JPG", 
-      //-               title: ""
-      //-             },
-      //-             {
-      //-               src: "img/pages/IMG_0280.JPG", 
-      //-               title: ""
-      //-             },
-      //-             {
-      //-               src: "img/pages/IMG_0714.JPG", 
-      //-               title: ""
-      //-             },
-      //-             {
-      //-               src: "img/pages/IMG_1024.jpg", 
-      //-               title: ""
-      //-             },
-      //-             {
-      //-               src: "img/pages/IMG_1118.jpg", 
-      //-               title: ""
-      //-             },
-      //-             {
-      //-               src: "img/pages/IMG_3187.jpg", 
-      //-               title: ""
-      //-             },
-      //-             {
-      //-               src: "img/pages/IMG_3715.JPG", 
-      //-               title: ""
-      //-             },
-      //-             {
-      //-               src: "img/pages/photo_2022-06-16_14-23-20.jpg", 
-      //-               title: ""
-      //-             },
-      //-             {
-      //-               src: "img/pages/photo_2022-07-12_23-36-03.jpg", 
-      //-               title: ""
-      //-             },
-                  
-      //-           ]
-      //-         each i in items 
-      //-           +pageFigure(
-      //-             i.src,
-      //-             i.title
-      //-           )
-      //-       .button-line
-      //-         +button('g', 'index.html#contacts', 'Замовити')  
