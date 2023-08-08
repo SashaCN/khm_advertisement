@@ -42,12 +42,12 @@ block seo
   ]
 
 
-block content 
+block.itemscope.itemtype="https://schema.org/Organization" content 
   section.first-screen
     .bg 
-      img.active-img(src="img/fs_bg1.jpg", alt="Композитний фасад")
-      img(src="img/fs_bg2.JPG", alt="Об'ємні літери")
-      img(src="img/fs_bg3.JPG", alt="Об’ємний козирок")
+      img.active-img(src="img/fs_bg1.jpg", alt="Композитний фасад").itemprop="image"
+      img(src="img/fs_bg2.JPG", alt="Об'ємні літери").itemprop="image"
+      img(src="img/fs_bg3.JPG", alt="Об’ємний козирок").itemprop="image"
       //- img(src="img/fs_bg5.JPG", alt="Об'ємні світлові літери")
     h1 розробка та виготовлення зовнішньої реклами
     ul.adv-list
@@ -99,29 +99,29 @@ block content
       b.sec-title.anim.animation-fade Наші партнери:
       .slider-line.flex-sb.anim.animation-fade
         .slider-pack 
-            img(src="img/ofice_center.png", alt="Логотип компанії \"Офіс центр\"")
-            img(src="img/zbruch_palac.png", alt="Логотип компанії \"Zbruch Palace\"")
-            img(src="img/chip.png", alt="Логотип компанії \"ЧІП\"")
-            img(src="img/seven_ocean.png", alt="Логотип компанії \"7 океан\"")
-            img(src="img/ajour.png", alt="Логотип компанії \"Ajour\"")
-            img(src="img/fielmann.png", alt="Логотип компанії \"Fielmann\"")
-            img(src="img/technoprostir.png", alt="Логотип компанії \"Technoprostir\"")
-            img(src="img/ukrgazbank.png", alt="Логотип компанії \"Укргазбанк\"")
+            img(src="img/ofice_center.png", alt="Логотип компанії \"Офіс центр\"").itemprop="image"
+            img(src="img/zbruch_palac.png", alt="Логотип компанії \"Zbruch Palace\"").itemprop="image"
+            img(src="img/chip.png", alt="Логотип компанії \"ЧІП\"").itemprop="image"
+            img(src="img/seven_ocean.png", alt="Логотип компанії \"7 океан\"").itemprop="image"
+            img(src="img/ajour.png", alt="Логотип компанії \"Ajour\"").itemprop="image"
+            img(src="img/fielmann.png", alt="Логотип компанії \"Fielmann\"").itemprop="image"
+            img(src="img/technoprostir.png", alt="Логотип компанії \"Technoprostir\"").itemprop="image"
+            img(src="img/ukrgazbank.png", alt="Логотип компанії \"Укргазбанк\"").itemprop="image"
         .slider-pack 
-            img(src="img/ofice_center.png", alt="Логотип компанії \"Офіс центр\"")
-            img(src="img/zbruch_palac.png", alt="Логотип компанії \"Zbruch Palace\"")
-            img(src="img/chip.png", alt="Логотип компанії \"ЧІП\"")
-            img(src="img/seven_ocean.png", alt="Логотип компанії \"7 океан\"")
-            img(src="img/ajour.png", alt="Логотип компанії \"Ajour\"")
-            img(src="img/fielmann.png", alt="Логотип компанії \"Fielmann\"")
-            img(src="img/technoprostir.png", alt="Логотип компанії \"Technoprostir\"")
-            img(src="img/ukrgazbank.png", alt="Логотип компанії \"Укргазбанк\"")
+            img(src="img/ofice_center.png", alt="Логотип компанії \"Офіс центр\"").itemprop="image"
+            img(src="img/zbruch_palac.png", alt="Логотип компанії \"Zbruch Palace\"").itemprop="image"
+            img(src="img/chip.png", alt="Логотип компанії \"ЧІП\"").itemprop="image"
+            img(src="img/seven_ocean.png", alt="Логотип компанії \"7 океан\"").itemprop="image"
+            img(src="img/ajour.png", alt="Логотип компанії \"Ajour\"").itemprop="image"
+            img(src="img/fielmann.png", alt="Логотип компанії \"Fielmann\"").itemprop="image"
+            img(src="img/technoprostir.png", alt="Логотип компанії \"Technoprostir\"").itemprop="image"
+            img(src="img/ukrgazbank.png", alt="Логотип компанії \"Укргазбанк\"").itemprop="image"
     a#service
     section.services.anim-parent
-      .services-desc.anim.animation-fade
+      .services-desc.anim.animation-fade.itemprop="description"
         h2.sec-title РЕКЛАМНІ ПОСЛУГИ. ВИГОТОВЛЕННЯ ЗОВНІШНЬОЇ РЕКЛАМИ
         p.sec-desc Ми пропонуємо комплексні послуги з виготовлення зовнішньої реклами, починаючи від проєктування і дизайнерської ідеї, закінчуючи втіленням ваших побажань в оригінальних конструкціях. Такий підхід дозволяє нам створювати яскраві, незабутні образи корпоративної індивідуальності.
-      .services-list.anim.animation-fade
+      .services-list.anim.animation-fade.itemprop="description"
         h2.sec-title МИ ГОТОВІ НАДАТИ ВАМ ПОСЛУГИ В НАСТУПНИХ НАПРЯМКАХ: 
         +service(
           'ДИЗАЙН І ПРОЄКТУВАННЯ ЯК ВАЖЛИВИЙ ЕТАП ВИГОТОВЛЕННЯ ЗОВНІШНЬОЇ РЕКЛАМИ.',
@@ -155,7 +155,7 @@ block content
     //- section creating
     include components/creating 
     a#facades
-    section.facades.anim-parent 
+    section.facades.anim-parent.itemprop="description"
       h2.sec-title.anim.animation-fade ВЕНТИЛЬОВАНІ ФАСАДИ (МОНТАЖ) СИСТЕМИ З АЛЮМІНІЄВОГО КОМПОЗИТУ.
       .sec-desc.anim.animation-fade
         p Вентильовані фасади – сучасний метод оформлення фасадів будівель та приміщень, які дозволяють значно покращити як естетичний вигляд будівель, так і його звуко- та термоізоляцію.
@@ -301,9 +301,9 @@ block content
             input.g-button.button(type="submit", value="відправити")
         .half.map-half.anim.animation-right 
           .contact-info
-            p 
+            p.itemprop="telephone"
               a.tel(href="tel:+380679047738") 067 904 77 38
-            p 
+            p.itemprop="location"
               address м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316
             +soc-line
           .map
