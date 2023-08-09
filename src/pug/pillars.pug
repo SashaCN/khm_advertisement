@@ -41,11 +41,11 @@ block seo
     }
   ]
 
-block content 
+block.itemscope.itemtype="https://schema.org/Organization" content 
   .wrapper.panel_sign-page.additional-page
     section 
-      img(src="img/banner_pillars.jpg", alt="")
-      .page-content.choosen-page 
+      img(src="img/banner_pillars.jpg", alt="").itemprop="image"
+      .page-content.choosen-page.itemprop="description" 
         h1.sec-title ШТЕНДЕРИ, ІНФОРМАЦІЙНІ ЩИТИ, ВУЛИЧНІ ТАБЛИЧКИ, БАНЕРИ
         h2.sec-subtitle Штендери
         p.sec-desc Штендер – це компактна, мобільна, переносна рекламна конструкція, яка користується великою популярністю в людних місцях. Частіше штендери ставлять біля дороги чи тротуару, недалеко від рекламованого об’єкта, зазвичай з вказівною стрілочкою.
@@ -58,7 +58,7 @@ block content
         .examples 
           h2.sec-subtitle приклади виконаних робіт
           .fig-slider 
-            .examples-line
+            .examples-line.itemprop="image"
               .arr-left 
               .arr-right 
               - 
