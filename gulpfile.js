@@ -80,7 +80,8 @@ export const js = () => {
 export const php = () => {
   return gulp
   .src([
-    "src/pug/send.pug"
+    "src/pug/send.pug",
+    "src/pug/gallery.pug"
   ])
   .pipe(pug())
   .pipe(rename({
@@ -138,7 +139,7 @@ export const watch = () => {
   gulp.watch("src/sass/**/*.sass", gulp.parallel(css))
   gulp.watch("src/js/**/*.js", gulp.parallel(js))
   gulp.watch("src/pug/**/*.pug", gulp.parallel(html))
-  gulp.watch("src/pug/send.pug", gulp.parallel(php))
+  gulp.watch("src/php/*.php", gulp.parallel(php))
   gulp.watch("src/*.*", gulp.parallel(files))
   gulp.watch("src/fonts/**/*.*", gulp.parallel(fonts))
   gulp.watch("src/img/**/*.*", gulp.parallel(images))
