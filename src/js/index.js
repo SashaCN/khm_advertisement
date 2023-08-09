@@ -232,35 +232,6 @@ function deleteBg ()
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                  IMG POPUP                                 */
-/* -------------------------------------------------------------------------- */
-
-// if(document.querySelector('.gallery')) {
-//   console.log("page")
-//   // const figureBg = document.createElement('figure');
-  
-//   let images = document.querySelectorAll('.gallery img'),
-//       figure = document.body.insertBefore(figureBg, document.body.firstChild);
-  
-//   images.forEach(img => {
-//     img.addEventListener('click', (e)=>{
-//       e.preventDefault();
-  
-//       if (e.target.classList.contains('close-btn')){
-//         return false;
-//       }
-  
-//       btn = figureBg.insertBefore(closeBtn, figure.firstChild)
-//       bg = document.body.insertBefore(newDiv, document.body.firstChild);
-//       figure.classList.add('active-figure');
-  
-//       bg.addEventListener('click', deleteBg);
-//       btn.addEventListener('click', deleteBg);
-//     })
-//   });
-// }
-
-/* -------------------------------------------------------------------------- */
 /*                               PANEL SIGN PAGE                              */
 /* -------------------------------------------------------------------------- */
 
