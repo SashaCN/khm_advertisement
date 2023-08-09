@@ -280,19 +280,19 @@ block content
           p.order замовити послугу
           .inputs 
             p.name
-              input#name(type="text", name="name")
+              input#name(type="text", name="name" maxlength="20")
               label(for="name") Ваше імʼя
             p.email 
-              input#email(type="text", name="email")
+              input#email(type="text", name="email" maxlength="30")
               label(for="email") Ваш емейл
             p.phone 
-              input#phone(type="tel", name="phone" required)
+              input#phone(type="tel", name="phone" required maxlength="20")
               label(for="phone") Ваш номер телефону*
             p.topic 
-              input#topic(type="text", name="topic")
+              input#topic(type="text", name="topic" maxlength="50")
               label(for="topic") Тема повідомлення
             p.message
-              textarea#message(name="message", cols="30", rows="10", required)  
+              textarea#message(name="message", cols="30", rows="10", required maxlength="1000")  
               label(for="message") Ваше повідомлення
             p.agreement 
               input#agreement(type="checkbox", name="agreement")
