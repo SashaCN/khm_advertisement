@@ -1,64 +1,22 @@
-extends components/template.pug
+extends components/template.pug 
 
-block seo 
-  meta(name="description", content="Вивіска світлова, латбокс, об'ємні літери, банери. Зовнішня реклама вивіски лайтбокс в Хмельницькому замовляють в агенції 'РЕКЛАМА ПОДІЛЛЯ'.")
-  meta(name="keywords", content="зовнішня реклама, розробка та виготовлення зовнішньої реклами, монтаж конструкцій зовнішньої реклами, замовити розробку вивісок")
-  meta(name="author", content="Реклама Поділля")
-  meta(name="publisher", content="Реклама Поділля")
-  meta(name="robots", content="index follow")
-  meta(property="og:title" content="Реклама Поділля - розробка, виготовлення зовнішньої реклами")
-  meta(property="og:description" content="Вивіски, лайтбокс, світлові літери. Зовнішня реклама, виготовлення розробка монтаж - швидко якісно.")
-  meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
-  meta(property="og:url" content="https://reklama-podillya.com.ua")
-  meta(property="og:type" content="website")
-  title Реклама Поділля. Розробка Та Виготовлення Зовнішньої Реклами
-  link(rel="canonical", href="https://reklama-podillya.com.ua/")
-  script(type="application/ld+json")
-    [
-    {
-      "@context": "http://schema.org/",
-      "@type": "LocalBusiness",
-      "name": "РЕКЛАМА ПОДІЛЛЯ",
-      "telephone": "067 904 77 38"
-    },
-    {
-      "@context": "http://schema.org/",
-      "@type": "LocalBusiness",
-      "name": "реклама Поділля",
-      "image": [
-        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
-        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
-        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
-        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
-        "https://reklama-podillya.com.ua/img/vf_center.jpg",
-        "https://reklama-podillya.com.ua/img/vf_right.jpg"
-      ],
-      "telephone": "067 904 77 38",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
-      }
-    }
-  ]
-
-
-block.itemscope.itemtype="https://schema.org/Organization" content 
+block content 
   section.first-screen
     .bg 
-      img.active-img(src="img/fs_bg1.jpg", alt="Композитний фасад").itemprop="image"
-      img(src="img/fs_bg2.JPG", alt="Об'ємні літери").itemprop="image"
-      img(src="img/fs_bg3.JPG", alt="Об’ємний козирок").itemprop="image"
+      img.active-img(src="img/fs_bg1.jpg", alt="Композитний фасад" title="")
+      img(src="img/fs_bg2.JPG", alt="Об'ємні літери")
+      img(src="img/fs_bg3.JPG", alt="Об’ємний козирок")
       //- img(src="img/fs_bg5.JPG", alt="Об'ємні світлові літери")
     h1 розробка та виготовлення зовнішньої реклами
     ul.adv-list
       li 
-        a(href="panel_sign.html#sign") вивіски
+        a(href="panel_sign.html") вивіски
       li 
-        a(href="light_letters.html") лайтбокси
+        a(href="#") лайтбокси
       li 
-        a(href="enterance_group.html") вхідні групи
+        a(href="#") літери
       li 
-        a(href="pillars.html") банери
+        a(href="#") банери
     +button('g', '#contacts', 'замовити')
   .wrapper.main-page
     a#about-us
@@ -99,29 +57,29 @@ block.itemscope.itemtype="https://schema.org/Organization" content
       b.sec-title.anim.animation-fade Наші партнери:
       .slider-line.flex-sb.anim.animation-fade
         .slider-pack 
-            img(src="img/ofice_center.png", alt="Логотип компанії \"Офіс центр\"").itemprop="image"
-            img(src="img/zbruch_palac.png", alt="Логотип компанії \"Zbruch Palace\"").itemprop="image"
-            img(src="img/chip.png", alt="Логотип компанії \"ЧІП\"").itemprop="image"
-            img(src="img/seven_ocean.png", alt="Логотип компанії \"7 океан\"").itemprop="image"
-            img(src="img/ajour.png", alt="Логотип компанії \"Ajour\"").itemprop="image"
-            img(src="img/fielmann.png", alt="Логотип компанії \"Fielmann\"").itemprop="image"
-            img(src="img/technoprostir.png", alt="Логотип компанії \"Technoprostir\"").itemprop="image"
-            img(src="img/ukrgazbank.png", alt="Логотип компанії \"Укргазбанк\"").itemprop="image"
+            img(src="img/ofice_center.png", alt="Логотип компанії \"Офіс центр\"")
+            img(src="img/zbruch_palac.png", alt="Логотип компанії \"Zbruch Palace\"")
+            img(src="img/chip.png", alt="Логотип компанії \"ЧІП\"")
+            img(src="img/seven_ocean.png", alt="Логотип компанії \"7 океан\"")
+            img(src="img/ajour.png", alt="Логотип компанії \"Ajour\"")
+            img(src="img/fielmann.png", alt="Логотип компанії \"Fielmann\"")
+            img(src="img/technoprostir.png", alt="Логотип компанії \"Technoprostir\"")
+            img(src="img/ukrgazbank.png", alt="Логотип компанії \"Укргазбанк\"")
         .slider-pack 
-            img(src="img/ofice_center.png", alt="Логотип компанії \"Офіс центр\"").itemprop="image"
-            img(src="img/zbruch_palac.png", alt="Логотип компанії \"Zbruch Palace\"").itemprop="image"
-            img(src="img/chip.png", alt="Логотип компанії \"ЧІП\"").itemprop="image"
-            img(src="img/seven_ocean.png", alt="Логотип компанії \"7 океан\"").itemprop="image"
-            img(src="img/ajour.png", alt="Логотип компанії \"Ajour\"").itemprop="image"
-            img(src="img/fielmann.png", alt="Логотип компанії \"Fielmann\"").itemprop="image"
-            img(src="img/technoprostir.png", alt="Логотип компанії \"Technoprostir\"").itemprop="image"
-            img(src="img/ukrgazbank.png", alt="Логотип компанії \"Укргазбанк\"").itemprop="image"
+            img(src="img/ofice_center.png", alt="Логотип компанії \"Офіс центр\"")
+            img(src="img/zbruch_palac.png", alt="Логотип компанії \"Zbruch Palace\"")
+            img(src="img/chip.png", alt="Логотип компанії \"ЧІП\"")
+            img(src="img/seven_ocean.png", alt="Логотип компанії \"7 океан\"")
+            img(src="img/ajour.png", alt="Логотип компанії \"Ajour\"")
+            img(src="img/fielmann.png", alt="Логотип компанії \"Fielmann\"")
+            img(src="img/technoprostir.png", alt="Логотип компанії \"Technoprostir\"")
+            img(src="img/ukrgazbank.png", alt="Логотип компанії \"Укргазбанк\"")
     a#service
     section.services.anim-parent
-      .services-desc.anim.animation-fade.itemprop="description"
+      .services-desc.anim.animation-fade
         h2.sec-title РЕКЛАМНІ ПОСЛУГИ. ВИГОТОВЛЕННЯ ЗОВНІШНЬОЇ РЕКЛАМИ
         p.sec-desc Ми пропонуємо комплексні послуги з виготовлення зовнішньої реклами, починаючи від проєктування і дизайнерської ідеї, закінчуючи втіленням ваших побажань в оригінальних конструкціях. Такий підхід дозволяє нам створювати яскраві, незабутні образи корпоративної індивідуальності.
-      .services-list.anim.animation-fade.itemprop="description"
+      .services-list.anim.animation-fade
         h2.sec-title МИ ГОТОВІ НАДАТИ ВАМ ПОСЛУГИ В НАСТУПНИХ НАПРЯМКАХ: 
         +service(
           'ДИЗАЙН І ПРОЄКТУВАННЯ ЯК ВАЖЛИВИЙ ЕТАП ВИГОТОВЛЕННЯ ЗОВНІШНЬОЇ РЕКЛАМИ.',
@@ -155,7 +113,7 @@ block.itemscope.itemtype="https://schema.org/Organization" content
     //- section creating
     include components/creating 
     a#facades
-    section.facades.anim-parent.itemprop="description"
+    section.facades.anim-parent 
       h2.sec-title.anim.animation-fade ВЕНТИЛЬОВАНІ ФАСАДИ (МОНТАЖ) СИСТЕМИ З АЛЮМІНІЄВОГО КОМПОЗИТУ.
       .sec-desc.anim.animation-fade
         p Вентильовані фасади – сучасний метод оформлення фасадів будівель та приміщень, які дозволяють значно покращити як естетичний вигляд будівель, так і його звуко- та термоізоляцію.
@@ -176,11 +134,11 @@ block.itemscope.itemtype="https://schema.org/Organization" content
         )
         +creatingFigure(
           "img/vf_right.jpg",
-          "Вентильований фасад Бізнес Центр ІНВОЛ, Волочиськ",
-          "Вентильований фасад Бізнес Центр ІНВОЛ, Волочиськ",
+          "Вентильований фасад для «BUBBLES»",
+          "Вентильований фасад для «BUBBLES»",
           "Обшивка приміщення касетами алюмінієвого композиту 4 мм Г 1  по класу негорючості , вмонтоване на алюмінієвій підсистемі, з утепленням мінеральної вати від 50 до 150 мм"
         )
-      +buttonLine("facades.html")
+      +buttonLine
     a#prices-table
     section.prices.anim-parent 
       h2.sec-title.anim.animation-fade Ціни на виготовлення вивісок 
@@ -280,14 +238,14 @@ block.itemscope.itemtype="https://schema.org/Organization" content
           p.order замовити послугу
           .inputs 
             p.name
-              input#name(type="text", name="name")
-              label(for="name") Ваше імʼя
+              input#name(type="text", name="name" required)
+              label(for="name") Ваше імʼя*
             p.email 
-              input#email(type="text", name="email")
-              label(for="email") Ваш емейл
+              input#email(type="text", name="email" required)
+              label(for="email") Ваш емейл*
             p.phone 
-              input#phone(type="tel", name="phone" required)
-              label(for="phone") Ваш номер телефону*
+              input#phone(type="tel", name="phone")
+              label(for="phone") Ваш номер телефону
             p.topic 
               input#topic(type="text", name="topic")
               label(for="topic") Тема повідомлення
@@ -301,9 +259,9 @@ block.itemscope.itemtype="https://schema.org/Organization" content
             input.g-button.button(type="submit", value="відправити")
         .half.map-half.anim.animation-right 
           .contact-info
-            p.itemprop="telephone"
+            p 
               a.tel(href="tel:+380679047738") 067 904 77 38
-            p.itemprop="location"
+            p 
               address м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316
             +soc-line
           .map
