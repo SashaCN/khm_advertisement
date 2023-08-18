@@ -1,2 +1,8 @@
 RewriteEngine On
 ErrorDocument 404 /404-page.html
+
+RewriteCond %{HTTP_HOST} ^www\.reklama-podillya\.com\.ua$ [NC]
+RewriteRule ^(.*)$ https://reklama-podillya.com.ua/$1 [L,R=301]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://reklama-podillya.com.ua/$1 [L,R=301]
