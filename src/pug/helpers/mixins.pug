@@ -63,7 +63,7 @@ mixin service(title, desc1, desc2)
 
 mixin creatingFigure(img, alt, title, ...descs)
   figure 
-    img(src=img, alt=alt) 
+    img(src=img, alt=alt, loading="lazy") 
     span.g-line
     figcaption 
       h4=title
