@@ -41,10 +41,10 @@ block seo
     }
   ]
 
-block.itemscope.itemtype="https://schema.org/Organization" content 
+block(itemscope itemtype="https://schema.org/Organization")
   .wrapper.panel_sign-page.additional-page
     section 
-      img(src="img/banner_parfum.jpg", alt="Обʼємний козирок ПАРФУМ").itemprop="image"
+      img(src="img/banner_parfum.jpg", alt="Обʼємний козирок ПАРФУМ" itemprop="image")
       .page-content.choosen-page 
         h1.sec-title ОБ’ЄМНІ КОЗИРКИ РІЗНИХ КОНФІГУРАЦІЙ
         p.sec-desc На даний час об’ємні козирки є одним з основних елементів комплексу фасадних конструкцій при оформлені будь-якого комерційного приміщення. Також може використовуватись як окремий елемент вхідної групи.
@@ -53,7 +53,7 @@ block.itemscope.itemtype="https://schema.org/Organization" content
         .examples 
           h2.sec-subtitle 
           .fig-slider 
-            .examples-line.itemprop="image"
+            .examples-line(itemprop="image")
               .arr-left 
               .arr-right 
               - 
