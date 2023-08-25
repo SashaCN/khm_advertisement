@@ -45,20 +45,20 @@ block seo
 block content 
   section.first-screen
     .bg 
-      img.active-img(src="img/fs_bg1.jpg", alt="Композитний фасад")
+      img.active-img(src="img/fs_bg1.jpg", alt="Композитний фасад" title="")
       img(src="img/fs_bg2.JPG", alt="Об'ємні літери")
       img(src="img/fs_bg3.JPG", alt="Об’ємний козирок")
       //- img(src="img/fs_bg5.JPG", alt="Об'ємні світлові літери")
     h1 розробка та виготовлення зовнішньої реклами
     ul.adv-list
       li 
-        a(href="panel_sign.html#sign") вивіски
+        a(href="panel_sign.html") вивіски
       li 
-        a(href="light_letters.html") лайтбокси
+        a(href="#") лайтбокси
       li 
-        a(href="enterance_group.html") вхідні групи
+        a(href="#") літери
       li 
-        a(href="pillars.html") банери
+        a(href="#") банери
     +button('g', '#contacts', 'замовити')
   .wrapper.main-page
     a#about-us
@@ -177,11 +177,11 @@ block content
         )
         +creatingFigure(
           "img/vf_right.jpg",
-          "Вентильований фасад Бізнес Центр ІНВОЛ, Волочиськ",
-          "Вентильований фасад Бізнес Центр ІНВОЛ, Волочиськ",
+          "Вентильований фасад для «BUBBLES»",
+          "Вентильований фасад для «BUBBLES»",
           "Обшивка приміщення касетами алюмінієвого композиту 4 мм Г 1  по класу негорючості , вмонтоване на алюмінієвій підсистемі, з утепленням мінеральної вати від 50 до 150 мм"
         )
-      +buttonLine("facades.html")
+      +buttonLine
     a#prices-table
     section.prices.anim-parent 
       h2.sec-title.anim.animation-fade Ціни на виготовлення вивісок 

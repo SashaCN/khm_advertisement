@@ -1,18 +1,59 @@
 extends components/template.pug 
 
-block content 
+block seo
+  meta(name="description", content="Замовлення, виготовлення, монтаж об'ємних козирків для комерційних преміщень.")
+  meta(name="keywords", content="Замовити об'ємний козирок, Монтаж об'ємних козирків, об'ємні козирки купити")
+  meta(name="author", content="Реклама Поділля")
+  meta(name="publisher", content="Реклама Поділля")
+  meta(name="robots", content="index follow")
+  meta(property="og:title" content="Об’ємні козирки різних конфігурацій на замовлення")
+  meta(property="og:description" content="Замовлення, виготовлення та монтаж об'ємних козирків.")
+  meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
+  meta(property="og:url" content="https://reklama-podillya.com.ua/volumetric_visors.html")
+  meta(property="og:type" content="website")
+  title Реклама Поділля. Розробка Та Виготовлення Зовнішньої Реклами
+  link(rel="canonical", href="https://reklama-podillya.com.ua/volumetric_visors.html")
+  script(type="application/ld+json")
+    [
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "РЕКЛАМА ПОДІЛЛЯ",
+      "telephone": "067 904 77 38"
+    },
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "реклама Поділля",
+      "image": [
+        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+        "https://reklama-podillya.com.ua/img/vf_center.jpg",
+        "https://reklama-podillya.com.ua/img/vf_right.jpg"
+      ],
+      "telephone": "067 904 77 38",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+      }
+    }
+  ]
+
+block(itemscope itemtype="https://schema.org/Organization")
   .wrapper.panel_sign-page.additional-page
     section 
-      img(src="img/banner_parfum.jpg", alt="Обʼємний кощирок ПАРФУМ")
+      img(src="img/banner_parfum.jpg", alt="Обʼємний козирок ПАРФУМ" itemprop="image")
       .page-content.choosen-page 
-        h1.sec-title ОБ’ЄМНІ КОЗИРкИ РІЗНИХ КОНФІГУРАЦІЙ
+        h1.sec-title ОБ’ЄМНІ КОЗИРКИ РІЗНИХ КОНФІГУРАЦІЙ
         p.sec-desc На даний час об’ємні козирки є одним з основних елементів комплексу фасадних конструкцій при оформлені будь-якого комерційного приміщення. Також може використовуватись як окремий елемент вхідної групи.
         h2.sec-subtitle вартість послуг
         p.sec-desc Ціна на монтаж та виготовлення від 3360 грн за метр квадратний і залежить від розмірів, матеріалів, складності конструкції. Для більш детальною інформацією зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
         .examples 
           h2.sec-subtitle 
           .fig-slider 
-            .examples-line
+            .examples-line(itemprop="image")
               .arr-left 
               .arr-right 
               - 

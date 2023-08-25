@@ -41,11 +41,11 @@ block seo
       }
     ]
 
-block content 
+block(itemscope itemtype="https://schema.org/Organization") 
   .wrapper.panel_sign-page.additional-page
     section 
-      img(src="img/banner_enterance_group.jpg", alt="Вхідна група KAVAMAK")
-      .page-content.choosen-page 
+      img(src="img/banner_enterance_group.jpg", alt="Вхідна група KAVAMAK" title="Усі види зовнішньої риклами для KAVAMAK" itemprop="image" )
+      .page-content.choosen-page(itemprop="description")
         h1.sec-title вхідна група
         h2.sec-subtitle ВХІДНА ГРУПА. КОМПЛЕКС ЕЛЕМЕНТІВ ЗОВНІШНЬОЇ РЕКЛАМИ.
         p.sec-desc Вхідна група — це комплекс з елементів зовнішньої реклами (світових вивісок, об’ємних та світлових літер, лайтбоксі, чи звичайних вивісок), вітрин поклеєні плівкою, підсвітки, та обшивка фасаду алюмінієвими панелями та іншими якісними матеріалами.
@@ -54,7 +54,7 @@ block content
         .examples 
           h2.sec-subtitle приклади виконаних робіт
           .fig-slider 
-            .examples-line
+            .examples-line(itemprop="image")
               .arr-left 
               .arr-right 
               - 
@@ -92,7 +92,7 @@ block content
                     title: ""
                   }               
                 ]
-              each i in items 
+              each i in items
                 +pageFigure(
                   i.src,
                   i.title
