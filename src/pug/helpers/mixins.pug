@@ -74,7 +74,7 @@ mixin creatingFigure(img, alt, title, ...descs)
 mixin pageFigure(img, alt)
   figure 
     figcaption 
-      img(src=img, alt=alt) 
+      img(src=img, alt=alt, loading='lazy') 
       
 
 mixin promo( title, price, desc, ...items)
