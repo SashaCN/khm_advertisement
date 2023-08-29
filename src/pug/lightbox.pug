@@ -16,136 +16,136 @@ block content
           .examples 
             h2.sec-subtitle приклади виконаних робіт
             .fig-slider 
-              .examples-line(itemprop="image")
-                .arr-left 
-                .arr-right 
-                - 
-                  var items = [
-                    {
-                      src: "img/pages/y_lb1.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb2.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb3.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb4.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb5.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb6.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb7.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb8.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb9.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb10.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb11.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb12.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb13.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb14.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb15.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb16.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb17.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb18.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb19.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb20.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb21.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb22.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb23.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb24.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb25.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb26.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb27.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb28.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb29.jpg", 
-                      title: ""
-                    },
-                    {
-                      src: "img/pages/y_lb30.jpeg", 
-                      title: ""
-                    },
-                  ]
-                each i in items 
-                  +pageFigure(
-                    i.src,
-                    i.title
-                  )
+              .slider#slider(itemprop="image")
+                .slider-container.examples-line
+                  - 
+                    var items = [
+                      {
+                        src: "img/pages/y_lb1.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb2.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb3.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb4.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb5.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb6.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb7.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb8.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb9.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb10.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb11.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb12.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb13.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb14.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb15.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb16.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb17.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb18.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb19.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb20.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb21.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb22.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb23.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb24.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb25.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb26.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb27.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb28.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb29.jpg", 
+                        title: ""
+                      },
+                      {
+                        src: "img/pages/y_lb30.jpeg", 
+                        title: ""
+                      },
+                    ]
+                  each i in items 
+                    +pageFigure(
+                      i.src,
+                      i.title
+                    )
+                  
               .button-line
                 +button('g', 'index.html#contacts', 'Замовити')

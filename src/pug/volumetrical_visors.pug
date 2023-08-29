@@ -51,38 +51,49 @@ block content
         h2.sec-subtitle вартість послуг
         p.sec-desc Ціна на монтаж та виготовлення від 3360 грн за метр квадратний і залежить від розмірів, матеріалів, складності конструкції. Для більш детальною інформацією зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
         .examples 
-          h2.sec-subtitle 
+          h2.sec-subtitle приклади виконаних робіт
           .fig-slider 
-            .examples-line(itemprop="image")
-              .arr-left 
-              .arr-right 
-              - 
-                var items = [
-                  {
-                    src: "img/pages/IMG_0255.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/IMG_1096.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/IMG_2360.JPG", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/IMG_2849.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/IMG_3690.jpg", 
-                    title: ""
-                  }               
-                ]
-              each i in items 
-                +pageFigure(
-                  i.src,
-                  i.title
-                )
+            .slider#slider(itemprop="image")
+              .slider-container.examples-line
+                - 
+                  var items = [
+                    {
+                      src: "img/pages/y_vv1.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_vv2.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_vv3.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_vv4.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_vv5.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_vv7.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_vv8.jfif", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_vv9.jpg", 
+                      title: ""
+                    },                
+                  ]
+                each i in items 
+                  +pageFigure(
+                    i.src,
+                    i.title
+                  )
             .button-line
               +button('g', 'index.html#contacts', 'Замовити')

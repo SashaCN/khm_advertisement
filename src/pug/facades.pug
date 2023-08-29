@@ -88,60 +88,55 @@ block content
         .examples 
           h2.sec-subtitle приклади виконаних робіт
           .fig-slider 
-            .examples-line
-              .arr-left 
-              .arr-right 
-              - 
-                var items = [
-                  {
-                    src: "img/pages/photo_2023-07-26_10-22-51.jpg", 
+            .slider#slider(itemprop="image")
+              .slider-container.examples-line
+                - 
+                  var items = [
+                    {
+                    src: "img/pages/y_fc1.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/photo_2023-08-04_16-22-58.jpg", 
-                    title: ""
-                  },               
-                  {
-                    src: "img/pages/photo_2023-08-04_16-22-572.jpg", 
-                    title: ""
-                  },               
-                  {
-                    src: "img/pages/photo_2023-07-26_10-22-512.jpg", 
+                    src: "img/pages/y_fc2.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/photo_2023-08-04_16-22-582.jpg", 
+                    src: "img/pages/y_fc3.jpg", 
                     title: ""
-                  },               
+                  },
                   {
-                    src: "img/pages/photo_2023-08-04_16-27-20.jpg", 
+                    src: "img/pages/y_fc4.jpg", 
                     title: ""
-                  },               
+                  },
                   {
-                    src: "img/pages/photo_2023-08-04_16-27-202.jpg", 
+                    src: "img/pages/y_fc5.jpg", 
                     title: ""
-                  },               
+                  },
                   {
-                    src: "img/pages/photo_2023-08-04_16-27-203.jpg", 
+                    src: "img/pages/y_fc6.jpg", 
                     title: ""
-                  },               
+                  },
                   {
-                    src: "img/pages/photo_2023-08-04_16-24-51.jpg", 
+                    src: "img/pages/y_fc7.jpg", 
                     title: ""
-                  },               
+                  },
                   {
-                    src: "img/pages/photo_2023-08-04_16-22-57.jpg", 
+                    src: "img/pages/y_fc8.jpg", 
                     title: ""
-                  },               
+                  },
                   {
-                    src: "img/pages/photo_2023-08-05_21-54-20.jpg", 
+                    src: "img/pages/y_fc9.jpg", 
                     title: ""
-                  }               
-                ]
-              each i in items 
-                +pageFigure(
-                  i.src,
-                  i.title
-                )
+                  },
+                  {
+                    src: "img/pages/y_fc10.jpg", 
+                    title: ""
+                  },         
+                  ]
+                each i in items 
+                  +pageFigure(
+                    i.src,
+                    i.title
+                  )
             .button-line
               +button('g', 'index.html#contacts', 'Замовити')

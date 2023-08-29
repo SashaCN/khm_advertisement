@@ -64,68 +64,67 @@ block content
         .examples 
           h2.sec-subtitle 
         .fig-slider 
-          .examples-line(itemprop="image")
-            .arr-left 
-            .arr-right 
-            - 
-              var items = [
-                {
-                  src: "img/pages/569BD883-D7C5-4895-BBD3-5A3B9EA9D9F1.jpg", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/B7EBE056-1519-45B7-919F-6461434C352A.jpg", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/BUBBLES.jpg", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_0207.jpg", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_0210.jpg", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_0630.JPG", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_1559.JPG", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_3668.JPG", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_6963.JPG", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_9594.JPG", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/photo_2021-06-10_15-43-45.jpg", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_9864.JPG", 
-                  title: ""
-                },
-                {
-                  src: "img/pages/IMG_0857.jpg", 
-                  title: ""
-                }                  
-              ]
-            each i in items 
-              +pageFigure(
-                i.src,
-                i.title
-              )
+          .slider#slider(itemprop="image")
+            .slider-container.examples-line
+              - 
+                var items = [
+                  {
+                    src: "img/pages/569BD883-D7C5-4895-BBD3-5A3B9EA9D9F1.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/B7EBE056-1519-45B7-919F-6461434C352A.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/BUBBLES.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0207.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0210.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0630.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1559.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3668.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_6963.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_9594.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/photo_2021-06-10_15-43-45.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_9864.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0857.jpg", 
+                    title: ""
+                  }                  
+                ]
+              each i in items 
+                +pageFigure(
+                  i.src,
+                  i.title
+                )
           .button-line
               +button('g', 'index.html#contacts', 'Замовити')

@@ -54,48 +54,75 @@ block content
         .examples 
           h2.sec-subtitle приклади виконаних робіт
           .fig-slider 
-            .examples-line(itemprop="image")
-              .arr-left 
-              .arr-right 
-              - 
-                var items = [
-                  {
-                    src: "img/pages/IMG_1046.jpg", 
+            .slider#slider(itemprop="image")
+              .slider-container.examples-line 
+                - 
+                  var items = [
+                    {
+                    src: "img/pages/y_eg1.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_1161.jpg", 
+                    src: "img/pages/y_eg2.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_1270.JPG", 
+                    src: "img/pages/y_eg3.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_1295.jpg", 
+                    src: "img/pages/y_eg4.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_2361.jpg", 
+                    src: "img/pages/y_eg5.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_3161.jpg", 
+                    src: "img/pages/y_eg6.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_2849.jpg", 
+                    src: "img/pages/y_eg7.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_2359.jpg", 
+                    src: "img/pages/y_eg8.jpg", 
                     title: ""
-                  }               
-                ]
-              each i in items
-                +pageFigure(
-                  i.src,
-                  i.title
-                )
+                  },
+                  {
+                    src: "img/pages/y_eg10.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg11.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg12.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg13.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg14.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg15.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg16.jpg", 
+                    title: ""
+                  },            
+                  ]
+                each i in items
+                  +pageFigure(
+                    i.src,
+                    i.title
+                  )
             .button-line
               +button('g', 'index.html#contacts', 'Замовити')
