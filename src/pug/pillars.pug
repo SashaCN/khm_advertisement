@@ -2,50 +2,50 @@ extends components/template.pug
 
 block seo
   meta(name="description", content="Компанія Реклама Поділля займається виготовленням штендерів,банерів,інформаційних щитів, які користуються великою популярністю серед власників бізнесу.")
-	meta(name="keywords", content="Замовити штендер, купити інформаційний щит, купити штендер, замовити банер")
-	meta(name="author", content="Реклама Поділля")
-	meta(name="publisher", content="Реклама Поділля")
-	meta(name="robots", content="index follow")
+  meta(name="keywords", content="Замовити штендер, купити інформаційний щит, купити штендер, замовити банер")
+  meta(name="author", content="Реклама Поділля")
+  meta(name="publisher", content="Реклама Поділля")
+  meta(name="robots", content="index follow")
   meta(property="og:title" content="Виготовлення штендерів, банерів, інформаційних щитів на Реклама Поділля")
   meta(property="og:description" content="Компанія Реклама Поділля займається виготовленням штендерів,банерів,інформаційних щитів, які користуються великою популярністю серед власників бізнесу.")
   meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
   meta(property="og:url" content="https://reklama-podillya.com.ua/pillars.html")
   meta(property="og:type" content="website")
-	title Виготовлення штендерів, банерів, інформаційних щитів на Реклама Поділля
-	link(rel="canonical", href="https://reklama-podillya.com.ua/pillars.html")
-	script(type="application/ld+json")
+  title Виготовлення штендерів, банерів, інформаційних щитів на Реклама Поділля
+  link(rel="canonical", href="https://reklama-podillya.com.ua/pillars.html")
+  script(type="application/ld+json").
     [
-    {
-      "@context": "http://schema.org/",
-      "@type": "LocalBusiness",
-      "name": "РЕКЛАМА ПОДІЛЛЯ",
-      "telephone": "067 904 77 38"
-    },
-    {
-      "@context": "http://schema.org/",
-      "@type": "LocalBusiness",
-      "name": "реклама Поділля",
-      "image": [
-        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
-        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
-        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
-        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
-        "https://reklama-podillya.com.ua/img/vf_center.jpg",
-        "https://reklama-podillya.com.ua/img/vf_right.jpg"
-      ],
-      "telephone": "067 904 77 38",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+      {
+        "@context": "http://schema.org/",
+        "@type": "LocalBusiness",
+        "name": "РЕКЛАМА ПОДІЛЛЯ",
+        "telephone": "067 904 77 38"
+      },
+      {
+        "@context": "http://schema.org/",
+        "@type": "LocalBusiness",
+        "name": "реклама Поділля",
+        "image": [
+          "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+          "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+          "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+          "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+          "https://reklama-podillya.com.ua/img/vf_center.jpg",
+          "https://reklama-podillya.com.ua/img/vf_right.jpg"
+        ],
+        "telephone": "067 904 77 38",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+        }
       }
-    }
-  ]
+    ]
 
 block content
   .wrapper.panel_sign-page.additional-page
     section(itemscope itemtype="https://schema.org/Organization")
       img(src="img/banner_pillars.jpg", alt="" itemprop="image")
-      .page-content.choosen-page.itemprop="description" 
+      .page-content.choosen-page(itemprop="description" )
         h1.sec-title ШТЕНДЕРИ, ІНФОРМАЦІЙНІ ЩИТИ, ВУЛИЧНІ ТАБЛИЧКИ, БАНЕРИ
         h2.sec-subtitle Штендери
         p.sec-desc Штендер – це компактна, мобільна, переносна рекламна конструкція, яка користується великою популярністю в людних місцях. Частіше штендери ставлять біля дороги чи тротуару, недалеко від рекламованого об’єкта, зазвичай з вказівною стрілочкою.
@@ -58,64 +58,51 @@ block content
         .examples 
           h2.sec-subtitle приклади виконаних робіт
           .fig-slider 
-            .examples-line(itemprop="image")
-              .arr-left 
-              .arr-right 
-              - 
-                var items = [
-                  {
-                    src: "img/pages/2AE7B3E1-9376-4FDE-8724-348989B8E91A.JPG", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/8FF8D92F-25DF-446F-B7ED-EFB4FFC7F14F.JPG", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/300096747_1241092846703609_1117324780303571595_n.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/IMG_1285.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/IMG_1511.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/IMG_1547.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/IMG_2157.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/IMG_9614.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/photo_2022-07-08_21-33-152.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/photo_2022-07-08_21-33-15.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/photo_2022-07-13_17-09-45.jpg", 
-                    title: ""
-                  },
-                  {
-                    src: "img/pages/IMG_3714.jpg", 
-                    title: ""
-                  }               
-                ]
-              each i in items 
-                +pageFigure(
-                  i.src,
-                  i.title
-                )
+            .slider#slider(itemprop="image")
+              .slider-container.examples-line
+                - 
+                  var items = [
+                    {
+                      src: "img/pages/y_pl1.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_pl2.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_pl3.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_pl4.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_pl5.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_pl6.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_pl7.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_pl8.jpg", 
+                      title: ""
+                    },
+                    {
+                      src: "img/pages/y_pl9.jpg", 
+                      title: ""
+                    },              
+                  ]
+                each i in items 
+                  +pageFigure(
+                    i.src,
+                    i.title
+                  )
             .button-line
               +button('g', 'index.html#contacts', 'Замовити')

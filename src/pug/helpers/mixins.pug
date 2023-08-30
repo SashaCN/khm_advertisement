@@ -63,7 +63,7 @@ mixin service(title, desc1, desc2)
 
 mixin creatingFigure(img, alt, title, ...descs)
   figure 
-    img(src=img, alt=alt) 
+    img(src=img, alt=alt, loading="lazy") 
     span.g-line
     figcaption 
       h4=title
@@ -72,9 +72,9 @@ mixin creatingFigure(img, alt, title, ...descs)
           p= desc
 
 mixin pageFigure(img, alt)
-  figure 
+  figure
     figcaption 
-      img(src=img, alt=alt) 
+      img(src=img, alt=alt, loading='lazy') 
       
 
 mixin promo( title, price, desc, ...items)

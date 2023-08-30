@@ -13,35 +13,34 @@ block seo
   meta(property="og:type" content="website")
   title Вхідна група. Комплекс елементів зовнішньої реклами.
   link(rel="canonical", href="https://reklama-podillya.com.ua/enterance_group.html")
-  script(type="application/ld+json")
+  script(type="application/ld+json").
     [
-    {
-      "@context": "http://schema.org/",
-      "@type": "LocalBusiness",
-      "name": "РЕКЛАМА ПОДІЛЛЯ",
-      "telephone": "067 904 77 38"
-    },
-    {
-      "@context": "http://schema.org/",
-      "@type": "LocalBusiness",
-      "name": "реклама Поділля",
-      "image": [
-        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
-        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
-        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
-        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
-        "https://reklama-podillya.com.ua/img/vf_center.jpg",
-        "https://reklama-podillya.com.ua/img/vf_right.jpg"
-      ],
-      "telephone": "067 904 77 38",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+      {
+        "@context": "http://schema.org/",
+        "@type": "LocalBusiness",
+        "name": "РЕКЛАМА ПОДІЛЛЯ",
+        "telephone": "067 904 77 38"
+      },
+      {
+        "@context": "http://schema.org/",
+        "@type": "LocalBusiness",
+        "name": "реклама Поділля",
+        "image": [
+          "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+          "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+          "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+          "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+          "https://reklama-podillya.com.ua/img/vf_center.jpg",
+          "https://reklama-podillya.com.ua/img/vf_right.jpg"
+        ],
+        "telephone": "067 904 77 38",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+        }
       }
-    }
-  ]
-
-block content  
+    ]
+block content
   .wrapper.panel_sign-page.additional-page
     section(itemscope itemtype="https://schema.org/Organization") 
       img(src="img/banner_enterance_group.jpg", alt="Вхідна група KAVAMAK" title="Усі види зовнішньої риклами для KAVAMAK" itemprop="image" )
@@ -54,48 +53,75 @@ block content
         .examples 
           h2.sec-subtitle приклади виконаних робіт
           .fig-slider 
-            .examples-line(itemprop="image")
-              .arr-left 
-              .arr-right 
-              - 
-                var items = [
-                  {
-                    src: "img/pages/IMG_1046.jpg", 
+            .slider#slider(itemprop="image")
+              .slider-container.examples-line 
+                - 
+                  var items = [
+                    {
+                    src: "img/pages/y_eg1.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_1161.jpg", 
+                    src: "img/pages/y_eg2.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_1270.JPG", 
+                    src: "img/pages/y_eg3.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_1295.jpg", 
+                    src: "img/pages/y_eg4.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_2361.jpg", 
+                    src: "img/pages/y_eg5.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_3161.jpg", 
+                    src: "img/pages/y_eg6.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_2849.jpg", 
+                    src: "img/pages/y_eg7.jpg", 
                     title: ""
                   },
                   {
-                    src: "img/pages/IMG_2359.jpg", 
+                    src: "img/pages/y_eg8.jpg", 
                     title: ""
-                  }               
-                ]
-              each i in items
-                +pageFigure(
-                  i.src,
-                  i.title
-                )
+                  },
+                  {
+                    src: "img/pages/y_eg10.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg11.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg12.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg13.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg14.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg15.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/y_eg16.jpg", 
+                    title: ""
+                  },            
+                  ]
+                each i in items
+                  +pageFigure(
+                    i.src,
+                    i.title
+                  )
             .button-line
               +button('g', 'index.html#contacts', 'Замовити')

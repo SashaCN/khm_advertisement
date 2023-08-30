@@ -1,4 +1,46 @@
-extends components/template.pug 
+extends components/template.pug
+
+block seo 
+  meta(name="description", content="Вивіска світлова, латбокс, об'ємні літери, банери. Зовнішня реклама вивіски лайтбокс в Хмельницькому замовляють в агенції 'РЕКЛАМА ПОДІЛЛЯ'.")
+  meta(name="keywords", content="зовнішня реклама, розробка та виготовлення зовнішньої реклами, монтаж конструкцій зовнішньої реклами, замовити розробку вивісок")
+  meta(name="author", content="Реклама Поділля")
+  meta(name="publisher", content="Реклама Поділля")
+  meta(name="robots", content="index follow")
+  meta(property="og:title" content="Реклама Поділля - розробка, виготовлення зовнішньої реклами")
+  meta(property="og:description" content="Вивіски, лайтбокс, світлові літери. Зовнішня реклама, виготовлення розробка монтаж - швидко якісно.")
+  meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
+  meta(property="og:url" content="https://reklama-podillya.com.ua")
+  meta(property="og:type" content="website")
+  title Реклама Поділля. Розробка Та Виготовлення Зовнішньої Реклами
+  link(rel="canonical", href="https://reklama-podillya.com.ua/")
+  script(type="application/ld+json").
+    [
+      {
+        "@context": "http://schema.org/",
+        "@type": "LocalBusiness",
+        "name": "РЕКЛАМА ПОДІЛЛЯ",
+        "telephone": "067 904 77 38"
+      },
+      {
+        "@context": "http://schema.org/",
+        "@type": "LocalBusiness",
+        "name": "реклама Поділля",
+        "image": [
+          "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+          "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+          "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+          "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+          "https://reklama-podillya.com.ua/img/vf_center.jpg",
+          "https://reklama-podillya.com.ua/img/vf_right.jpg"
+        ],
+        "telephone": "067 904 77 38",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+        }
+      }
+    ]
+
 
 block content 
   section.first-screen
@@ -10,19 +52,20 @@ block content
     h1 розробка та виготовлення зовнішньої реклами
     ul.adv-list
       li 
-        a(href="panel_sign.html") вивіски
+        a(href="lightbox.html") лайтбокси
       li 
-        a(href="#") лайтбокси
+        a(href="sign.html#sign") літери
       li 
-        a(href="#") літери
+        a(href="shield_sign.html") вивіски
       li 
-        a(href="#") банери
+        a(href="pillars.html") банери
     +button('g', '#contacts', 'замовити')
   .wrapper.main-page
     a#about-us
     section.order-adv.anim-parent 
       h2.sec-title.anim.animation-fade ПРИДБАТИ ЧИ ЗАМОВИТИ РОЗРОБКУ, ОТРИМАТИ КОНСУЛЬТАЦІЮ - ВСЕ ПО ЗОВНІШНІЙ РЕКЛАМІ В АГЕНЦІЇ "РЕКЛАМА ПОДІЛЛЯ" 
-      p.sec-desc.anim.animation-fade Реклама Поділля – агенція в м. Хмельницькому, що розробляє зовнішню рекламу. Здійснює монтаж рекламних конструкцій. Розробляє, починаючи з 3D макета, виготовляє та монтує вивіски від звичайних щитових вивісок, світлових коробів, лайтбоксів світлових, об’ємних вивісок, до складних дахових вивісок, світлових літер, об’ємних букв, літер з різними способами підсвічування.
+      +button('g', 'gallery.php', "Всі роботи")
+      p.sec-desc.anim.animation-fade Реклама Поділля – агенція в м. Хмельницькому, що розробляє зовнішню рекламу. Здійснює монтаж рекламних конструкцій. Розробляє, починаючи з 3D макета, виготовляє та монтує вивіски від звичайних щитових вивісок, світлових коробів, лайтбоксів світлових, об’ємних вивісок, до складних дахових вивісок, світлових літер, об’ємних букв, літер з різними способами підсвічування. На всі роботи надається гарантія та виготовляється паспорт.
       .preferences.flex-sb.anim.animation-bottom 
         +preference(
           'СЕРТИФІКОВАНІ, ЯКІСНІ МАТЕРІАЛИ ДЛЯ ВИГОТОВЛЕННЯ ЗОВНІШНЬОЇ РЕКЛАМИ',
@@ -138,7 +181,7 @@ block content
           "Вентильований фасад для «BUBBLES»",
           "Обшивка приміщення касетами алюмінієвого композиту 4 мм Г 1  по класу негорючості , вмонтоване на алюмінієвій підсистемі, з утепленням мінеральної вати від 50 до 150 мм"
         )
-      +buttonLine
+      +buttonLine("facades.html")
     a#prices-table
     section.prices.anim-parent 
       h2.sec-title.anim.animation-fade Ціни на виготовлення вивісок 
@@ -238,19 +281,19 @@ block content
           p.order замовити послугу
           .inputs 
             p.name
-              input#name(type="text", name="name" required)
-              label(for="name") Ваше імʼя*
+              input#name(type="text", name="name" maxlength="20")
+              label(for="name") Ваше імʼя
             p.email 
-              input#email(type="text", name="email" required)
-              label(for="email") Ваш емейл*
+              input#email(type="text", name="email" maxlength="30")
+              label(for="email") Ваш емейл
             p.phone 
-              input#phone(type="tel", name="phone")
-              label(for="phone") Ваш номер телефону
+              input#phone(type="tel", name="phone" required maxlength="20")
+              label(for="phone") Ваш номер телефону*
             p.topic 
-              input#topic(type="text", name="topic")
+              input#topic(type="text", name="topic" maxlength="50")
               label(for="topic") Тема повідомлення
             p.message
-              textarea#message(name="message", cols="30", rows="10", required)  
+              textarea#message(name="message", cols="30", rows="10", required maxlength="1000")  
               label(for="message") Ваше повідомлення
             p.agreement 
               input#agreement(type="checkbox", name="agreement")
