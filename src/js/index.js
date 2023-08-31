@@ -217,8 +217,8 @@ if (figures.length !== 0) {
       
       btn = figure.insertBefore(closeBtn, figure.firstChild)
       wrap = document.body.insertBefore(wrapDiv, document.body.firstChild);
-      wrap.appendChild(wrapImg);
-      img = wrapImg.appendChild(figure.querySelector('img').cloneNode());
+      imgWrap =  wrap.appendChild(wrapImg);
+      img = imgWrap.appendChild(figure.querySelector('img').cloneNode());
       //     imgCoords = {
       //       'top': img.getBoundingClientRect().y,
       //       'right': img.getBoundingClientRect().x+img.getBoundingClientRect().width,

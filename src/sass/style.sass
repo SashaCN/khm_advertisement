@@ -624,6 +624,8 @@ section
     object-position: center
     border-radius: 5px
     height: 580px
+    @media screen and ( max-width: 600px )
+      height: 400px
   figcaption 
     p 
       font-size: 14rem
@@ -741,6 +743,11 @@ figure.active-figure
   display: flex
   justify-content: center
   column-gap: 20px
+  @media screen and ( max-width: 600px )
+    flex-wrap: wrap 
+    row-gap: 10px
+    a 
+      width: 100%
 
 /* -------------------------------------------------------------------------- */
 /*                                   FACADES                                  */
@@ -1086,6 +1093,7 @@ address
     z-index: 2
     transition: $trs
     @media screen and ( max-width: 600px )
+      opacity: 1
       width: 20%
     &::before
       content: ''
