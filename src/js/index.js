@@ -219,7 +219,7 @@ if (figures.length !== 0) {
       wrap = document.body.insertBefore(wrapDiv, document.body.firstChild);
       imgWrap =  wrap.appendChild(wrapImg);
       img = imgWrap.appendChild(figure.querySelector('img').cloneNode());
-      let zoom = 1,
+      let zoom = 2,
           imgCoords = {
             'top': img.getBoundingClientRect().y,
             'right': img.getBoundingClientRect().x+img.getBoundingClientRect().width,
