@@ -215,28 +215,43 @@ if (figures.length !== 0) {
         return false;
       }
       
-      btn = figure.insertBefore(closeBtn, figure.firstChild)
+      btn = wrapImg.appendChild(closeBtn);
       wrap = document.body.insertBefore(wrapDiv, document.body.firstChild);
-      wrap.appendChild(wrapImg);
-      img = wrapImg.appendChild(figure.querySelector('img').cloneNode());
-      //     imgCoords = {
-      //       'top': img.getBoundingClientRect().y,
-      //       'right': img.getBoundingClientRect().x+img.getBoundingClientRect().width,
-      //       'bottom': img.getBoundingClientRect().y+img.getBoundingClientRect().height,
-      //       'left': img.getBoundingClientRect().x,
-      //       'x': img.getBoundingClientRect().x+img.getBoundingClientRect().width/2,
-      //       'y': img.getBoundingClientRect().y+img.getBoundingClientRect().height/2
-      //     };
-      
-      // img.addEventListener('mousemove', function(event){
-      //   // console.log(imgCoords.left);
-      //   if (event.clientX > imgCoords.left && event.clientX < imgCoords.right && event.clientY > imgCoords.top && event.clientY < imgCoords.bottom){
-      //     img.style.objectPosition = `${(imgCoords.x/event.clientX-1)*100}px ${(imgCoords.y/event.clientY-1)*100}px`;
-      //   }
-      // });
-      // img.addEventListener("mouseout", function() {
-      //   img.style.cssText = "";
-      // });
+      imgWrap =  wrap.appendChild(wrapImg);
+      img = imgWrap.appendChild(figure.querySelector('img').cloneNode());
+      let zoom = 2,
+          imgCoords = {
+            'top': img.getBoundingClientRect().y,
+            'right': img.getBoundingClientRect().x+img.getBoundingClientRect().width,
+            'bottom': img.getBoundingClientRect().y+img.getBoundingClientRect().height,
+            'left': img.getBoundingClientRect().x,
+            'x': img.getBoundingClientRect().x+img.getBoundingClientRect().width/2,
+            'y': img.getBoundingClientRect().y+img.getBoundingClientRect().height/2
+          };
+      // zoom img
+      imgWrap.addEventListener('wheel', function(event) {
+        if (event.deltaY > 0) {
+          if (zoom > 0.3){
+            zoom -= 0.1
+          }
+        }
+        if (event.deltaY < 0) {
+            zoom += 0.1
+        }
+        img.style.scale = zoom;
+      });
+      // move img
+      imgWrap.addEventListener('mousemove', function(event){
+        console.log(event.clientX-imgCoords.left)
+        if (event.clientX > imgCoords.left && event.clientX < imgCoords.right && event.clientY > imgCoords.top && event.clientY < imgCoords.bottom){
+          img.style.transformOrigin = `${event.clientX-imgCoords.left}px ${event.clientY-imgCoords.top}px`;
+        }
+      });
+      // clear img styles
+      imgWrap.addEventListener("mouseout", function() {
+        img.style.cssText = "";
+        zoom = 1;
+      });
       bg = document.body.insertBefore(bgDiv, document.body.firstChild);
 
       bg.addEventListener('click', deleteBg);
