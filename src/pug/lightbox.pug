@@ -1,5 +1,45 @@
 extends components/template.pug 
 
+block seo 
+  meta(name="description", content="Лайтбокс – це оптимальне рішення у співвідношенні ціни, ефективності та привабливості вивіски. Світлова вивіска, типу світлового короба з внутрішньою підсвіткою  створює об’ємній ефект, тому здається більшою та краще приверне увагу. Цей ефект можна підсилити зробивши його двостороннім та фігурним, у формі товарного знака, чи додати якийсь світловий елемент до лайтбоксу.")
+  meta(name="keywords", content="Купити лайтбокси, світловий об'ємний лайтбок замовити, Світловий Лайтбокс - зовнішня реклма для бізнесу")
+  meta(name="author", content="Реклама Поділля")
+  meta(name="publisher", content="Реклама Поділля")
+  meta(name="robots", content="index follow")
+  meta(property="og:title" content="Лайтбокси різних видів - зовнішня реклма Вашого бізнесу")
+  meta(property="og:description" content="Лайтбокс – це оптимальне рішення у співвідношенні ціни, ефективності та привабливості вивіски. Світлова вивіска, типу світлового короба з внутрішньою підсвіткою  створює об’ємній ефект, тому здається більшою та краще приверне увагу. Цей ефект можна підсилити зробивши його двостороннім та фігурним, у формі товарного знака, чи додати якийсь світловий елемент до лайтбоксу.")
+  meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
+  meta(property="og:url" content="https://reklama-podillya.com.ua/lightbox.html")
+  meta(property="og:type" content="website")
+  title Лайтбокси різних видів - зовнішня реклма Вашого бізнесу
+  link(rel="canonical", href="https://reklama-podillya.com.ua/lightbox.html")
+  script(type="application/ld+json").
+  [
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "РЕКЛАМА ПОДІЛЛЯ",
+      "telephone": "067 904 77 38"
+    },
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "реклама Поділля",
+      "image": [
+        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+        "https://reklama-podillya.com.ua/img/vf_center.jpg",
+        "https://reklama-podillya.com.ua/img/vf_right.jpg"
+      ],
+      "telephone": "067 904 77 38",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+      }
+    }
+  ]
 block content
   .wrapper.panel_sign-page.additional-page
     section 
