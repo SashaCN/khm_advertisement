@@ -1,0 +1,168 @@
+extends components/template.pug 
+
+block seo
+  meta(name="description", content="Розробка,Виготовлення Вивіски Різних Видів,Конфігурацій в м Хмельницькому. Щитова, Неонова вивіски за низькими цінами на 'РЕКЛАМА ПОДІЛЛЯ'.")
+	meta(name="keywords", content="Замовити вивіску, купити рекламний щит, купити вивіску дешево, купити неонову вивіску, замовити неонову вивіску, купити рекламний щит")
+	meta(name="author", content="Реклама Поділля")
+	meta(name="publisher", content="Реклама Поділля")
+	meta(name="robots", content="index follow")
+  meta(property="og:title" content="Рекламний щит,вивіски різних видів замовити в Хмельницькому за низькою ціною")
+  meta(property="og:description" content="Розробка,Виготовлення Вивіски Різних Видів,Конфігурацій в м Хмельницькому. Щитова, Неонова вивіски за низькими цінами на 'РЕКЛАМА ПОДІЛЛЯ'.")
+  meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
+  meta(property="og:url" content="https://reklama-podillya.com.ua/panel_sign.html")
+  meta(property="og:type" content="website")
+	title Рекламний щит,вивіски різних видів замовити в Хмельницькому за низькою ціною
+	link(rel="canonical", href="https://reklama-podillya.com.ua/panel_sign.html")
+	script(type="application/ld+json")
+    [
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "РЕКЛАМА ПОДІЛЛЯ",
+      "telephone": "067 904 77 38"
+    },
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "реклама Поділля",
+      "image": [
+        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+        "https://reklama-podillya.com.ua/img/vf_center.jpg",
+        "https://reklama-podillya.com.ua/img/vf_right.jpg"
+      ],
+      "telephone": "067 904 77 38",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+      }
+    }
+  ]
+
+block content
+  .wrapper.panel_sign-page.additional-page
+    section(itemscope itemtype="https://schema.org/Organization")
+      img(src="img/banner_panel_sign.jpg", alt="Щитова вивіска Chameleon" data-name="sign" itemprop="image")
+      img(src="img/banner_neon_sign.jpg", alt="Щитова неонова вивіска Chameleon" data-name="neon_sign" itemprop="image")
+      .page-switches.flex-sb(itemprop="url")
+        a.choosen-switch(href="#" data-name="sign") вивіски
+        a(href="#" data-name="neon_sign") неонові вивіски 
+      .page-content.choosen-page(data-name='sign') 
+        h1.sec-title щитова вивіска, рекламний щит за 260 грн
+        p.sec-desc Щитова вивіска - оптимальний спосіб інформувати про себе. Така вивіска, рекламний щит є не дорога як у виробництві, так і в обслуговувані. Основними перевагами такого виду зовнішньої реклами є її невисока ціна виготовлення, простий монтаж, транспортування, невибагливе обслуговування. Щитову вивіску, рекламний щит, також можна доповнити зовнішнім підсвічуванням. Найбільше така вивіска застосовується для невеликих магазинів, кіосків, кав'ярень, також як вказівник чи рекламно-інформаційний щит.
+        h2.sec-subtitle Ми пропонуємо декілька варіантів виготовлення щитової реклами з застосуванням різних матеріалів:
+        .sec-desc(itemprop="description")
+          p Вартість пласких, об’ємних, світлових букв залежить від ряду критеріїв: вигляду виробу, розмірів, місця застосування, складності роботи й т.д. У нас ви можете замовити будь-який вподобаний варіант всього за кілька натискань.
+          p Ціна на монтаж та виготовлення залежить від розмірів вивіски, а також від способу їх підсвітки, розміщення, монтажу та кріплення. Для більш детальної інформації зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
+          ul.components(itemprop="description")
+            li основа – оцинкована жесть поклеєна широкоформатним друком з ламінацією на плівці Оракал – 520 грн м².
+            li основа – ластик ПВХ товщиною 3 мм, поклеєний широкоформатним друком з ламінацією на плівці Оракал –800 грн м².
+            li основа – панель з алюмінієвого композиту товщиною 3 мм, поклеєний широкоформатним друком з ламінацією на плівці Оракал – 1100 грн м².
+        .examples 
+          h2.sec-subtitle приклади виконаних робіт
+          .fig-slider 
+            .examples-line(itemprop="image")
+              .arr-left 
+              .arr-right 
+              - 
+                var items = [
+                  {
+                    src: "img/pages/IMG_0469.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0801.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1408.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_2462.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_2717.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3169.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_8586.JPG", 
+                    title: ""
+                  }                  
+                ]
+              each i in items 
+                +pageFigure(
+                  i.src,
+                  i.title
+                )
+            .button-line
+              +button('g', 'index.html#contacts', 'Замовити')
+      .page-content(data-name='neon_sign') 
+        h2.sec-title скляна трубка з інертним газом
+        p.sec-desc Характерною рисою є скляна трубка, наповнена газом - неоном.Виготовляють неонові вивіски по засобу нагріву трубки та закачування газу. Після застосування газу - подається висока напруга і трубка випромінює світло. Індивідуальний колірний діапазон досягається внаслідок використання різних і іноді декількох інертних газів.
+        h2.sec-subtitle гнучкий світловий неон
+        p.sec-desc Це гнучкий неоновий шнур з діодами, має всередині люмінофорне покриття, завдяки якому світло розсіюється рівномірно по всьому периметру
+        .sec-desc(itemprop="description")
+          h2.sec-subtitle вартість послуг
+          p Ціна на монтаж та виготовлення (як приклад вивіска світлова AJOUR - вивіска з скляних трубок наповнених інертним газом, п'ять літер розміром 25 см - 5000 грн ) залежить від розмірів вивіски, а також від способу їх підсвітки, розміщення, монтажу та кріплення. 
+          p Для більш детальною інформацією зверніться до наших менеджерів.Консультації, заміри, розрахунки безкоштовні.Працюємо з юридичними та фізичними особами. Надаємо всі фінансові та супровідні документи.
+        .examples 
+          h2.sec-subtitle приклади виконаних робіт
+          .fig-slider 
+            .examples-line(itemprop="image")
+              .arr-left 
+              .arr-right 
+              - 
+                var items = [
+                  {
+                    src: "img/pages/IMG_0197.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0280.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_0714.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1024.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_1118.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3187.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/IMG_3715.JPG", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/photo_2022-06-16_14-23-20.jpg", 
+                    title: ""
+                  },
+                  {
+                    src: "img/pages/photo_2022-07-12_23-36-03.jpg", 
+                    title: ""
+                  },
+                  
+                ]
+              each i in items 
+                +pageFigure(
+                  i.src,
+                  i.title
+                )
+            .button-line
+              +button('g', 'index.html#contacts', 'Замовити')  

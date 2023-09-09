@@ -1,5 +1,45 @@
 extends components/template.pug 
 
+block seo 
+  meta(name="description", content="Реклама Поділля. Галерея виконаних робіт, лише якісна та індивідуальна робота для реклами вашого бізнесу.")
+  meta(name="keywords", content="Реклама Поділля приклад робіт, зразок виконаних робіт,світлові вивіски приклад, фасади приклад робіт, Неоннові літери приклад")
+  meta(name="author", content="Реклама Поділля")
+  meta(name="publisher", content="Реклама Поділля")
+  meta(name="robots", content="index follow")
+  meta(property="og:title" content="Реклама Поділля. Галерея виконаних робіт.")
+  meta(property="og:description" content="Реклама Поділля. Галерея виконаних робіт, лише якісна та індивідуальна робота для реклами вашого бізнесу.")
+  meta(property="og:image" content="https://reklama-podillya.com.ua/img/logo.svg")
+  meta(property="og:url" content="https://reklama-podillya.com.ua/gallery.html")
+  meta(property="og:type" content="website")
+  title Реклама Поділля. Галерея виконаних робіт.
+  link(rel="canonical", href="https://reklama-podillya.com.ua/gallery.html")
+  script(type="application/ld+json").
+  [
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "РЕКЛАМА ПОДІЛЛЯ",
+      "telephone": "067 904 77 38"
+    },
+    {
+      "@context": "http://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "реклама Поділля",
+      "image": [
+        "https://reklama-podillya.com.ua/img/ll_bidonchik.jpg",
+        "https://reklama-podillya.com.ua/img/ll_sviatoslav.jpg",
+        "https://reklama-podillya.com.ua/img/ll_dnipro.jpg",
+        "https://reklama-podillya.com.ua/img/vf_veloman.jpg",
+        "https://reklama-podillya.com.ua/img/vf_center.jpg",
+        "https://reklama-podillya.com.ua/img/vf_right.jpg"
+      ],
+      "telephone": "067 904 77 38",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "м. Хмельницький, вул. Кам'янецька 122 БЦ “ОРІТ”, офіс 316"
+      }
+    }
+  ]
 block content 
   .wrapper.gallery-page
     h1.sec-title.gallery-title Галерея робіт
