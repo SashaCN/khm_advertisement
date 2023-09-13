@@ -195,8 +195,6 @@ setInterval(() => {
 let figures = document.querySelectorAll('figure'),
     bg, btn;
 
-// console.log(bg)
-
 const bgDiv = document.createElement('div');
 const wrapDiv = document.createElement('figure');
 const wrapImg = document.createElement('div');
