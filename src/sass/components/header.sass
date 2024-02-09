@@ -66,7 +66,7 @@ header
       margin: 0
       padding: 0
   @media screen and ( max-width: 1660px )
-    padding-top: 170px
+    padding-top: 150px
   @media screen and ( max-width: 768px )
     padding-top: 79px
 
@@ -87,7 +87,7 @@ header
   z-index: 10
   transition: $trs
   @media screen and ( max-width: 1660px )
-    height: 170px
+    height: 150px
   @media screen and ( max-width: 768px )
     display: flex
     justify-content: space-between
@@ -138,7 +138,7 @@ header
       .menu 
         width: 100%
         height: 100%
-        ul 
+        &>ul 
           max-height: 50vh
           display: flex
           height: 100%
@@ -286,23 +286,60 @@ address
       background-size: 200%
       border-radius: 2px
       transition: $trs
-      
-      
 
 .menu 
-  padding: 25px 0
+  overflow: visible
   a 
+    display: block
     position: relative
     font-size: 18rem
     line-height: 19.5rem
     font-weight: 700
+    padding: 25px 0
     text-transform: uppercase
     transition: $trs
-    +underlineHover
-  @media screen and ( max-width: 1660px )
-    padding: 20px 0
-    a 
+    @media screen and ( max-width: 1660px )
       font-size: 16rem
+      padding: 20px 0
+    +underlineHover
+  &>ul>li>a::after 
+    bottom: 15px
   @media screen and ( max-width: 768px )
-    ul 
+    &>ul 
       display: none
+
+.drop-item 
+  position: relative
+  &:hover .drop-menu
+    display: block
+  .drop-menu 
+    display: none
+    position: absolute
+    z-index: 10
+    top: 100%
+    left: 50%
+    width: 300px
+    padding: 20px
+    border-radius: 0 0 10px 10px
+    transform: translateX(-50%)
+    background-color: rgba(255, 255, 255, .95)
+    backdrop-filter: blur(10px)
+    li
+      &:not(:last-child)
+        margin-bottom: 15px
+    a 
+      font-weight: normal
+      padding: 0
+    &:hover 
+      display: block
+    @media screen and (max-width: 768px)
+      display: block
+      backdrop-filter: unset
+      background-color: transparent
+      position: static
+      transform: unset
+      width: unset
+      padding: 0
+      li 
+        &:not(:last-child)
+          margin: 0
